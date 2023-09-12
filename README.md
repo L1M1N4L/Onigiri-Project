@@ -9,7 +9,7 @@ Restaurant:
 1. Menu
 2. Contact
 3. Reservation
-4. 
+4. Registration to become a member to get promos(?)
 
 Japanese Course Website: 
 1. Information about the course
