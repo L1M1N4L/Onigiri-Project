@@ -14,3 +14,6 @@ Restaurant:
 Japanese Course Website: 
 1. Information about the course
 2. Registration for the course
+3. Simulation test
+4. Cultural notes
+5. Materials
