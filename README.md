@@ -14,9 +14,9 @@ Restaurant:
 Japanese Course Website: 
 1. Information about the course + show promotion video(maybe)
 2. Registration for the course
-3. Simulation test
+3. Simulation test <-- adrian suggestion: maybe we make like a free trial teaching some basic stuff abt the lesson and we give em a quiz at the end (the simulation test)
 4. Cultural notes 
 5. Materials (lesson content(?))
 6. Feedback 
-7. Free trial(?)
+
 
