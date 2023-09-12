@@ -12,7 +12,7 @@ Restaurant:
 4. Registration to become a member to get promos(?)
 
 Japanese Course Website: 
-1. Information about the course
+1. Information about the course + show promotion video(maybe)
 2. Registration for the course
 3. Simulation test
 4. Cultural notes
