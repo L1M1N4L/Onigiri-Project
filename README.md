@@ -18,5 +18,5 @@ Japanese Course Website:
 4. Cultural notes 
 5. Materials (lesson content(?))
 6. Feedback 
-
+7. Free trial(?)
 
