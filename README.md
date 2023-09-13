@@ -17,6 +17,6 @@ Japanese Course Website:
 3. Simulation test <-- adrian suggestion: maybe we make like a free trial teaching some basic stuff abt the lesson and we give em a quiz at the end (the simulation test)
 4. Cultural notes 
 5. Materials (lesson content(?))
-6. Feedback 
-
-
+6. Feedback
+7. Pricing list?
+8. Contact information
