@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+}
+
+.Logo {
+    Width: 75.29px;
+    Height: 65.99px;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+.logoimage{
+    Width: 75.29px;
+    Height: 65.99px;
+    display: inline-block;
+    padding-top: 100px;
+}
+
+.LogoText {
+    display:"inline-block";
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color:black;
+    padding-left: 15px;
+    
+}
+
+.SignUp {
+    width: 113px;
+    height: 58px;
+    background-color:#B03131;
+    border: 10px solid #B03131;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color:white;
+    
+    padding-top: 0;
+    filter: drop-shadow(0 3px 0.5px #1f1f1f);
+}
+
+.Dropdown {
+    background-color: transparent;
+    border: transparent;
+    font-size:15px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: wrap;
+    justify-content: space-between;
+    margin-left: 75%;
+    margin-top: -3%;
+}
+
+.SignUp:hover {
+    cursor:pointer;
+    background-color: brown;
+    border: 10px solid brown;
+}
