@@ -50,10 +50,10 @@ html {
     margin-right: 10px;
 }
 
-.buttons {
+.RightButtons {
     display: wrap;
     justify-content: space-between;
-    margin-left: 75%;
+    margin-left: 85%;
     margin-top: -3%;
 }
 
