@@ -3,10 +3,9 @@ html {
 }
 
 .Logo {
+
     position:relative;
-    Width: 115px;
-    margin-left: 0;
-    border: 5px solid red;
+    Width: 5.9896vw;
     padding-top:2%;
     padding-left:2.5%;
 }
@@ -15,7 +14,7 @@ html {
 
 .LogoText {
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 2.604167vw;
     font-weight: bold;
     color:black;
     position:absolute;
@@ -25,8 +24,8 @@ html {
 
 
 .SignUp {
-    width: 113px;
-    height: 52px;
+    width: 5.885vw;
+    height: 2.9167vw;
     background-color:#B03131;
     border: 10px solid #B03131;
     border-radius: 4px;
@@ -56,8 +55,8 @@ html {
 }
 
 .LogIn {
-    width: 113px;
-    height: 56px;
+    width: 5.885vw;
+    height: 2.9167vw;
     background-color: transparent;
     border: 2px solid #878787;
     border-radius: 5px;
@@ -78,12 +77,14 @@ html {
     display:flex;
     justify-content: space-between; 
     margin-left: 75%;
-    margin-top: -4%;
-    padding-right: 7.5%;
+    margin-top: -3.5%;
+    padding-right: 2%;
  
 }
 
-
+.Shape {
+    padding-left: 50px;
+}
 
 
 
