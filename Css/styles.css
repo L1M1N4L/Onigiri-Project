@@ -93,12 +93,11 @@ html {
 }
 
 .SignUpFree {
-    width: 113px;
-    height: 58px;
+    width: 13.65vw;
+    height: 3.85vw;
     background-color:#B03131;
     border: 10px solid #B03131;
     border-radius: 4px;
-    padding: 50px 125px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 700;
@@ -121,7 +120,7 @@ html {
     position: relative; 
     left: 100px; 
     top: 50px; 
-    color: rgba(84, 72, 55,);
+    color: #1c1c1c;
 }
 
 #caption {
