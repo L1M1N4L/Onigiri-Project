@@ -86,5 +86,32 @@ html {
     padding-left: 50px;
 }
 
+.SignUpFree:hover {
+    cursor:pointer;
+    background-color: brown;
+    border: 10px solid brown;
+}
 
+.SignUpFree {
+    width: 113px;
+    height: 58px;
+    background-color:#B03131;
+    border: 10px solid #B03131;
+    border-radius: 4px;
+    padding: 50px 125px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color:white;
+    padding-top: 0;
+    filter: drop-shadow(0 3px 0.5px #1f1f1f);
+}
+
+
+.leftButtons {
+    display: wrap;
+    justify-content: space-between;
+    margin-right: 100%;
+    margin-top: 5%;
+}
 
