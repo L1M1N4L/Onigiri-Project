@@ -115,3 +115,21 @@ html {
     margin-top: 5%;
 }
 
+.Header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px ;
+    position: relative; 
+    left: 100px; 
+    top: 50px; 
+    color: rgba(84, 72, 55,);
+}
+
+#caption {
+position: relative;
+bottom: 0px
+}
+
+.H1 {
+    font-size: 74px ;
+    font-weight: 900;
+}
