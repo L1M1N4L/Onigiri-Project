@@ -30,12 +30,17 @@ html {
     background-color:#B03131;
     border: 10px solid #B03131;
     border-radius: 4px;
-    padding: 5px 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 700;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
+}
+
+.SignUp:hover {
+    cursor:pointer;
+    background-color: brown;
+    border: 10px solid brown;
 }
 
 .Dropdown {
@@ -46,16 +51,33 @@ html {
     margin-right: 10px;
 }
 
-.RightButtons {
-    display: wrap;
-    justify-content: space-between;
-    margin-left: 75%;
-    margin-top: -3%;
+.Dropdown:hover {
+    cursor:pointer;
 }
 
-.SignUp:hover {
-    cursor:pointer;
-    background-color: brown;
-    border: 10px solid brown;
+.LogIn {
+    width: 113px;
+    height: 56px;
+    background-color: transparent;
+    border: 2px solid #878787;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color:#878787;
+
 }
+
+.RightButtons {
+    display:flex;
+    justify-content: space-between; 
+    margin-left: 75%;
+    margin-top: -4%;
+    padding-right: 7.5%;
+ 
+}
+
+
+
+
 
