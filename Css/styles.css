@@ -5,16 +5,15 @@ html {
 .Logo {
     position:relative;
     Width: 115px;
-    Height: 100.794926285;
+    margin-left: 0;
+    border: 5px solid red;
     padding-top:2%;
     padding-left:2.5%;
-    
 }
 
 
 
 .LogoText {
-    display:"inline-block";
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     font-weight: bold;
@@ -27,7 +26,7 @@ html {
 
 .SignUp {
     width: 113px;
-    height: 58px;
+    height: 52px;
     background-color:#B03131;
     border: 10px solid #B03131;
     border-radius: 4px;
@@ -36,7 +35,6 @@ html {
     font-size: 15px;
     font-weight: 700;
     color:white;
-    padding-top: 0;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
 }
 
