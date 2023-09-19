@@ -30,7 +30,7 @@ html {
     border: 10px solid #B03131;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px; 
+    font-size: 1rem; 
     font-weight: 700;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
@@ -45,7 +45,7 @@ html {
 .Dropdown {
     background-color: transparent;
     border: transparent;
-    font-size:15px;
+    font-size:1rem;
     font-family: 'Montserrat', sans-serif;
     margin-right: 10px;
 }
@@ -61,7 +61,7 @@ html {
     border: 2px solid #878787;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 700;
     color:#878787;
 
