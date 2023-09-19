@@ -30,7 +30,7 @@ html {
     border: 10px solid #B03131;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 15px; 
     font-weight: 700;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
@@ -83,7 +83,7 @@ html {
 }
 
 .Shape {
-    padding-left: 50px;
+    padding-left: 5%;
 }
 
 .SignUpFree:hover {
@@ -116,7 +116,6 @@ html {
 
 .Header {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px ;
     position: relative; 
     left: 100px; 
     top: 50px; 
@@ -124,8 +123,9 @@ html {
 }
 
 #caption {
+font-size: 20px ;
 position: relative;
-bottom: 0px
+
 }
 
 .H1 {
