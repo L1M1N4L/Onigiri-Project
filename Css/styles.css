@@ -7,7 +7,6 @@ body {
 }
 
 .top {
-    border: 5px solid black;
     width: 100%;
 }
 
@@ -36,13 +35,14 @@ body {
     width: 6.5vw;
     height: 2.9167vw;
     background-color:#B03131;
-    border: 10px solid #B03131;
+    border: 2px solid #B03131;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1vw; 
     font-weight: 700;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
+    overflow:hidden;
 }
 
 .SignUp:hover {
@@ -70,7 +70,7 @@ body {
     border: 2px solid #878787;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: 700;
     color:#878787;
 
@@ -127,10 +127,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     position: relative; 
     color: #1c1c1c;
-    width: 100%;
+    width: 35%;
     padding-bottom: 3.5vw;
     padding-left: 3.5vw;
-   
+
 }
 
 #caption {
