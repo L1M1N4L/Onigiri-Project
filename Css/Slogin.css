@@ -47,7 +47,6 @@ body{
 }
 
 .container button{
-    background-color: #B03131;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -60,7 +59,13 @@ body{
     cursor: pointer;
 }
 
+.LoginButton {
+    background-color: #931F1D;
+}
 
+.SignupButton {
+    background-color: #12355B;
+}
 
 .container button.hidden{
     background-color: transparent;
@@ -177,6 +182,7 @@ body{
 
 .container.active .toggle{
     transform: translateX(50%);
+    background: linear-gradient(to right, #184370, #12355B);
 }
 
 .toggle-panel{
