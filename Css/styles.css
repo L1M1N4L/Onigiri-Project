@@ -128,9 +128,7 @@ body {
     position: relative; 
     color: #1c1c1c;
     width: 35%;
-    padding-bottom: 3.5vw;
-    padding-left: 3.5vw;
-
+    padding: 7vw 0 3.5vw 3.5vw;
 }
 
 #caption {
