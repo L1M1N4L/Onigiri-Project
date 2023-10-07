@@ -151,6 +151,7 @@ body{
 }
 
 .toggle-container{
+    background: #931F1D;
     position: absolute;
     top: 0;
     left: 50%;
@@ -165,12 +166,11 @@ body{
 .container.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
+    background: #12355B;
 }
 
 .toggle{
-    background-color: #B03131;
     height: 100%;
-    background: linear-gradient(to right, #8d2121, #c03232);
     color: #fff;
     position: relative;
     left: -100%;
@@ -182,7 +182,6 @@ body{
 
 .container.active .toggle{
     transform: translateX(50%);
-    background: linear-gradient(to right, #184370, #12355B);
 }
 
 .toggle-panel{
