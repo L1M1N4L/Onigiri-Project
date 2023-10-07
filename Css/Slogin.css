@@ -47,18 +47,20 @@ body{
 }
 
 .container button{
-    background-color: #512da8;
+    background-color: #B03131;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
 }
+
+
 
 .container button.hidden{
     background-color: transparent;
@@ -161,9 +163,9 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #B03131;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #8d2121, #c03232);
     color: #fff;
     position: relative;
     left: -100%;
