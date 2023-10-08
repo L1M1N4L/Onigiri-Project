@@ -33,10 +33,13 @@ Our web app offers the following key features:
 ## Homepage
 
 Visit our homepage to get an overview of what the Onigiri-Project has to offer. Navigate through our courses, explore cultural insights, and find resources to enhance your learning experience.
+![image](https://github.com/L1M1N4L/Onigiri-Project/assets/127649044/ac36e579-7f32-4ab3-84c2-a391f4e15a1f)
 
 ## Login Page
 
 To access your account and personalized learning content, visit our login page. If you're new to our platform, you can also create a new account to get started.
+![image](https://github.com/L1M1N4L/Onigiri-Project/assets/127649044/17505448-f218-4f02-8c45-b18ebac58398)
+![image](https://github.com/L1M1N4L/Onigiri-Project/assets/127649044/1e360322-47e3-46f2-ae9e-86b948e2b216)
 
 ## Registration
 
