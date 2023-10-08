@@ -11,7 +11,7 @@ body {
 }
 
 .topbar {
-    background: #E7E7E7;
+    background: white;
     filter: drop-shadow(0 3px 5px #b3b3b3);
     padding-top: 20px;
     width: 100%;
@@ -173,14 +173,50 @@ margin-top: 25px;
     
 }
 
-.importance>hr{
-    border: 3px solid #B03131;
-    width: 379px;
-    margin-left: 5vw; 
+.importance{
+    margin-left: 10vw; 
+    .heading{
+        font-size: 50px;
+        width: 50%;
+        color: #2F281E;
+    }
+
+    .para{
+        font-size: 24px;
+        width: 41%;
+        margin-top: 60px;
+        margin-left: 10px;
+    }
+
+    .hr{
+        border: 3px solid #B03131;
+        width: 379px;
+        margin-top: 30px;
+    }
 }
 
-.info>div{
-    height: 5vw;
+
+
+.eduprogram{
+    margin-left: 50vw; 
+    margin-top: 500px;
+    .heading{
+        font-size: 50px;
+        color: #2F281E;
+    }
+
+    .para{
+        font-size: 24px;
+        width: 75%;
+        margin-top: 60px;
+        margin-left: 10px;
+    }
+
+    .hr{
+        border: 3px solid #B03131;
+        width: 379px;
+        margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -211,3 +247,4 @@ margin-top: 25px;
         float:right;
     }
 }
+
