@@ -6,51 +6,38 @@ body {
     margin: 0;
 }
 
-.top {
-    width: 100%;
+.top{
+    width:100%;
 }
 
 .topbar {
     background: #E7E7E7;
     filter: drop-shadow(0 3px 5px #b3b3b3);
-    padding-top: 1.5vw;
+    padding-top: 20px;
     width: 100%;
-    height: 7vw;
+    height: 120px;
     position:fixed;
     top: 0;
     left: 0;
     z-index: 9999;
     transition: all 300ms ease-in-out;
+    overflow: hidden;
 }
 
 .Logo {
-    Width: 5.9896vw;
-    padding-top:2%;
-    padding-left:2.5%;
+    Width: 446px;
+    padding-left: 40px;
 }
-
-
-
-.LogoText {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.604167vw;
-    font-weight: bold;
-    color:black;
-    position:absolute;
-    padding-top:1.35%;
-}
-
-
 
 .SignUp {
-    width: 6.5vw;
-    height: 2.9167vw;
+    width: 113px;
+    height: 58px;
     background-color:#B03131;
     border: 2px solid #B03131;
     border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1vw; 
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; 
+    font-weight: 500;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
     overflow:hidden;
@@ -75,14 +62,15 @@ body {
 }
 
 .LogIn {
-    width: 6vw;
-    height: 2.9167vw;
+    width: 113px;
+    height: 58px;
     background-color: transparent;
     border: 2px solid #878787;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     color:#878787;
 
 }
@@ -96,10 +84,10 @@ body {
 .RightButtons {
     display:flex;
     justify-content: space-between; 
+    width: 400px;
     margin-left: 75%;
-    margin-top: -3.5%;
-    padding-right: 2%;
- 
+    margin-top: -65px;
+    
 }
 
 .Shape {
@@ -113,39 +101,33 @@ body {
 }
 
 .SignUpFree {
-    width: 13.65vw;
-    height: 3.85vw;
+    width: 262px;
+    height: 74px;
     background-color:#B03131;
     border: 10px solid #B03131;
     border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
     color:white;
     padding-top: 0;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
-}
-
-
-.leftButtons {
-    display: wrap;
-    justify-content: space-between;
-    margin-right: 100%;
-    margin-top: 5%;
+    margin-top: 150px;
 }
 
 .Header {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     position: relative; 
-    color: #1c1c1c;
+    color: #2F281E;
     width: 35%;
-    padding: 13vw 0 3.5vw 3.5vw;
+    padding: 13vw 0 3.5vw 9vw;
 }
 
 #caption {
 font-size: 20px ;
 position: relative;
-
+margin-top: 25px;
 }
 
 .H1 {
@@ -176,6 +158,7 @@ position: relative;
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
+
 .close {
     position: absolute;
     top: 0px;
@@ -191,4 +174,26 @@ position: relative;
 
 .info>div{
     height: 50vw;
+}
+
+@media only screen and (max-width: 900px) {
+    .SignUp{
+        width: 0px;
+        height: 0px;
+        border: none;
+    }
+
+    .LogIn{
+        width: 0px;
+        height: 0px;
+        border: none;
+    }
+
+    .Dropdown{
+        width: 0px;
+        height: 0px;
+    }
+
+    .Shape {
+    }
 }
