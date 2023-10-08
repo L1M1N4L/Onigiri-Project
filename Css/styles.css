@@ -173,3 +173,11 @@ position: relative;
     cursor: pointer;
 }
 
+.info {
+    width: 100%;
+    border: 5px solid red;
+}
+
+.info>div{
+    height: 25vw;
+}
