@@ -10,6 +10,10 @@ body {
     width: 100%;
 }
 
+.logoimage {
+    
+}
+
 .Logo {
 
     position:relative;
@@ -179,5 +183,5 @@ position: relative;
 }
 
 .info>div{
-    height: 25vw;
+    height: 50vw;
 }
