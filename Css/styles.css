@@ -10,13 +10,20 @@ body {
     width: 100%;
 }
 
-.logoimage {
-    
+.topbar {
+    background: #E7E7E7;
+    filter: drop-shadow(0 3px 5px #b3b3b3);
+    padding-top: 1.5vw;
+    width: 100%;
+    height: 7vw;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
 }
 
 .Logo {
-
-    position:relative;
     Width: 5.9896vw;
     padding-top:2%;
     padding-left:2.5%;
@@ -30,7 +37,7 @@ body {
     font-weight: bold;
     color:black;
     position:absolute;
-    padding-top:1.95%;
+    padding-top:1.35%;
 }
 
 
@@ -132,7 +139,7 @@ body {
     position: relative; 
     color: #1c1c1c;
     width: 35%;
-    padding: 7vw 0 3.5vw 3.5vw;
+    padding: 13vw 0 3.5vw 3.5vw;
 }
 
 #caption {
