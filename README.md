@@ -2,7 +2,7 @@
 
 ![Onigiri-Project Banner](link_to_banner_image.png)
 
-Welcome to the Onigiri-Project! This web app is designed for teaching Japanese and provides various features to enhance your learning experience. This README file provides an overview of the project and its main sections.
+Welcome to the [Onigiri Project](https://l1m1n4l.github.io/Onigiri-Project/) This web app is designed for teaching Japanese and provides various features to enhance your learning experience. This README file provides an overview of the project and its main sections.
 
 ## Table of Contents
 
