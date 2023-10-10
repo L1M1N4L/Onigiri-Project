@@ -167,6 +167,7 @@ margin-top: 25px;
     cursor: pointer;
 }
 
+/* Importance of Japanese Lang. Schools and Edu Program section*/
 .info {
     margin-top: 200px;
     width: 100%;
@@ -259,19 +260,27 @@ margin-top: 25px;
         border: 3px solid white;
         width: 379px;
         margin-top: 30px;
-        margin-left: 650px;
+        margin-left: 515px;
     
     }
 }
 
-.activityvideos{
+.activityvidh3{
     text-align: center;
-    font-size: 22px;
+    font-size: 35px;
     color: white;
     padding-top: 70px;
 }
 
+.activityvidh1{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding-top: 30px;
+}
+
 .vid{
+    margin-left: 17%;
     margin-top: 50px;
     border: 3px solid black;
     border-radius: 5px;
