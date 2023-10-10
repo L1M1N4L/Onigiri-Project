@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('overlay-pop');
     const closeButton = document.getElementById('closeButton');
     const regisButton = document.getElementById('SignUp');
-    const bigSignupButton = document.getElementById('SignUpFree')
+    const bigSignupButton = document.getElementById("SignUpFree")
     // Function to open the login pop-up
     function openPopup() {
         overlay.style.display = 'block';
