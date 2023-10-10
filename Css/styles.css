@@ -24,6 +24,10 @@ body {
     overflow: hidden;
 }
 
+.logoimage{
+    width: 65%;
+}
+
 .Logo {
     Width: 446px;
     padding-left: 40px;
@@ -84,10 +88,9 @@ body {
 .RightButtons {
     display:flex;
     justify-content: space-between; 
-    width: 400px;
-    margin-left: 70%;
+    width: 30%;
+    float:right;
     margin-top: -65px;
-    
 }
 
 .Shape {
