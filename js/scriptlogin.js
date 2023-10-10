@@ -3,7 +3,6 @@ const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 const SignUp = document.getElementById('SignUp')
 const loginBtnActive = document.getElementById('login-button')
-const SignupButtonFree = document.getElementById("SignUpFree")
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
@@ -17,9 +16,6 @@ loginBtnActive.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-SignupButtonFree.addEventListener('click', () => {
-    container.classList.add("active");
-});
 
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
