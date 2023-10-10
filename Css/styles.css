@@ -85,7 +85,7 @@ body {
     display:flex;
     justify-content: space-between; 
     width: 400px;
-    margin-left: 77%;
+    margin-left: 70%;
     margin-top: -65px;
     
 }
@@ -200,7 +200,7 @@ margin-top: 25px;
 
 .eduprogram{
     margin-left: 50vw; 
-    margin-top: 500px;
+    margin-top: 15vw;
     .heading{
         font-size: 50px;
         color: #2F281E;
