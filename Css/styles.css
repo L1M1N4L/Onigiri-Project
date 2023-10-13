@@ -6,6 +6,8 @@ body {
     margin: 0;
 }
 
+/* HEADER */
+
 .top{
     width:100%;
 }
@@ -15,7 +17,8 @@ body {
     filter: drop-shadow(0 3px 5px #b3b3b3);
     padding-top: 20px;
     width: 100%;
-    height: 120px;
+    height: 8vw;
+    min-height: 6vw;    
     position:fixed;
     top: 0;
     left: 0;
@@ -26,21 +29,25 @@ body {
 
 .logoimage{
     width: 65%;
+    height: 8vw;
+    border: 5px solid red;
+    float: left;
 }
 
 .Logo {
-    Width: 446px;
+    Width: 23vw;
     padding-left: 40px;
 }
 
 .SignUp {
-    width: 113px;
-    height: 58px;
+    width: 6vw;
+    height: 3.15vw;
+    margin-top: 0.75vh;
     background-color:#B03131;
     border: 2px solid #B03131;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px; 
+    font-size: 0.85vw; 
     font-weight: 500;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
@@ -58,7 +65,8 @@ body {
     border: transparent;
     font-size:1rem;
     font-family: 'Montserrat', sans-serif;
-    margin-right: 10px;
+    
+    margin-top: 0.75vh;
 }
 
 .Dropdown:hover {
@@ -66,13 +74,14 @@ body {
 }
 
 .LogIn {
-    width: 113px;
-    height: 58px;
+    width: 6vw;
+    height: 3.15vw;
+    margin-top: 0.75vh;
     background-color: transparent;
     border: 2px solid #878787;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 0.85vw; 
     font-weight: 500;
     letter-spacing: 0.5px;
     color:#878787;
@@ -88,13 +97,17 @@ body {
 .RightButtons {
     display:flex;
     justify-content: space-between; 
-    width: 30%;
+    width: 35%;
+    height: 65%;
     float:right;
-    margin-top: -65px;
+    padding: 0 2vw 0 10vw;
+    border:5px solid red;
 }
 
 .Shape {
+    margin-top: 0.75vh;
     padding-left: 5%;
+    width: 3.5vw;
 }
 
 .SignUpFree:hover {
@@ -117,6 +130,8 @@ body {
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
     margin-top: 150px;
 }
+
+/* Main Homepage */
 
 .Header {
     font-family: 'Poppins', sans-serif;
@@ -223,34 +238,7 @@ margin-top: 25px;
     }
 }
 
-@media only screen and (max-width: 980px) {
-    .SignUp{
-        width: 0px;
-        height: 0px;
-        border: none;
-    }
-
-    .LogIn{
-        width: 0px;
-        height: 0px;
-        border: none;
-        font-size: 0;
-    }
-
-    .Dropdown{
-        font-size: 0;
-    }
-
-    .Dropdown>img{
-        width: 0;
-        height: 0;
-    }
-
-    .Shape {
-        margin-right: 50%;
-        float:right;
-    }
-}
+/* VIDEO */
 
 .videoactivity {
     margin-top: 200px;
@@ -288,4 +276,35 @@ margin-top: 25px;
     border: 3px solid black;
     border-radius: 5px;
     background-color: black;
+}
+
+
+/* Media for PHONE */
+@media only screen and (max-width: 600px) {
+    .SignUp{
+        width: 0px;
+        height: 0px;
+        border: none;
+    }
+
+    .LogIn{
+        width: 0px;
+        height: 0px;
+        border: none;
+        font-size: 0;
+    }
+
+    .Dropdown{
+        font-size: 0;
+    }
+
+    .Dropdown>img{
+        width: 0;
+        height: 0;
+    }
+
+    .Shape {
+        margin-right: 50%;
+        float:right;
+    }
 }
