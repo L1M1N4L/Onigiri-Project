@@ -22,7 +22,6 @@ body {
     top: 0;
     left: 0;
     z-index: 9999;
-    transition: all 300ms ease-in-out;
     overflow: hidden;
 }
 
@@ -30,7 +29,6 @@ body {
     padding-top: 2%;
     width: 65%;
     height: 100%;
-    border: 5px solid red;
     float: left;
 }
 
@@ -104,7 +102,6 @@ body {
     height: 100%;
     float:right;
     padding: 0 2vw 0 10vw;
-    border:5px solid red;
 }
 
 .Shape {
@@ -281,6 +278,17 @@ margin-top: 25px;
     background-color: black;
 }
 
+@media (max-width: 1024px) {
+    .RightButtons {
+        display:flex;
+        justify-content: space-between; 
+        width: 35%;
+        height: 100%;
+        float:right;
+        padding: 1vw 2vw 0 10vw;
+    }
+}
+
 /* Media for Tablet */
 @media only screen and (max-width: 768px) {
 
@@ -295,7 +303,6 @@ margin-top: 25px;
         padding-top: 3.5%;
         width: 65%;
         height: 100%;
-        border: 5px solid red;
         float: left;
     }
 
@@ -304,6 +311,7 @@ margin-top: 25px;
         min-width: 300px;
         padding: 0;
         margin: 0;
+        padding: 0 0 0 3.5vw;
     }
 
     .SignUp {
@@ -362,7 +370,6 @@ margin-top: 25px;
         padding-top: 3.5%;
         width: 65%;
         height: 100%;
-        border: 5px solid red;
         float: left;
     }
 
