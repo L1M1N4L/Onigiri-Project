@@ -17,7 +17,7 @@ body {
     filter: drop-shadow(0 3px 5px #b3b3b3);
     width: 100%;
     height: 8vw;
-    min-height: 6vw;    
+    min-height: 100px;    
     position:fixed;
     top: 0;
     left: 0;
@@ -35,18 +35,21 @@ body {
 }
 
 .Logo {
-    Width: 23vw;
+    width: 23vw;
+    min-width: 300px;
     padding-left: 40px;
 }
 
 .SignUp {
     width: 6vw;
+    min-width: 60px;
     height: 3.15vw;
+    min-height: 31.57px;
     background-color:#B03131;
     border: 2px solid #B03131;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.85vw; 
+    font-size:calc(0.5em + 0.5vw);
     font-weight: 500;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
@@ -74,12 +77,14 @@ body {
 
 .LogIn {
     width: 6vw;
+    min-width: 60px;
     height: 3.15vw;
+    min-height: 31.57px;
     background-color: transparent;
     border: 2px solid #878787;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.85vw; 
+    font-size:calc(0.5em + 0.5vw);
     font-weight: 500;
     letter-spacing: 0.5px;
     color:#878787;
@@ -93,7 +98,6 @@ body {
 }
 
 .RightButtons {
-    padding-top: ;
     display:flex;
     justify-content: space-between; 
     width: 35%;
@@ -106,6 +110,7 @@ body {
 .Shape {
     padding-left: 5%;
     width: 3.5vw;
+    min-width: 25px;
 }
 
 .SignUpFree:hover {
@@ -276,6 +281,71 @@ margin-top: 25px;
     background-color: black;
 }
 
+/* Media for Tablet */
+@media only screen and (max-width: 768px) {
+
+    /* HEADER */
+    .topbar {
+        width: 100%;
+        height: 15vw;
+        min-height: 100px;    
+    }
+
+    .logoimage{
+        padding-top: 3.5%;
+        width: 65%;
+        height: 100%;
+        border: 5px solid red;
+        float: left;
+    }
+
+    .Logo {
+        Width: 35vw;
+        min-width: 300px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .SignUp {
+        width: 12vw;
+        min-width: 47px;
+        height: 6.31vw;
+        min-height: 30px;
+        font-size: 1.7vw; 
+        font-weight: 500;
+        color:white;
+        margin: 15% 0 0 0;
+    }
+
+    .Dropdown {
+        width: 0;
+        height: 0;
+        border: none;
+        font-size: 0 
+    }
+
+    .Dropdown img {
+        width: 0;
+        height: 0;
+        border: none;
+        font-size: 0 
+    }
+
+    .LogIn {
+        min-width: 0;
+        min-height: 0;
+        width: 0;
+        height: 0;
+        border: none;
+        font-size: 0 
+    }
+
+    .Shape {
+        padding-left: 0;
+        width: 5vw;
+    }
+
+}
 
 /* Media for PHONE */
 @media only screen and (max-width: 600px) {
@@ -285,7 +355,7 @@ margin-top: 25px;
     .topbar {
         width: 100%;
         height: 20vw;
-        min-height: 15vw;    
+        min-height: 100px;    
     }
 
     .logoimage{
@@ -298,9 +368,13 @@ margin-top: 25px;
 
     .Logo {
         Width: 75vw;
+        min-width: 200px;
+        padding: 2vw 0 0 2vw;
     }
 
     .SignUp {
+        min-width: 0;
+        min-height: 0;
         width: 0;
         height: 0;
         border: none;
@@ -323,6 +397,8 @@ margin-top: 25px;
     }
 
     .LogIn {
+        min-width: 0;
+        min-height: 0;
         width: 0;
         height: 0;
         border: none;
