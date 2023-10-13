@@ -9,8 +9,8 @@
   --c-gray-300: #bdbbb7;
   --c-gray-200: #f1f1f1;
   --c-gray-100: #ffffff;
-  --c-green-500: #45ffbc;
-  --c-olive-500: #e3ffa8;
+  --c-green-500: #BF4146; 
+  --c-olive-500: #A62C2C;
   --c-white: var(--c-gray-100);
   --c-text-primary: var(--c-gray-100);
   --c-text-secondary: var(--c-gray-200);
@@ -59,6 +59,7 @@ a {
 }
 
 .app {
+  border-radius: 0.35vw;
   min-height: 80vh;
   width: 95%;
   max-width: 1600px;
@@ -447,6 +448,7 @@ a {
   border-bottom: 1px solid var(--c-gray-600);
   background-color: transparent;
   padding-left: 1.5rem;
+  color: var(--c-gray-500);
 }
 .search-field i {
   position: absolute;
@@ -768,6 +770,7 @@ a {
   background-color: transparent;
   padding: 0.25em 0;
   width: 100%;
+  color: var(--c-gray-500);
 }
 
 .payment-section-footer {
