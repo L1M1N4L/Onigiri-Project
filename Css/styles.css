@@ -27,7 +27,7 @@ body {
 
 .logoimage{
     padding-top: 2%;
-    width: 65%;
+    width: 35%;
     height: 100%;
     float: left;
 }
@@ -65,8 +65,10 @@ body {
     margin-left: -2%;
     background-color: transparent;
     border: transparent;
-    font-size:1vw;
+    font-size:calc(0.3em + 0.75vw);
     font-family: 'Montserrat', sans-serif;
+    height: 3.15vw;
+    margin-top: 9%;
 }
 
 .Dropdown:hover {
@@ -108,6 +110,8 @@ body {
     padding-left: 5%;
     width: 3.5vw;
     min-width: 25px;
+    height: 3.15vw;
+    margin-top: 9%;
 }
 
 .SignUpFree:hover {
@@ -300,10 +304,20 @@ margin-top: 2vw;
     .RightButtons {
         display:flex;
         justify-content: space-between; 
-        width: 35%;
+        width: 27%;
+        min-width: 150px;
         height: 100%;
         float:right;
-        padding: 1vw 2vw 0 10vw;
+        padding: 0vw 2vw 0 0;
+    }
+
+    .Dropdown {
+        margin-left: -2%;
+        margin-top: 20px;
+    }
+
+    .Shape {
+        width: 35px
     }
 }
 
@@ -321,8 +335,6 @@ margin-top: 2vw;
     .logoimage{
         padding-top: 3.5%;
         width: 65%;
-        height: 100%;
-        float: left;
     }
 
     .Logo {
@@ -349,6 +361,7 @@ margin-top: 2vw;
         height: 0;
         border: none;
         font-size: 0 
+        
     }
 
     .Dropdown img {
@@ -370,6 +383,8 @@ margin-top: 2vw;
     .Shape {
         padding-left: 0;
         width: 5vw;
+        height: auto;
+        margin-top: 0;
     }
 
     .Header {
@@ -394,10 +409,9 @@ margin-top: 2vw;
     }
 
     .logoimage{
-        padding-top: 3.5%;
+        padding-top: calc(1.5em - 2%);
         width: 65%;
-        height: 100%;
-        float: left;
+        border: 5px solid red
     }
 
     .Logo {
@@ -442,6 +456,10 @@ margin-top: 2vw;
     .Shape {
         padding-left: 0;
         width: 7.5vw;
+        min-width: 35px;
+        height: auto;
+        margin-top: 0;
+        border: 5px solid red
     }
 
     .Header {
