@@ -127,7 +127,7 @@ body {
     width: 25vw;
     height: 6vw;
     background-color:#B03131;
-    border: 10px solid #B03131;
+    border: 2px solid #B03131;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vw;
@@ -387,13 +387,54 @@ margin-top: 2vw;
         margin-top: 0;
     }
 
+    /* Main Homepage */
     .Header {
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
         position: relative; 
         color: #2F281E;
-        width: 35%;
+        width: 50%;
         padding: 20vw 0 3.5vw 9vw;
+        margin-bottom: 20%;
+    }
+
+    .H1 {
+        font-size: 7.5vw ;
+    }
+
+    #caption {
+        font-size: 2.5vw ;
+    }
+    
+    .SignUpFree {
+        width: 32vw;
+        height: 9vw;
+        font-size: 2.3vw;
+    }
+
+    .importance .heading {
+        font-size: 4vw; 
+        width: 80%; 
+        color: #2F281E;
+    }
+    
+    .importance .para {
+        font-size: 2.1vw; 
+        width: 45%; 
+        margin-top: 3vw; 
+        margin-left: 1vw; 
+    }
+
+    .eduprogram .heading {
+        font-size: 4vw; 
+        color: #2F281E;
+    }
+    
+    .eduprogram .para {
+        font-size: 2vw; 
+        width: 90%; 
+        margin-top: 3vw; 
+        margin-left: 1vw;
     }
 }
 
@@ -478,8 +519,8 @@ margin-top: 2vw;
     }
 
     .SignUpFree {
-        width: 35vw;
-        height: 8.5vw;
+        width: 40vw;
+        height: 12vw;
         font-size: 3vw;
     }
 
