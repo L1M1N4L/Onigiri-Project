@@ -252,7 +252,7 @@ margin-top: 2vw;
 .videoactivity {
     margin-top: 5%;
     width: 100%;
-    margin-bottom: 200px;
+    margin-bottom: 5%;
     background-color: #B03131;
 
     .hr2{
@@ -299,6 +299,117 @@ margin-top: 2vw;
     border-radius: 5px;
     background-color: black;
 }
+
+/* Lesson Content */
+
+.lessoncontent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding-left: 15vw;
+
+}
+
+.lesson-content-container h1{
+ text-align: center;
+ font-size: 3vw;
+}
+
+.lesson-content-container .hr {
+    border: 3px solid #B03131; 
+    width: 10%; 
+    margin-top: 2vw; 
+    margin-left: 45%;
+}
+
+
+
+.basiclevel img {
+    padding-left: 6.5vw;
+    width: 15vw;
+}
+
+.basiclevel h2 {
+    padding-left: 6.5vw;
+    width: 35vw;
+    padding-bottom: 1vw;
+    font-size: 1.5vw;
+}
+
+
+.basiclevel p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2F281E;
+    margin: 1vw 0 0 0;
+    font-size: 1vw;
+}
+
+
+.ilevel img{
+    padding-left: 6.5vw;
+    width: 15vw;
+}
+
+.ilevel h2 {
+    padding-left: 4.5vw;
+    width: 35vw;
+    padding-bottom: 1vw;
+    font-size: 1.5vw;
+}
+
+.ilevel p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2F281E;
+    margin: 1vw 0 0 0;
+    font-size: 1vw;
+}
+
+.alevel1 img{
+    padding-left: 6.5vw;
+    width: 15vw;
+}
+
+.alevel1 h2 {
+    padding-left: 4.5vw;
+    width: 35vw;
+    padding-bottom: 1vw;
+    font-size: 1.5vw;
+}
+
+.alevel1 p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2F281E;
+    margin: 1vw 0 0 0;
+    font-size: 1vw;
+}
+
+.alevel2 img{
+    padding-left: 6.5vw;
+    width: 18vw;
+}
+
+.alevel2 h2 {
+    padding-left: 4.5vw;
+    width: 35vw;
+    padding-bottom: 1vw;
+    font-size: 1.5vw;
+}
+
+.alevel2 p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2F281E;
+    margin: 1vw 0 0 0;
+    font-size: 1vw;
+}
+
+
 
 @media (max-width: 1024px) {
     .RightButtons {
@@ -583,4 +694,46 @@ margin-top: 2vw;
         width: 50%;
         margin-left: 25%;
     }
+
+    .lessoncontent{
+        gap: 5%;
+    }
+    
+    
+      .lesson-content-container h1 {
+        font-size: 4vw; 
+      }
+    
+      .lesson-content-container .hr {
+        width: 20%; 
+        margin-left: 40%; 
+      }
+    
+      
+      .basiclevel img,
+      .ilevel img,
+      .alevel1 img{
+        width: 20vw;
+    
+      }
+
+      .alevel2 img{
+        width: 25vw;
+      }
+  
+      .basiclevel h2,
+      .ilevel h2,
+      .alevel1 h2,
+      .alevel2 h2 {
+        padding-left: 4vw;
+        font-size:3vw;
+      }
+  
+      .basiclevel p,
+      .ilevel p,
+      .alevel1 p,
+      .alevel2 p {
+          font-size: 1.4vw; 
+      }
+
 }
