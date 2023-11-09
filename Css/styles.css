@@ -199,6 +199,13 @@ margin-top: 2vw;
 }
 
 /* Importance component */
+
+.importance-container{
+    background-color: #e5e5e5;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
 .importance {
     margin-left: 5vw; 
 }
@@ -406,6 +413,53 @@ margin-top: 2vw;
     font-weight: 600;
     color: #2F281E;
     margin: 1vw 0 0 0;
+    font-size: 1vw;
+}
+
+/*Footer*/
+.contact-us{
+    margin-top: 5%;
+    padding-top: 30px;
+    width: 100%;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.contact-us h2{
+    font-size: 3vw;
+    margin: 2vw;
+}
+
+.contact-us > * {
+    margin-bottom: 20px; 
+}
+
+.contact-us input[type="textbox"] , .contact-us input[type="email"]{
+    width: 600px;
+    height: 50px;
+    padding-left: 3vw;
+}
+
+.contact-us textarea{
+    padding-top: 2vw;
+    padding-left: 3vw;
+    width: 600px;
+    height: 200px;
+}
+
+.footer-container button{
+    border-radius: 10%;
+    padding: 1vw 2vw 1vw 2vw;
+    
+}
+
+.footer-container-2{
+    background-color: #B03131;
+    padding: 2vw;;
+    text-align: center;
     font-size: 1vw;
 }
 
