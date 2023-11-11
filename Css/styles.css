@@ -16,8 +16,8 @@ body {
     background: white;
     filter: drop-shadow(0 3px 5px #b3b3b3);
     width: 100%;
-    height: 8vw;
-    min-height: 100px;    
+    height: 6vw;
+    min-height: 50px;    
     position:fixed;
     top: 0;
     left: 0;
@@ -26,33 +26,35 @@ body {
 }
 
 .logoimage{
-    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    margin-top: 0.85%;
     width: 35%;
-    height: 100%;
+    height: 70%;
     float: left;
 }
 
 .Logo {
-    width: 23vw;
-    min-width: 300px;
+    width: 18vw;
+    min-width: 200px;
     padding-left: 40px;
 }
 
 .SignUp {
-    width: 6vw;
+    width: 5.32vw;
     min-width: 60px;
-    height: 3.15vw;
+    height: 2.8vw;
     min-height: 31.57px;
     background-color:#B03131;
     border: 2px solid #B03131;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
-    font-size:calc(0.30em + 0.75vw);
+    font-size:calc(0.30em + 0.65vw);
     font-weight: 500;
     color:white;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
     overflow:hidden;
-    margin-top: 9%;
+    transition: 0.3s;
 }
 
 .SignUp:hover {
@@ -68,7 +70,6 @@ body {
     font-size:calc(0.3em + 0.75vw);
     font-family: 'Montserrat', sans-serif;
     height: 3.15vw;
-    margin-top: 9%;
 }
 
 .Dropdown:hover {
@@ -76,19 +77,19 @@ body {
 }
 
 .LogIn {
-    width: 6vw;
+    width: 5.32vw;
     min-width: 60px;
-    height: 3.15vw;
+    height: 2.8vw;
     min-height: 31.57px;
     background-color: transparent;
     border: 2px solid #878787;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    font-size:calc(0.30em + 1vw);
+    font-size:calc(0.30em + 0.65vw);
     font-weight: 500;
     letter-spacing: 0.5px;
     color:#878787;
-    margin-top: 9%;
+    transition: 0.3s;
 }
 
 .LogIn:hover {
@@ -99,19 +100,21 @@ body {
 
 .RightButtons {
     display:flex;
-    justify-content: space-between; 
+    gap: 1.5vw;
     width: 35%;
-    height: 100%;
+    height: 70%;
     float:right;
-    padding: 0 2vw 0 10vw;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2vw;
+    margin-top: 0.85%;
 }
 
 .Shape {
-    padding-left: 5%;
-    width: 3.5vw;
+    width: 2.5vw;
     min-width: 25px;
-    height: 3.15vw;
-    margin-top: 9%;
+    min-height: 25px;
+    height: 2.5vw;
 }
 
 .SignUpFree:hover {
@@ -124,18 +127,19 @@ body {
 /* Main Homepage */
 
 .SignUpFree {
-    width: 25vw;
-    height: 6vw;
+    width: 20vw;
+    height: 4.8vw;
     background-color:#B03131;
     border: 2px solid #B03131;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-weight: 500;
     color:white;
     padding-top: 0;
     filter: drop-shadow(0 3px 0.5px #1f1f1f);
-    margin-top: 7vw;
+    margin-top: 5vw;
+    transition: 0.3s;
 }
 
 
@@ -144,17 +148,21 @@ body {
     font-weight: 500;
     position: relative; 
     color: #2F281E;
-    width: 35%;
-    padding: 13vw 0 3.5vw 9vw;
+    width: 90%;
+    height: 100vh;
+    padding: 10vw 3vw;
+    margin: auto;
 }
 
 #caption {
 font-size: 1.5vw ;
 position: relative;
 margin-top: 2vw;
+font-weight: 400;
 }
 
 .H1 {
+    width: 50%;
     font-size: 5vw ;
     font-weight: 900;
 }
@@ -194,31 +202,33 @@ margin-top: 2vw;
 /* Importance of Japanese Lang. Schools and Edu Program section*/
 /* General information section */
 .info {
-    margin-top: 5vw; 
     width: 100%;
+    height: 100vh;
 }
 
 /* Importance component */
 
 .importance-container{
     background-color: #e5e5e5;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
+    height: 50%;
+    padding: 1.5vw 4vw;
 }
 
 .importance {
-    margin-left: 5vw; 
+    width: 50%;
+    height: 100%;
+    float: left;
 }
 
 .importance .heading {
-    font-size: 3vw; 
-    width: 80%; 
+    font-size: 2.5vw; 
+    width: 100%; 
     color: #2F281E;
+    margin-top: 5%;
 }
 
 .importance .para {
-    font-size: 1.5vw; 
-    width: 50%; 
+    font-size: 1.2vw; 
     margin-top: 3vw; 
     margin-left: 1vw; 
 }
@@ -230,36 +240,50 @@ margin-top: 2vw;
 }
 
 /* Educational program component */
+
+.eduprogram-container{
+    height: 50%;
+    padding: 1.5vw 4vw;
+}
+
 .eduprogram {
-    margin-left: 45vw;
-    margin-top: 10vw; 
+    text-align: right;
+    width: 50%;
+    height: 100%;
+    float: right;
 }
 
 .eduprogram .heading {
-    font-size: 3.5vw; 
+    font-size: 3vw; 
     color: #2F281E;
+    margin-top: 5%;
 }
 
 .eduprogram .para {
-    font-size: 1.5vw; 
+    float: right;
+    font-size: 1.2vw; 
     width: 90%; 
+    margin-top: 1.5vw; 
+    margin-right: 1vw;
+}
+
+.eduprogram p:first-of-type {
     margin-top: 3vw; 
-    margin-left: 1vw;
 }
 
 .eduprogram .hr {
     border: 3px solid #B03131; 
     width: 35%; 
     margin-top: 2vw; 
+    float:right;
 }
 
 
 /* VIDEO */
 
 .videoactivity {
-    margin-top: 5%;
     width: 100%;
-    margin-bottom: 5%;
+    height: 100vh;
     background-color: #B03131;
 
     .hr2{
@@ -286,22 +310,13 @@ margin-top: 2vw;
 }
 
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%; 
-    overflow: hidden;
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 60%;
-    height: 60%;
+    margin: auto;
+    margin-top: 3.5%;
 }
 
 .vid{
-    margin-left: 20vw;
-    margin-top: 5vw;
+    width: 100%;
     border: 3px solid black;
     border-radius: 5px;
     background-color: black;
@@ -463,29 +478,6 @@ margin-top: 2vw;
     font-size: 1vw;
 }
 
-
-
-@media (max-width: 1024px) {
-    .RightButtons {
-        display:flex;
-        justify-content: space-between; 
-        width: 27%;
-        min-width: 150px;
-        height: 100%;
-        float:right;
-        padding: 0vw 2vw 0 0;
-    }
-
-    .Dropdown {
-        margin-left: -2%;
-        margin-top: 20px;
-    }
-
-    .Shape {
-        width: 35px
-    }
-}
-
 /* Media for Tablet */
 @media only screen and (max-width: 768px) {
 
@@ -495,11 +487,11 @@ margin-top: 2vw;
         height: 15vw;
         min-height: 100px;    
     }
-
     
     .logoimage{
-        padding-top: 3.5%;
+        margin-top: 2%;
         width: 65%;
+        height: 70%;
     }
 
     .Logo {
@@ -518,53 +510,35 @@ margin-top: 2vw;
         font-size: 1.7vw; 
         font-weight: 500;
         color:white;
-        margin: 15% 0 0 0;
     }
 
-    .Dropdown {
-        width: 0;
-        height: 0;
-        border: none;
-        font-size: 0 
+    .Dropdown,  .LogIn, .Dropdown img{
+        display:none;
         
-    }
-
-    .Dropdown img {
-        width: 0;
-        height: 0;
-        border: none;
-        font-size: 0 
-    }
-
-    .LogIn {
-        min-width: 0;
-        min-height: 0;
-        width: 0;
-        height: 0;
-        border: none;
-        font-size: 0 
     }
 
     .Shape {
         padding-left: 0;
         width: 5vw;
-        height: auto;
+        height: 5vw;
         margin-top: 0;
     }
 
+    .RightButtons{
+        gap: 5vw;
+        margin-top: 2%;
+    }
+
+
     /* Main Homepage */
     .Header {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        position: relative; 
-        color: #2F281E;
-        width: 50%;
-        padding: 20vw 0 3.5vw 9vw;
-        margin-bottom: 20%;
+        height: 75vh;
+        padding: 20vw 3vw;
     }
 
     .H1 {
-        font-size: 7.5vw ;
+        font-size: 10vw ;
+        width: 100%;
     }
 
     #caption {
@@ -577,29 +551,26 @@ margin-top: 2vw;
         font-size: 2.3vw;
     }
 
-    .importance .heading {
+    .info{
+        height: 75vh;
+    }
+
+    .importance .heading, .eduprogram .heading {
         font-size: 4vw; 
-        width: 80%; 
-        color: #2F281E;
     }
     
     .importance .para {
         font-size: 2.1vw; 
-        width: 45%; 
-        margin-top: 3vw; 
-        margin-left: 1vw; 
     }
 
-    .eduprogram .heading {
-        font-size: 4vw; 
-        color: #2F281E;
-    }
-    
     .eduprogram .para {
         font-size: 2vw; 
-        width: 90%; 
-        margin-top: 3vw; 
-        margin-left: 1vw;
+    }
+
+    /* VIDEO */
+
+    .videoactivity{
+        height: 45vh;
     }
 }
 
@@ -617,7 +588,6 @@ margin-top: 2vw;
     .logoimage{
         padding-top: calc(1.5em - 2%);
         width: 65%;
-        border: 5px solid red
     }
 
     .Logo {
@@ -636,42 +606,20 @@ margin-top: 2vw;
     }
 
     
-    .Dropdown {
-        width: 0;
-        height: 0;
-        border: none;
-        font-size: 0 
-    }
-
-    .Dropdown img {
-        width: 0;
-        height: 0;
-        border: none;
-        font-size: 0 
-    }
-
-    .LogIn {
-        min-width: 0;
-        min-height: 0;
-        width: 0;
-        height: 0;
-        border: none;
-        font-size: 0 
+    .Dropdown,  .LogIn, .Dropdown img{
+        display:none;
     }
 
     .Shape {
-        padding-left: 0;
         width: 7.5vw;
+        height: 7.5vw;
         min-width: 35px;
-        height: auto;
-        margin-top: 0;
-        border: 5px solid red
     }
 
     .Header {
         width: 90%; 
-        padding: 10vw 0 3vw 5vw; 
-        margin-top: 20vw;
+        height: 75vh;
+        padding: 30vw 0 3vw 5vw; 
     }
 
     .H1 {
@@ -690,32 +638,21 @@ margin-top: 2vw;
     }
 
     /*Info*/
-    .info {
-        margin-top: 10vw;
-    }
-    
-    .importance {
-        margin-left: 2vw;
+    .info{
+        height: 75vh;
     }
 
     .importance .heading {
         font-size: 4vw;
-        width: 90%;
     }
 
     .importance .para {
         font-size: 3vw;
-        width: 45%;
     }
 
     .importance .hr {
         width: 40%;
         border: 0.5vw solid #B03131; 
-    }
-
-    .eduprogram {
-        margin-left: 40vw;
-        margin-top: 10vw;
     }
 
     .eduprogram .heading {
@@ -729,6 +666,12 @@ margin-top: 2vw;
     .eduprogram .hr {
         width: 35%;
         border: 0.5vw solid #B03131;
+    }
+
+    /* VIDEO */
+
+    .videoactivity{
+        height: 40vh;
     }
     
     .activityvidh3{
@@ -749,45 +692,49 @@ margin-top: 2vw;
         margin-left: 25%;
     }
 
+    .video-container {
+        margin-top: 10%;
+    }
+
     .lessoncontent{
         gap: 5%;
     }
     
     
-      .lesson-content-container h1 {
-        font-size: 4vw; 
-      }
-    
-      .lesson-content-container .hr {
-        width: 20%; 
-        margin-left: 40%; 
-      }
-    
-      
-      .basiclevel img,
-      .ilevel img,
-      .alevel1 img{
-        width: 20vw;
-    
-      }
+    .lesson-content-container h1 {
+    font-size: 4vw; 
+    }
 
-      .alevel2 img{
-        width: 25vw;
-      }
-  
-      .basiclevel h2,
-      .ilevel h2,
-      .alevel1 h2,
-      .alevel2 h2 {
-        padding-left: 4vw;
-        font-size:3vw;
-      }
-  
-      .basiclevel p,
-      .ilevel p,
-      .alevel1 p,
-      .alevel2 p {
-          font-size: 1.4vw; 
-      }
+    .lesson-content-container .hr {
+    width: 20%; 
+    margin-left: 40%; 
+    }
+
+    
+    .basiclevel img,
+    .ilevel img,
+    .alevel1 img{
+    width: 20vw;
+
+    }
+
+    .alevel2 img{
+    width: 25vw;
+    }
+
+    .basiclevel h2,
+    .ilevel h2,
+    .alevel1 h2,
+    .alevel2 h2 {
+    padding-left: 4vw;
+    font-size:3vw;
+    }
+
+    .basiclevel p,
+    .ilevel p,
+    .alevel1 p,
+    .alevel2 p {
+        font-size: 1.4vw; 
+    }
 
 }
