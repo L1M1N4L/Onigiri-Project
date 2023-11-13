@@ -115,6 +115,7 @@ body {
     min-width: 25px;
     min-height: 25px;
     height: 2.5vw;
+    display:none;
 }
 
 .SignUpFree:hover {
@@ -285,7 +286,6 @@ font-weight: 400;
     width: 100%;
     height: 100vh;
     background-color: #B03131;
-
     .hr2{
         border: 3px solid white;
         width: 35vw;
@@ -324,151 +324,122 @@ font-weight: 400;
 
 /* Lesson Content */
 
+.lesson-content-container{
+    height: 100vh;
+}
+
+.lesson-content-title{
+    box-sizing: border-box;
+    font-size: 1.5vw;
+    width: 50%;
+    height: 25%;
+    text-align: center;
+    margin: auto;
+    padding-top: 2.5%;
+}
+
+.lesson-content-title hr{
+    border: 0.15vw solid #B03131;
+    width: 10%;
+    margin:auto;
+    margin-top: 2%;
+}
+
 .lessoncontent{
+    height: 75%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-    padding-left: 15vw;
-
+    padding: 4vw 16vw;
 }
 
-.lesson-content-container h1{
- text-align: center;
- font-size: 3vw;
+.N5, .N4, .N3, .N2{
+    width: 50%;
+    height: 50%;
+    padding: 2vw 2vw;
 }
 
-.lesson-content-container .hr {
-    border: 3px solid #B03131; 
-    width: 10%; 
-    margin-top: 2vw; 
-    margin-left: 45%;
+.N5, .N2{
+    background-color: #e5e5e5;
 }
 
-
-
-
-.basiclevel h2 {
-    padding-left: 0;
-    width: 35vw;
-    padding-bottom: 1vw;
-    font-size: 1.5vw;
+.N4, .N3{
+    background-color: #dfdede;
 }
 
-
-.basiclevel p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #2F281E;
-    margin: 1vw 0 0 0;
-    font-size: 1vw;
+.N5 h2, .N4 h2, .N3 h2, .N2 h2{
+    font-size: 1.6vw;
 }
 
-
-.ilevel h2 {
-    padding-left: 0vw;
-    width: 35vw;
-    padding-bottom: 1vw;
-    font-size: 1.5vw;
+.N5 p, .N4 p, .N3 p, .N2 p{
+    font-size: 0.9vw;
+    margin-left: 2%;
 }
 
-.ilevel p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #2F281E;
-    margin: 1vw 0 0 0;
-    font-size: 1vw;
-}
-
-.alevel1 img{
-    padding-left: 6.5vw;
-    width: 15vw;
-}
-
-.alevel1 h2 {
-    padding-left: 0vw;
-    width: 35vw;
-    padding-bottom: 1vw;
-    font-size: 1.5vw;
-}
-
-.alevel1 p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #2F281E;
-    margin: 1vw 0 0 0
-    font-size: 1vw;
-    margin-bottom:0vw;
-}
-
-.alevel2 img{
-    padding-left: 6.5vw;
-    width: 18vw;
-}
-
-.alevel2 h2 {
-    padding-left: 0vw;
-    width: 35vw;
-    padding-bottom: 1vw;
-    font-size: 1.5vw;
-    margin-bottom:2vw;
-}
-
-.alevel2 p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #2F281E;
-    margin: 1vw 0 0 0;
-    font-size: 1vw;
+.N5 p:first-of-type, .N4 p:first-of-type, .N3 p:first-of-type, .N2 p:first-of-type{
+    margin-top: 3%;
 }
 
 /*Footer*/
+
+.footer-container{
+    background-color: #B03131;
+    color: #e5e5e5;
+}
+
 .contact-us{
-    margin-top: 5%;
-    padding-top: 30px;
     width: 100%;
-    background-color: #f3f3f3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5%;
 }
 
 .contact-us h2{
     font-size: 3vw;
-    margin: 2vw;
+    padding: 2vw;
 }
 
 .contact-us > * {
-    margin-bottom: 20px; 
+    margin-bottom: 2vw; 
 }
 
 .contact-us input[type="textbox"] , .contact-us input[type="email"]{
-    width: 600px;
-    height: 50px;
-    padding-left: 3vw;
+    width: 36vw;
+    height: 3vw;
+    padding: 0 1.5vw;
+    border-radius: 0.25vw;
+    border: none;
+    filter:drop-shadow(0 3px 0.5px #1f1f1f);
 }
 
 .contact-us textarea{
-    padding-top: 2vw;
-    padding-left: 3vw;
-    width: 600px;
-    height: 200px;
+    border-radius: 0.25vw;
+    padding: 1.5vw;
+    width: 36vw;
+    height: 12vw;
+    border: none;
+    filter:drop-shadow(0 3px 0.5px #1f1f1f);
 }
 
 .footer-container button{
-    border-radius: 10%;
-    padding: 1vw 2vw 1vw 2vw;
-    
+    border-radius: 0.5vw;
+    width: 5vw;
+    height: 2.5vw;
+    margin-top: 30%;
+    font-size: 0.9vw;
+    border: none;
+    filter:drop-shadow(0 3px 0.5px #1f1f1f);
+    transition: 0.3s;
+}
+
+.footer-container button:hover{
+    transform: translateY(-2px);
+    cursor:pointer;
 }
 
 .footer-container-2{
-    background-color: #B03131;
-    padding: 2vw;;
+    padding: 2vw;
     text-align: center;
-    font-size: 1vw;
+    font-size: 0.5vw;
 }
 
 /* Media for Tablet */
@@ -515,6 +486,7 @@ font-weight: 400;
         width: 5vw;
         height: 5vw;
         margin-top: 0;
+        display: block;
     }
 
     .RightButtons{
@@ -565,6 +537,7 @@ font-weight: 400;
     .videoactivity{
         height: 45vh;
     }
+
 }
 
 /* Media for PHONE */
@@ -607,12 +580,13 @@ font-weight: 400;
         width: 7.5vw;
         height: 7.5vw;
         min-width: 35px;
+        display: block;
     }
 
     .Header {
         width: 90%; 
         height: 75vh;
-        padding: 30vw 0 3vw 5vw; 
+        padding: 40vw 0 3vw 5vw; 
     }
 
     .H1 {
@@ -633,6 +607,7 @@ font-weight: 400;
     /*Info*/
     .info{
         height: 75vh;
+        max-height: 700px;
     }
 
     .importance .heading {
@@ -688,46 +663,5 @@ font-weight: 400;
     .video-container {
         margin-top: 10%;
     }
-
-    .lessoncontent{
-        gap: 5%;
-    }
     
-    
-    .lesson-content-container h1 {
-    font-size: 4vw; 
-    }
-
-    .lesson-content-container .hr {
-    width: 20%; 
-    margin-left: 40%; 
-    }
-
-    
-    .basiclevel img,
-    .ilevel img,
-    .alevel1 img{
-    width: 20vw;
-
-    }
-
-    .alevel2 img{
-    width: 25vw;
-    }
-
-    .basiclevel h2,
-    .ilevel h2,
-    .alevel1 h2,
-    .alevel2 h2 {
-    padding-left: 4vw;
-    font-size:3vw;
-    }
-
-    .basiclevel p,
-    .ilevel p,
-    .alevel1 p,
-    .alevel2 p {
-        font-size: 1.4vw; 
-    }
-
 }
