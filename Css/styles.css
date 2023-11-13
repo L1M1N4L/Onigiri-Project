@@ -349,13 +349,9 @@ font-weight: 400;
 
 
 
-.basiclevel img {
-    padding-left: 6.5vw;
-    width: 15vw;
-}
 
 .basiclevel h2 {
-    padding-left: 6.5vw;
+    padding-left: 0;
     width: 35vw;
     padding-bottom: 1vw;
     font-size: 1.5vw;
@@ -371,13 +367,8 @@ font-weight: 400;
 }
 
 
-.ilevel img{
-    padding-left: 6.5vw;
-    width: 15vw;
-}
-
 .ilevel h2 {
-    padding-left: 4.5vw;
+    padding-left: 0vw;
     width: 35vw;
     padding-bottom: 1vw;
     font-size: 1.5vw;
@@ -397,7 +388,7 @@ font-weight: 400;
 }
 
 .alevel1 h2 {
-    padding-left: 4.5vw;
+    padding-left: 0vw;
     width: 35vw;
     padding-bottom: 1vw;
     font-size: 1.5vw;
@@ -407,8 +398,9 @@ font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #2F281E;
-    margin: 1vw 0 0 0;
+    margin: 1vw 0 0 0
     font-size: 1vw;
+    margin-bottom:0vw;
 }
 
 .alevel2 img{
@@ -417,10 +409,11 @@ font-weight: 400;
 }
 
 .alevel2 h2 {
-    padding-left: 4.5vw;
+    padding-left: 0vw;
     width: 35vw;
     padding-bottom: 1vw;
     font-size: 1.5vw;
+    margin-bottom:2vw;
 }
 
 .alevel2 p{
