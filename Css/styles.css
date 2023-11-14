@@ -312,7 +312,7 @@ font-weight: 400;
 .video-container {
     width: 60%;
     margin: auto;
-    margin-top: 3.5%;
+    margin-top: 1.5%;
 }
 
 .vid{
@@ -323,6 +323,27 @@ font-weight: 400;
 }
 
 /* Lesson Content */
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid #6e6e6e;
+    text-align: left;
+    padding: 1vw;
+}
+
+.cell1{
+    width: 15%;
+}
+
+.cell3{
+    width: 60%;
+}
+  
 
 .lesson-content-container{
     height: 100vh;
@@ -538,6 +559,35 @@ font-weight: 400;
         height: 45vh;
     }
 
+    /* Lesson Content */
+
+    .lesson-content-container{
+        height: 60vh;
+    }
+
+    .lesson-content-title{
+        font-size: 3vw;
+        height: 20%;
+    }
+
+    .lesson-content-title hr{
+        width: 40%;
+        border: 3px solid #B03131
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 85%;
+        margin: auto;
+    }
+    
+    td, th {
+        border: 1.2px solid #6e6e6e;
+        text-align: left;
+        padding: 1vw;
+        font-size: 2.3vw; 
+    }
+
 }
 
 /* Media for PHONE */
@@ -606,16 +656,25 @@ font-weight: 400;
 
     /*Info*/
     .info{
-        height: 75vh;
+        height: 100vh;
         max-height: 700px;
+    }
+
+    .importance{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 
     .importance .heading {
         font-size: 4vw;
+        text-align: center;
     }
 
     .importance .para {
         font-size: 3vw;
+        text-align: justify;
     }
 
     .importance .hr {
@@ -623,12 +682,21 @@ font-weight: 400;
         border: 0.5vw solid #B03131; 
     }
 
+    .eduprogram{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
     .eduprogram .heading {
         font-size: 4vw;
+        text-align: center;
     }
 
     .eduprogram .para {
         font-size: 3vw;
+        text-align: justify;
     }
 
     .eduprogram .hr {
@@ -662,6 +730,38 @@ font-weight: 400;
 
     .video-container {
         margin-top: 10%;
+    }
+
+    /* Lesson Content */
+
+    .lesson-content-container{
+        height: 60vh;
+        min-height: 200px;
+    }
+
+    .lesson-content-title{
+        font-size: 3vw;
+        height: 20%;
+        width: 70%;
+        padding: 5vw;
+    }
+
+    .lesson-content-title hr{
+        width: 40%;
+        border: 3px solid #B03131
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 90%;
+        margin: auto;
+    }
+    
+    td, th {
+        border: 1.2px solid #6e6e6e;
+        text-align: left;
+        padding: 1vw;
+        font-size: 3vw; 
     }
     
 }
