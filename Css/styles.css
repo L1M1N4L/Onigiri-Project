@@ -605,16 +605,25 @@ td, th {
 
     .SignUpFree{
         width: 60%;
+        margin-top: 15%;
+    }
+
+    .H1 {
+        font-size: 4rem ;
     }
 
     /*Info*/
 
     .info{
-        aspect-ratio: 1/1.3;
+        aspect-ratio: auto;
+    }
+    
+    .eduprogram p:first-of-type, .importance p:first-of-type{
+        margin-top: 10%; 
     }
 
     .importance-container, .eduprogram-container{
-        padding: 5%;
+        padding: 10%;
     }
 
     .importance, .eduprogram{
@@ -633,9 +642,9 @@ td, th {
         text-align: justify;
     }
 
-    .importance .hr {
-        width: 40%;
-        border: 0.5vw solid #B03131; 
+    .importance .hr, .eduprogram .hr {
+        width: 60%;
+        border: 0.15rem solid #B03131; 
     }
 
     .eduprogram .heading {
@@ -645,12 +654,6 @@ td, th {
     .eduprogram .para {
         text-align: justify;
     }
-
-    .eduprogram .hr {
-        width: 35%;
-        border: 0.5vw solid #B03131;
-    }
-
     
     .eduprogram-image-container, .importance-image-container{
         display: none;
