@@ -8,10 +8,6 @@ body {
 
 /* HEADER */
 
-.top{
-    width:100%;
-}
-
 .topbar {
     background: white;
     filter: drop-shadow(0 3px 5px #b3b3b3);
@@ -121,14 +117,13 @@ body {
 .SignUpFree:hover {
     cursor:pointer;
     background-color: brown;
-    border: 10px solid brown;
 }
 
 
 /* Main Homepage */
 
 .SignUpFree {
-    width: 50%;
+    width: 15rem;
     background-color:#B03131;
     border: 0.1rem solid #B03131;
     border-radius: 0.25rem;
@@ -144,13 +139,16 @@ body {
 
 
 .Header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     position: relative; 
     color: #2F281E;
     width: 90%;
     aspect-ratio: 16/9;
-    padding: 10vw 3vw;
+    padding: 10% 3%;
     margin: auto;
 }
 
@@ -162,6 +160,7 @@ font-weight: 400;
 }
 
 .H1 {
+    margin: auto 0;
     width: 50%;
     font-size: 5rem ;
     font-weight: 900;
@@ -223,12 +222,12 @@ font-weight: 400;
 }
 
 .importance .heading {
-    font-size: 2rem;  
+    font-size: 1.75rem;  
     color: #2F281E;
 }
 
 .importance .para {
-    font-size: 0.9rem; 
+    font-size: 1rem; 
     margin-top: 3%; 
     margin-left: 3%; 
 }
@@ -294,33 +293,30 @@ font-weight: 400;
 
 .videoactivity {
     width: 100%;
-    height: 100vh;
     background-color: #B03131;
+    padding: 4.5% 0;
     .hr2{
-        border: 3px solid white;
-        width: 35vw;
-        margin-top: 1%;
-        margin-left: 32.5%;
-    
+        border: 0.2em solid white;
+        width: 20%;
+        margin: auto;
+        margin-top: 2%;
     }
 }
 
 .activityvidh3{
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.5rem;
     color: white;
-    padding-top: 5vw;
 }
 
 .activityvidh1{
     text-align: center;
-    font-size: 3vw;
+    font-size: 3rem;
     color: white;
-    padding-top: 1vw;
 }
 
 .video-container {
-    width: 60%;
+    width: 50%;
     margin: auto;
     margin-top: 1.5%;
 }
@@ -338,12 +334,13 @@ table {
     border-collapse: collapse;
     width: 70%;
     margin: auto;
+    margin-top: 2%;
 }
 
 td, th {
-    border: 1px solid #6e6e6e;
+    border: 0.1em solid #6e6e6e;
     text-align: left;
-    padding: 1vw;
+    padding: 2.5%;
 }
 
 .cell1{
@@ -356,37 +353,25 @@ td, th {
   
 
 .lesson-content-container{
-    height: 100vh;
+    padding: 5% 0;
 }
 
 .lesson-content-title{
     box-sizing: border-box;
-    font-size: 1.5vw;
     width: 50%;
-    height: 25%;
     text-align: center;
     margin: auto;
-    padding-top: 2.5%;
+}
+
+.lesson-content-title h1{
+    font-size: 3rem;
 }
 
 .lesson-content-title hr{
-    border: 0.15vw solid #B03131;
-    width: 10%;
+    border: 0.2em solid #B03131;
+    width: 15%;
     margin:auto;
     margin-top: 2%;
-}
-
-.lessoncontent{
-    height: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4vw 16vw;
-}
-
-.N5, .N4, .N3, .N2{
-    width: 50%;
-    height: 50%;
-    padding: 2vw 2vw;
 }
 
 
@@ -398,6 +383,7 @@ td, th {
 }
 
 .contact-us{
+    padding: 2.5% 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -405,52 +391,55 @@ td, th {
 }
 
 .contact-us h2{
-    font-size: 3vw;
-    padding: 2vw;
+    font-size: 3rem;
 }
 
 .contact-us > * {
-    margin-bottom: 2vw; 
+    margin-bottom: 2%; 
 }
 
 .contact-us input[type="textbox"] , .contact-us input[type="email"]{
-    width: 36vw;
-    height: 3vw;
-    padding: 0 1.5vw;
-    border-radius: 0.25vw;
+    width: 30%;
+    min-width: 500px;
+    aspect-ratio: 10/1;
+    padding: 0 1.5%;
+    border-radius: 0.25em;
     border: none;
     filter:drop-shadow(0 3px 0.5px #1f1f1f);
 }
 
 .contact-us textarea{
-    border-radius: 0.25vw;
-    padding: 1.5vw;
-    width: 36vw;
-    height: 12vw;
+    border-radius: 0.25em;
+    padding: 1.5%;
+    width: 30%;
+    min-width: 500px;
+    aspect-ratio: 2/1;
     border: none;
     filter:drop-shadow(0 3px 0.5px #1f1f1f);
 }
 
 .footer-container button{
-    border-radius: 0.5vw;
-    width: 5vw;
-    height: 2.5vw;
-    margin-top: 30%;
-    font-size: 0.9vw;
+    border-radius: 0.5em;
+    width: 5%;
+    min-width: 83px;
+    aspect-ratio: 2/1;
+    margin-top: 1.5%;
+    font-size: 1rem;
     border: none;
     filter:drop-shadow(0 3px 0.5px #1f1f1f);
     transition: 0.3s;
 }
 
 .footer-container button:hover{
+    background-color: #e5e5e5;
     transform: translateY(-2px);
     cursor:pointer;
 }
 
 .footer-container-2{
-    padding: 2vw;
+    padding: 2rem;
     text-align: center;
-    font-size: 0.5vw;
+    font-size: 0.5rem;
 }
 
 /* Media for Tablet */
@@ -518,41 +507,58 @@ td, th {
         width: 100%;
     }
 
-    /* VIDEO */
-
-    .videoactivity{
-        height: 45vh;
-    }
-
     /* Lesson Content */
 
-    .lesson-content-container{
-        height: 60vh;
-    }
-
-    .lesson-content-title{
-        font-size: 3vw;
-        height: 20%;
-    }
-
-    .lesson-content-title hr{
-        width: 40%;
-        border: 3px solid #B03131
-    }
-
     table {
-        border-collapse: collapse;
         width: 85%;
-        margin: auto;
-    }
-    
-    td, th {
-        border: 1.2px solid #6e6e6e;
-        text-align: left;
-        padding: 1vw;
-        font-size: 2.3vw; 
     }
 
+    /*Footer*/
+
+    .footer-container{
+        background-color: #B03131;
+        color: #e5e5e5;
+    }
+
+    .contact-us{
+        padding: 2.5% 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-us h2{
+        font-size: 3rem;
+    }
+
+    .contact-us > * {
+        margin-bottom: 5%; 
+    }
+
+    .contact-us input[type="textbox"] , .contact-us input[type="email"]{
+        width: 60%;
+        min-width: 150px;
+    }
+
+    .contact-us textarea{
+        width: 60%;
+        min-width: 150px;
+    }
+
+    .footer-container button{
+        width: 5%;
+        min-width: 75px;
+        font-size: 1.25rem;
+    }
+
+    .footer-container button:hover{
+        transform: none;
+    }
+
+    .footer-container-2{
+        font-size: 0.75rem;
+    }
 }
 
 /* Media for PHONE */
@@ -634,11 +640,13 @@ td, th {
         align-items: center;
     }
 
-    .importance .heading {
+    .importance .heading,  .eduprogram .heading  {
+        font-size: 2rem;
         text-align: center;
     }
 
-    .importance .para {
+    .importance .para, .eduprogram .para {
+        font-size: 1.5rem;
         text-align: justify;
     }
 
@@ -647,76 +655,76 @@ td, th {
         border: 0.15rem solid #B03131; 
     }
 
-    .eduprogram .heading {
-        text-align: center;
-    }
-
-    .eduprogram .para {
-        text-align: justify;
-    }
-    
     .eduprogram-image-container, .importance-image-container{
         display: none;
     }
 
     /* VIDEO */
 
-    .videoactivity{
-        height: 40vh;
-    }
-    
     .activityvidh3{
-        font-size: 3vw;
-        padding-top: 4vw;
+        font-size: 1.5rem;
     }
 
     .activityvidh1{
-        font-size: 5vw;
-        color: white;
-        padding-top: 1.5vw;
-        padding-bottom: 1.5vw;
+        font-size: 2rem;
     }
     
     .videoactivity .hr2{
-        border: 0.5vw solid white;
+        border: 0.15em solid white;
         width: 50%;
         margin-left: 25%;
     }
 
     .video-container {
+        width: 90%;
         margin-top: 10%;
     }
 
     /* Lesson Content */
 
     .lesson-content-container{
-        height: 60vh;
-        min-height: 200px;
+        padding: 10% 0;
     }
 
     .lesson-content-title{
-        font-size: 3vw;
-        height: 20%;
-        width: 70%;
-        padding: 5vw;
+        font-size: 2rem;
     }
 
     .lesson-content-title hr{
         width: 40%;
-        border: 3px solid #B03131
+        margin-top: 4%;
     }
 
     table {
-        border-collapse: collapse;
         width: 90%;
-        margin: auto;
+        margin-top: 4%;
     }
     
     td, th {
-        border: 1.2px solid #6e6e6e;
+        border: 0.1rem solid #6e6e6e;
         text-align: left;
-        padding: 1vw;
-        font-size: 3vw; 
+        font-size: 1.3rem; 
+        padding: 0.35rem;
+    }
+
+    /*Footer*/
+
+    .contact-us input[type="textbox"] , .contact-us input[type="email"]{
+        width: 80%;
+        min-width: 150px;
+        min-height: 50px;
+    }
+
+    .contact-us textarea{
+        width: 80%;
+        min-width: 150px;
+        min-height: 100px;
+    }
+
+    .footer-container button{
+        width: 5%;
+        min-width: 75px;
+        font-size: 1.25rem;
     }
     
 }
