@@ -251,6 +251,7 @@ font-weight: 400;
     width: auto;
     height: 100%;
     margin: auto;
+    border-radius: 5%;
 }
 
 .eduprogram-container{
@@ -676,6 +677,7 @@ td, th {
     .eduprogram-image-container-mobile img, .importance-image-container img{
         width: 100%;
         height: auto;
+        border-radius: 5%;
     }
 
     /* VIDEO */
