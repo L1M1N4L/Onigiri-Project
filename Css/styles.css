@@ -175,16 +175,17 @@ font-weight: 400;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
     z-index: 1;
 
 }
 
 .login-popup {
     background-color: #fff;
-    padding: 35px;
+    padding: 3%;
     border-radius: 30px;
     position: absolute;
-    top: 50%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -205,8 +206,6 @@ font-weight: 400;
     max-height: 800px;
     aspect-ratio: 4/3;
 }
-
-/* Importance component */
 
 .importance-container{
     display: flex;
@@ -238,12 +237,14 @@ font-weight: 400;
     margin-top: 2%; 
 }
 
-/* Educational program component */
+.hr-mobile-only{
+    display: none;
+}
 
 .eduprogram-image-container, .importance-image-container{
     display: flex;
     width:50%;
-    height: 60%;
+    height: 80%;
 }
 
 .importance-image-container img, .eduprogram-image-container img{
@@ -287,6 +288,10 @@ font-weight: 400;
     width: 35%; 
     margin-top: 2%; 
     float:right;
+}
+
+.eduprogram-image-container-mobile{
+    display: none;
 }
 
 /* VIDEO */
@@ -484,14 +489,6 @@ td, th {
         
     }
 
-    .Shape {
-        padding-left: 0;
-        width: 5vw;
-        height: 5vw;
-        margin-top: 0;
-        display: block;
-    }
-
     .RightButtons{
         gap: 5vw;
         margin-top: 2%;
@@ -622,6 +619,14 @@ td, th {
 
     .info{
         aspect-ratio: auto;
+        max-height: 1200px;
+    }
+
+    .hr-mobile-only{
+        display:block;
+        border: 0.15rem solid #B03131;
+        width: 90%;
+        margin: 10% auto;
     }
     
     .eduprogram p:first-of-type, .importance p:first-of-type{
@@ -629,15 +634,17 @@ td, th {
     }
 
     .importance-container, .eduprogram-container{
+        flex-wrap: wrap;
         padding: 10%;
     }
 
     .importance, .eduprogram{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         width: 100%;
-        height: 100%;
         align-items: center;
+        float: none;
     }
 
     .importance .heading,  .eduprogram .heading  {
@@ -648,6 +655,7 @@ td, th {
     .importance .para, .eduprogram .para {
         font-size: 1.5rem;
         text-align: justify;
+        float: none;
     }
 
     .importance .hr, .eduprogram .hr {
@@ -655,8 +663,19 @@ td, th {
         border: 0.15rem solid #B03131; 
     }
 
-    .eduprogram-image-container, .importance-image-container{
+    .eduprogram-image-container{
         display: none;
+    }
+
+    .eduprogram-image-container-mobile, .importance-image-container{
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    .eduprogram-image-container-mobile img, .importance-image-container img{
+        width: 100%;
+        height: auto;
     }
 
     /* VIDEO */
