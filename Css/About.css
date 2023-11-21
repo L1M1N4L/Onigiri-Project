@@ -2,38 +2,51 @@
 
 .aboutus {
   width: 67vw;
-  max-height: 1000px;
+  height: 100%;
   border-radius: 8px;
   padding: 2em;
 }
 
 .aboutus h1{
   margin-top: -2vw;
-  font-size: 3em;
+  font-size: 5rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 2vw;
 }
 
 .aboutus h2{
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin-bottom: 2vw;
 }
 
 .aboutus p{
   text-align: justify;
   margin-bottom: 1.5em;
+  font-size: 1rem;
 }
 
   
-  @media only screen and (max-width: 1400px){
-    .aboutus{
-      width: 87vw;
-    }
+@media only screen and (max-width: 1400px){
+  .aboutus{
+    width: 87vw;
   }
-  
-  @media only screen and (max-width: 1000px){
-    .aboutus{
-      width: 87vw;
-    }
+}
+
+@media only screen and (max-width: 1000px){
+  .app {
+    max-height: 3000px;
   }
+
+  .aboutus h1{
+    font-size: 6rem;
+  }
+
+  .aboutus h2{
+    font-size: 2.5rem;
+  }
+
+  .aboutus p{
+    font-size: 2rem;
+  }
+}

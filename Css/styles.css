@@ -6,6 +6,18 @@ body {
     margin: 0;
 }
 
+/* Animations */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+  }
+
+
 /* HEADER */
 
 .topbar {
@@ -203,7 +215,7 @@ font-weight: 400;
 /* General information section */
 .info {
     width: 100%;
-    max-height: 800px;
+    max-height: 1200px;
     aspect-ratio: 4/3;
 }
 
@@ -221,12 +233,12 @@ font-weight: 400;
 }
 
 .importance .heading {
-    font-size: 1.75rem;  
+    font-size: 3rem;  
     color: #2F281E;
 }
 
 .importance .para {
-    font-size: 1rem; 
+    font-size: 1.5rem; 
     margin-top: 3%; 
     margin-left: 3%; 
 }
@@ -268,13 +280,13 @@ font-weight: 400;
 }
 
 .eduprogram .heading {
-    font-size: 2rem; 
+    font-size: 3rem; 
     color: #2F281E;
 }
 
 .eduprogram .para {
     float: right;
-    font-size: 1rem; 
+    font-size: 1.5rem; 
     width: 90%; 
     margin-top: 5%; 
     margin-left: 3%; 
@@ -505,6 +517,19 @@ td, th {
         width: 100%;
     }
 
+    /* Info Section */
+
+    .importance .para, .eduprogram .para{
+        font-size: 1rem;
+    }
+
+    .importance .heading, .eduprogram .heading{
+        width: 100%;
+        font-size: 3rem;
+    }
+
+
+
     /* Lesson Content */
 
     table {
@@ -620,7 +645,7 @@ td, th {
 
     .info{
         aspect-ratio: auto;
-        max-height: 1200px;
+        max-height: 1600px;
     }
 
     .hr-mobile-only{
@@ -747,17 +772,26 @@ td, th {
         min-width: 75px;
         font-size: 1.25rem;
     }
-
-    /* Animations */
-
-.fade-in {
-    opacity: 0;
-    transition: opacity 400ms ease-in;
-  }
-  
-  .fade-in.appear {
-    opacity: 1;
-  }
     
 }
 
+/* Media query for info section sizing*/
+@media (min-width: 901px) and (max-width: 1200px){
+    .importance .para, .eduprogram .para{
+        font-size: 1.1rem;
+    }
+
+    .importance .heading, .eduprogram .heading{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 900px){
+    .importance .para, .eduprogram .para{
+        font-size: 1rem;
+    }
+
+    .importance .heading, .eduprogram .heading{
+        font-size: 1.25rem;
+    }
+}
