@@ -159,7 +159,7 @@ body {
     position: relative; 
     color: #2F281E;
     width: 90%;
-    aspect-ratio: 16/9;
+    height: 100vh;
     padding: 10% 3%;
     margin: auto;
 }
@@ -632,13 +632,25 @@ td, th {
 
     /* Main Homepage */
 
+    .Header{
+        justify-content: center;
+        height: 100vh;
+    }
+
     .SignUpFree{
         width: 60%;
-        margin-top: 15%;
+        margin: auto;
+        font-size: 1.25rem;
     }
 
     .H1 {
-        font-size: 4rem ;
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    #caption{
+        font-size: 2rem;
+        margin: 10% 0;
     }
 
     /*Info*/
