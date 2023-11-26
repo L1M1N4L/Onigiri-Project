@@ -124,6 +124,7 @@ body {
     min-height: 25px;
     height: 2.5vw;
     display:none;
+    cursor:pointer;
 }
 
 .SignUpFree:hover {
