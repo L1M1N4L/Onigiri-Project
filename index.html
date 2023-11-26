@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./Css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="Css/Slogin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- JQuery Script -->
         <title>Onigiri</title>
     </head>
     
@@ -50,6 +51,7 @@
                                 <button class="LoginButton">Log In</button>
                             </form>
                         </div>
+
                         <div class="toggle-container">
                             <div class="toggle">
                                 <div class="toggle-panel toggle-left">
@@ -71,23 +73,32 @@
 
                 <!-- Top Sign Up + Login + LOGO bar-->
                 <div class="topbar">
-                <!-- logo -->
-                <a class="logoimage" href="#">
-                    <img src="./Images/Logo.svg" class="Logo">
-                </a>
-                <!-- end logo -->
-                
-                <!-- Sign up and Login buttons on the top-->
-                <div class="RightButtons">
-                    <button class="Dropdown"id ="Dropdown" onmouseclick="">EN<img src="./Images/Arrow.svg"></button>
-                    <button class="SignUp" id="SignUp">Sign Up</button>
-                    <button class="LogIn" id="login-button">Log In</button>
-                    <img src="./Images/Shape.svg" class="Shape">
-                </div>
-                <!-- End of buttons -->
-
+                    <!-- logo -->
+                    <a class="logoimage" href="#">
+                        <img src="./Images/Logo.svg" class="Logo">
+                    </a>
+                    <!-- end logo -->
+                    
+                    <!-- Sign up and Login buttons on the top-->
+                    <div class="RightButtons">
+                        <button class="Dropdown"id ="Dropdown" onmouseclick="">EN<img src="./Images/Arrow.svg"></button>
+                        <button class="SignUp" id="SignUp">Sign Up</button>
+                        <button class="LogIn" id="login-button">Log In</button>
+                        <img src="./Images/Shape.svg" class="Shape" id="hamburger-button">
+                    </div>
+                    <!-- End of buttons -->
                 </div>
                 <!-- End of TOPBAR-->
+
+                <!-- MOBILE ONLY DROPDOWN -->
+
+            <div class="dropdown-menu">
+                <div class="dropdown-buttons">
+                    <li>Sign Up</li>
+                    <li>Log In</li>
+                    <a href="#contact-us" class="mobile-contact-button">Contact Us</a>
+                </div>
+            </div>
 
             <!-- Japanese Mastery In A FLASH! -->
             <div class="Header">
@@ -185,7 +196,7 @@
                <!--Footer Start-->
 
             <div class="footer-container">
-                <div class="contact-us">
+                <div class="contact-us" id="contact-us">
                     <h2>Contact Us</h2>
                     <input type="textbox" placeholder="Name" label="Name">
                     <input type="email" placeholder="Email" label="Email">
@@ -201,6 +212,7 @@
 
         <script src="js/scriptlogin.js"></script>
         <script src="js/observer.js"></script>
+        <script src="js/mobile-popup.js"></script>
     </body>
     <script src="js/main.js"></script>
 </html>

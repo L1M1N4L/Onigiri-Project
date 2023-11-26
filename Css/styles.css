@@ -71,19 +71,6 @@ body {
     border: 2px solid brown;
 }
 
-.Dropdown {
-    margin-left: -2%;
-    background-color: transparent;
-    border: transparent;
-    font-size:calc(0.3em + 0.75vw);
-    font-family: 'Montserrat', sans-serif;
-    height: 3.15vw;
-}
-
-.Dropdown:hover {
-    cursor:pointer;
-}
-
 .LogIn {
     width: 5.32vw;
     min-width: 60px;
@@ -104,6 +91,19 @@ body {
     cursor:pointer;
     color:#6e6e6e;
     border: 2px solid #6e6e6e;
+}
+
+.Dropdown {
+    margin-left: -2%;
+    background-color: transparent;
+    border: transparent;
+    font-size:calc(0.3em + 0.75vw);
+    font-family: 'Montserrat', sans-serif;
+    height: 3.15vw;
+}
+
+.Dropdown:hover {
+    cursor:pointer;
 }
 
 .RightButtons {
@@ -129,6 +129,12 @@ body {
 .SignUpFree:hover {
     cursor:pointer;
     background-color: brown;
+}
+
+/* mobile dropdown */
+
+.dropdown-menu{
+    display: none;
 }
 
 
@@ -630,26 +636,73 @@ td, th {
         display: block;
     }
 
+    /* mobile dropdown */
+
+    .dropdown-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+    }
+
+    .dropdown-buttons{
+        display: flex;
+        flex-direction: column;
+        background-color: #e5e5e5;
+        border-radius: 0.5rem;
+        width: 90%;
+        margin: auto;
+        padding: 5%;
+    }
+
+    .dropdown-buttons li, .mobile-contact-button{
+        list-style: none;
+        font-size: 2rem;
+        width: 90%;
+        height: 10%;
+        margin: 2% auto;
+        padding: 5%;
+        border-radius: 0.5rem;
+        border: 0.15rem solid #b3b3b3;
+        text-decoration: none;
+        color: black;
+    }
+
+    .clicked{
+        display:flex;
+    }
+
     /* Main Homepage */
 
     .Header{
         justify-content: center;
         height: 100vh;
+        width: 100%;
+        box-shadow:  inset 0px -64px 48px -10px #e5e5e5;
+        background-image: url(../Images/mobile_bg.jpg);
+        background-size: cover;
+        color:white;
     }
 
     .SignUpFree{
         width: 60%;
+        max-width: 20rem;
         margin: auto;
         font-size: 1.25rem;
     }
 
     .H1 {
-        font-size: 6rem;
+        font-size: 4.5rem;
         text-align: center;
+        text-shadow: 2px 2px 15px #272727;
     }
 
     #caption{
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 10% 0;
     }
 
@@ -784,7 +837,11 @@ td, th {
         min-width: 75px;
         font-size: 1.25rem;
     }
-    
+
+    /* Turning off animations for mobile */
+    .fade-in {
+        opacity: 1;
+    }
 }
 
 /* Media query for info section sizing*/
