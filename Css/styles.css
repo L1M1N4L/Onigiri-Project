@@ -149,7 +149,6 @@ body {
     transition: 0.3s;
 }
 
-
 .Header {
     box-sizing: border-box;
     display: flex;
@@ -158,12 +157,13 @@ body {
     font-weight: 500;
     position: relative; 
     color: #2F281E;
-    width: 90%;
+    width: 100%;
     height: 100vh;
-    padding: 10% 3%;
+    padding: 10% 5%;
     margin: auto;
+    background-image: url(/Images/cherryblossom.jpg);
+    background-size: cover;
 }
-
 #caption {
 font-size: 1.5rem ;
 position: relative;
