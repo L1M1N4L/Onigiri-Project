@@ -168,9 +168,10 @@ body {
     height: 100vh;
     padding: 10% 5%;
     margin: auto;
-    background-image: url(Images/cherryblossom.jpg);
+    background-image: url(../Images/cherryblossom.jpg);
     background-size: cover;
 }
+
 #caption {
 font-size: 1.5rem ;
 position: relative;
