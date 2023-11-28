@@ -1,6 +1,7 @@
 const hamburgerButton = document.getElementById('hamburger-button')
 const dropdownMenu = document.querySelector('.dropdown-menu')
 const contactUsMobile = document.querySelector('.mobile-contact-button')
+const signUpMobile = document.querySelector('.mobile-contact-button')
 
 hamburgerButton.onclick = function () {
     dropdownMenu.classList.toggle('clicked')
