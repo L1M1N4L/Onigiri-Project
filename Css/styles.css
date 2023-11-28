@@ -11,12 +11,11 @@ body {
 .fade-in {
     opacity: 0;
     transition: opacity 400ms ease-in;
-  }
-  
-  .fade-in.appear {
-    opacity: 1;
-  }
+}
 
+.fade-in.appear {
+    opacity: 1;
+}
 
 /* HEADER */
 
@@ -168,8 +167,9 @@ body {
     height: 100vh;
     padding: 10% 5%;
     margin: auto;
-    background-image: url(../Images/cherryblossom.jpg);
+    background-image: url(../Images/cherryblossomv3.jpg);
     background-size: cover;
+    box-shadow:  inset 0px -64px 48px -10px #e5e5e5;
 }
 
 #caption {
@@ -184,6 +184,12 @@ font-weight: 400;
     width: 50%;
     font-size: 5rem ;
     font-weight: 900;
+}
+
+@media (max-height: 600px){
+    .Header {
+        height: auto;
+    }
 }
 
 /* pop-up */

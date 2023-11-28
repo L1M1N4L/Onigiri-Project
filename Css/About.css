@@ -36,6 +36,7 @@
 @media only screen and (max-width: 1000px){
   .app-body-main-content {
     max-height: 3000px;
+    overflow-y: scroll;
   }
 
   .app-body-main-content h1{
