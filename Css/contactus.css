@@ -1,0 +1,10 @@
+.Contact-us{
+    background-color: white;
+}
+
+.app-body{
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1170px) ;
+}
+
