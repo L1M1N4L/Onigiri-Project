@@ -852,6 +852,62 @@ td, th {
     }
 }
 
+.progress {
+    width: 300px;
+    height: 300px;
+    background: #931F1D; /* Set theme color to red */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+circle {
+    fill: none;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.progress-circle:nth-child(1) {
+    stroke: #fff; /* Set stroke color to white */
+    stroke-width: 12px;
+}
+
+.progress-circle:nth-child(2) {
+    stroke: #2980B9; /* Set stroke color to matching color */
+    stroke-dasharray: 1413; /* Circumference of a circle with radius 135 (2 * π * 135) */
+    stroke-dashoffset: calc(1413 * (70/100)); /* For a 15-day streak (half of a 30-day month) */
+    stroke-linecap: round;
+    stroke-width: 16px;
+    animation: progress 1s ease;
+}
+
+@keyframes progress {
+    from {
+        stroke-dashoffset: 1413;
+    }
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #fff; /* Set text color to white */
+    font-weight: 500;
+    text-align: center;
+}
+
+.text span {
+    font-size: 14px;
+    color: #eee; /* Set span text color to a slightly off-white */
+}
+
 /* Media query for info section sizing*/
 @media (min-width: 901px) and (max-width: 1200px){
     .importance .para, .eduprogram .para{
