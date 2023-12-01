@@ -580,6 +580,7 @@ input:checked::after {
   background: #fff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
 .streak-container h1{
@@ -641,4 +642,84 @@ input:checked::after {
 .streak-text span {
   font-size: 14px;
   color: #eee; /* Set span text color to a slightly off-white */
+}
+
+/* Word Of The Day */
+.wordoftheday-container{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2vw auto;
+}
+
+.wordoftheday-container h1{
+  font-size: 1.5rem;
+}
+
+.single-card {
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.wrapper:hover .single-card {
+  transform: rotateX(-180deg); /* Flipping upwards (vertically) */
+}
+
+.front, .back {
+  width: 200px;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.front {
+	cursor: pointer;
+	height: 100%;
+	background-image: url(1.jpg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	border-radius: 50px;
+	background-size: cover;
+	background-position: center center;
+}
+
+
+.back {
+  transform: rotateX(180deg); /* Initially flipped */
+  position: absolute;
+  border-radius: 50px;
+  height: 450px;
+  background: #fff;
+}
+
+.content {
+	padding-top: 15%;
+}
+.content h2 {
+	font-size: 35px;
+	margin: 0;
+	font-weight: 300;
+}
+.content h4 {
+	margin: 0;
+}
+
+.wrapper, .single-card {
+	height: 450px;
+	max-width: 300px;
+	margin: 0 auto;
+	position: relative;
+}
+.wrapper {
+	perspective: 900px;
+  padding: 10px
 }
