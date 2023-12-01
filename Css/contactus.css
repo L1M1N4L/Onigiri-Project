@@ -2,9 +2,11 @@
     background-color: white;
 }
 
-.app-body{
+.app-body {
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1170px) ;
-}
+    grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1600px) !important;
+    padding-top: 2.5rem;
+    border: 5px solid red;
+  }
 
