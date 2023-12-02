@@ -143,6 +143,17 @@ let questions = [
     choice4: "あとで",
     answer: 1,
   },
+
+  {
+    instruction: "もんだい7） 次のぶんしょうを読んで、しつもんに　こたえて　ください。こたえて　ください。こたえは、A・B・C・D から　いいものを　一つ　えらんで　ください",
+    question: "「わたし」は　子どもの　とき、何が　きらいでしたか",
+    image: "Images/COMP１N5.png",
+    choice1: "にくが　きらいでした。",
+    choice2: "やさいが　きらいでした。",
+    choice3: "さかなが　きらいでした",
+    choice4: "あまいものが　きらいでした",
+    answer: 1,
+  },
   
   // Add more questions as needed
 ];
