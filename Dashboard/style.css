@@ -51,7 +51,7 @@ a {
 
 .app {
   border-radius: 0.35vw;
-  min-height: 80vh;
+  min-height: 100vh;
   width: 100%;
   height: 100%;
   background-color: var(--c-gray-800);
@@ -142,6 +142,7 @@ a {
 }
 
 .app-body {
+  min-height: 60vh;
   height: 100%;
   display: grid;
   grid-template-columns: minmax(min-content, 175px) minmax(max-content, 900px) minmax(min-content, 400px);
@@ -153,6 +154,7 @@ a {
 @media only screen and (max-width: 1400px) {
   .app-body {
     grid-template-columns: 1fr;
+    grid-template-rows: 100px;
     padding-top: 1.5rem;
   }
   .app-body > * {
@@ -165,6 +167,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 @media only screen and (max-width: 1400px) {
   .app-body-navigation {

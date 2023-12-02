@@ -3,10 +3,45 @@
 }
 
 .app-body {
-    height: 100%;
-    display: grid;
-    grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1600px) !important;
-    padding-top: 2.5rem;
-    border: 5px solid red;
+    grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1400px) !important;
   }
 
+.app-body-sidebar{
+    display: none;
+}
+
+.contact-info-container{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.user-info{
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.onigiri-contact-info{
+  width: 30%;
+  height: 100%;
+  background-color: #EE5B5B;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-body-main-content{
+  
+}
+
+@media only screen and (max-width: 1400px) {
+    .app-body {
+      grid-template-columns: 2fr !important;
+    }
+}
