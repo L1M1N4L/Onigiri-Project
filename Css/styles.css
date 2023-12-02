@@ -42,7 +42,7 @@ body {
 }
 
 .Logo {
-    width: 18vw;
+    width: 14vw;
     min-width: 200px;
     padding-left: 40px;
 }
@@ -131,12 +131,6 @@ body {
     background-color: brown;
 }
 
-/* mobile dropdown */
-
-.dropdown-menu{
-    display: none;
-}
-
 
 /* Main Homepage */
 
@@ -170,6 +164,11 @@ body {
     background-image: url(../Images/cherryblossomv3.jpg);
     background-size: cover;
     box-shadow:  inset 0px -64px 48px -10px #e5e5e5;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #caption {
@@ -184,6 +183,10 @@ font-weight: 400;
     width: 50%;
     font-size: 5rem ;
     font-weight: 900;
+}
+
+.mobile-button, .mobile-button-text{
+    display: none;
 }
 
 @media (max-height: 600px){
@@ -615,11 +618,12 @@ td, th {
 
     .logoimage{
         padding-top: calc(1.5em - 2%);
-        width: 65%;
+        width: 100%;
+        display:flex;
+        justify-content: center;
     }
 
     .Logo {
-        Width: 75vw;
         min-width: 200px;
         padding: 2vw 0 0 2vw;
     }
@@ -637,53 +641,6 @@ td, th {
         display:none;
     }
 
-    .Shape {
-        width: 7.5vw;
-        height: 7.5vw;
-        min-width: 35px;
-        display: block;
-    }
-
-    /* mobile dropdown */
-
-    .dropdown-menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(5px);
-    }
-
-    .dropdown-buttons{
-        display: flex;
-        flex-direction: column;
-        background-color: #e5e5e5;
-        border-radius: 0.5rem;
-        width: 90%;
-        margin: auto;
-        padding: 5%;
-    }
-
-    .dropdown-buttons li, .mobile-contact-button{
-        list-style: none;
-        font-size: 2rem;
-        width: 90%;
-        height: 10%;
-        margin: 2% auto;
-        padding: 5%;
-        border-radius: 0.5rem;
-        border: 0.15rem solid #b3b3b3;
-        text-decoration: none;
-        color: black;
-    }
-
-    .clicked{
-        display:flex;
-    }
-
     /* Main Homepage */
 
     .Header{
@@ -697,10 +654,33 @@ td, th {
     }
 
     .SignUpFree{
+        display: none;
+    }
+
+    .mobile-button{
         width: 60%;
         max-width: 20rem;
         margin: auto;
         font-size: 1.25rem;
+        display: block;
+        min-width: 60px;
+        height: 5rem;
+        background-color:#B03131;
+        border: 2px solid #B03131;
+        border-radius: 4px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        color:white;
+        filter: drop-shadow(0 3px 0.5px #1f1f1f);
+        overflow:hidden;
+        transition: 0.3s;
+    }
+
+    .mobile-button-text{
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin: 5% 0;
+        display: block;
     }
 
     .H1 {

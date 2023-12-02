@@ -21,7 +21,7 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   font-family: "Be Vietnam Pro", sans-serif;
-  background-color: #fff;
+  background-color: var(--c-gray-800);
   color: var(--c-text-primary);
   display: flex;
   justify-content: center;
@@ -51,7 +51,6 @@ a {
 
 .app {
   border-radius: 0.35vw;
-  min-height: 100vh;
   width: 100%;
   height: 100%;
   background-color: var(--c-gray-800);
@@ -268,29 +267,6 @@ a {
   color: var(--c-text-primary);
 }
 
-
-/*
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  color: var(--c-text-tertiary);
-  border-bottom: 1px solid var(--c-gray-600);
-}
-.tabs a {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-decoration: none;
-  border-top: 2px solid transparent;
-  display: inline-flex;
-  transition: 0.25s ease;
-}
-.tabs a .active, .tabs a:hover, .tabs a:focus {
-  color: var(--c-text-primary);
-  border-color: var(--c-text-primary);
-}
-
-*/
-
 .user-profile {
   display: flex;
   align-items: center;
@@ -378,11 +354,18 @@ a {
 .d-pathways-block {
   max-width: 900px;
   width: 100%;
+  height: 76vh;
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 1400px) {
+  .d-pathways-block {
+    height: 100%;
+  }
 }
 
 .d-pathways-block__top {
@@ -393,7 +376,6 @@ a {
 }
 
 .d-pathways-block__title {
-  color: #3498db;
   font-size: 24px;
 }
 
@@ -418,7 +400,7 @@ a {
   align-items: center;
   margin-right: 20px;
 }
-input {
+.d-pathways-switch input {
   -webkit-appearance: none;
   position: relative;
   width: 50px;
@@ -432,7 +414,7 @@ input {
   
 }
 
-input::after {
+.d-pathways-switch input::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -445,11 +427,11 @@ input::after {
   transition: left .3s;
 }
 
-input:checked {
+.d-pathways-switch input:checked {
   background-color: var(--c-olive-500);
 }
 
-input:checked::after {
+.d-pathways-switch input:checked::after {
   left: 70%;
 }
 
@@ -469,7 +451,7 @@ input:checked::after {
 }
 
 .js-edit-pathways {
-  background-color: #e74c3c;
+  background-color: #df5e5b;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -593,7 +575,7 @@ input:checked::after {
   width: 250px;
   height: 250px;
   margin: auto;
-  background: #931F1D; 
+  background: #df5e5b; 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -615,7 +597,7 @@ input:checked::after {
 }
 
 .streak-circle:nth-child(2) {
-  stroke: #466d97; /* Set stroke color to matching color */
+  stroke: #598dc4; /* Set stroke color to matching color */
   stroke-dasharray: 1413; /* Circumference of a circle with radius 135 (2 * π * 135) */
   stroke-dashoffset: calc(1413*(70/100)); /* For a 15-day streak (half of a 30-day month) */
   stroke-linecap: round;
@@ -642,7 +624,7 @@ input:checked::after {
 }
 
 .streak-text span {
-  font-size: 14px;
+  font-size: 20px;
   color: #eee; /* Set span text color to a slightly off-white */
 }
 
@@ -693,7 +675,6 @@ input:checked::after {
 	background-size: cover;
 	background-position: center center;
 }
-
 
 .back {
   cursor: pointer;

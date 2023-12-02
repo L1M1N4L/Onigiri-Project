@@ -5,19 +5,21 @@
   height: 100%;
   border-radius: 8px;
   padding: 2em;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .app-body-main-content h1{
   margin-top: -2vw;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 2vw;
+  margin-bottom: 5%;
 }
 
 .app-body-main-content h2{
   font-size: 1.5rem;
-  margin-bottom: 2vw;
+  margin: 1% 0;
 }
 
 .app-body-main-content p{
