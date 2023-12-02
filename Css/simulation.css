@@ -1,0 +1,139 @@
+/* Quiz Section Styles */
+
+.dashboard-quizzes {
+    display: flex;
+    width: 200%;
+  }
+  
+  .d-quiz-block {
+    max-width: 900px;
+    width: 100%;
+    margin: 1% 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .d-quiz-block__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .d-quiz-block__title {
+    color: #3498db;
+    font-size: 24px;
+  }
+  
+  .d-quiz-block__link {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--c-gray-500);
+    margin-left: 20px;
+    transition: 0.3s;
+  }
+  
+  .d-quiz-block__link:hover {
+    color: var(--c-gray-400);
+  }
+  
+  .d-quiz-block__content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .d-quiz-block__empty {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .d-quiz-block__empty-cover {
+    display: flex;
+    gap: 5%;
+    width: 95%;
+    margin: 5% auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  .d-quiz-block__empty-cover .icon-background {
+    background-color: #e5e5e5;
+  }
+  
+  .quiz-info {
+    flex-grow: 1;
+  }
+  
+  .d-quiz-block__empty-text {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Remove progress bar styles */
+  
+  .d-quizzes__quiz {
+    /* Add styles for individual quizzes if needed */
+  }
+  
+  .d-quiz-block__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .d-quiz-block__item {
+    margin-top: 20px;
+  }
+  
+  .d-quiz-block__item .d-quiz-block__link {
+    display: block;
+    margin-top: 10px;
+  }
+  /* Quiz Section Styles */
+
+/* Quiz Section Styles */
+
+  
+  .d-quiz-block {
+    max-width: 900px;
+    width: 100%;
+    margin: 1% 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: auto; /* Move it to the left */
+  }
+  
+  .d-quiz-block__empty-cover {
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .d-quiz-block__empty-cover:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+  
+  /* Add this to push other content to the right */
+  .other-content {
+    margin-left: auto;
+  }
+  
+  /* Add hover effect for the link */
+  .d-quiz-block__link:hover {
+    color: var(--c-gray-400);
+  }
+  
+  
+  /* Modify other styles as needed */
