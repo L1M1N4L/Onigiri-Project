@@ -1,43 +1,137 @@
 .Contact-us{
-    background-color: white;
+  background-color: white;
 }
 
 .app-body {
-    grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1400px) !important;
-  }
+  grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1400px) !important;
+}
 
 .app-body-sidebar{
-    display: none;
+  display: none;
 }
 
 .contact-info-container{
-  width: 90%;
-  height: 100%;
-  display: flex;
-  margin: auto;
+width: 90%;
+height: 100%;
+display: flex;
+margin: auto;
 }
 
 .user-info{
-  width: 70%;
-  height: 100%;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px 0 0 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 70%;
+height: 100%;
+background-color: #f4F4F4;
+border: 1px solid #ddd;
+padding: 20px;
+border-radius: 10px 0 0 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .onigiri-contact-info{
-  width: 30%;
-  height: 100%;
-  background-color: #EE5B5B;
-  padding: 20px;
-  border-radius: 0 10px 10px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 30%;
+height: 100%;
+background-color: #EE5B5B;
+padding: 20px;
+border-radius: 0 10px 10px 0;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.header {
+display: flex;
+justify-content: space-between; 
+align-items: center; 
+font-size: 1.5rem;
+font-weight: 600;
+}
+
+.header h1 {
+margin: 0; 
+}
+
+.fa-regular.fa-envelope {
+vertical-align: middle; 
+}
+
+.text-box {
+display: flex;
+flex-direction: column;
+margin-bottom: 20px; 
+margin-top: 30px;
+}
+
+label {
+margin-bottom: 5px; 
+}
+
+input[type="text"] {
+padding: 8px;
+border: none; 
+border-bottom: 1px solid rgb(100, 99, 99); 
+width: 300px; 
+background-color: transparent; 
+border-radius: 0px;
+cursor: text;
+}
+
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px; 
+  resize: none;
+  margin-bottom: 10px;
+  background-color: #e3e3e3;
+}
+
+.submit-button {
+margin-top: 10px;
+padding: 5px 10px; 
+background-color: #EE5B5B;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 14px; 
+height: 30px; 
+width: 80px; 
+}
+
+.onigiri-contact-info h1{
+color: white;
+margin-bottom: 50px;
+}
+
+.onigiri-contact-info {
+display: flex;
+flex-direction: column;
+}
+
+.phone-info, .email-info, .instagram-info, .address-info {
+display: flex;
+align-items: center;
+margin-bottom: 60px;
+}
+
+.fa-solid.fa-phone, .fa-brands.fa-instagram, .fa-solid.fa-location-dot {
+color: white;
+margin-right: 10px; 
+margin-left: 15px;
+}
+
+.email-info i{
+color: white;
+margin-right: 10px; 
+margin-left: 15px;
+}
+
+p{
+color: white;
+}
+
+
+
 @media only screen and (max-width: 1400px) {
-    .app-body {
-      grid-template-columns: 2fr !important;
-    }
+  .app-body {
+    grid-template-columns: 2fr !important;
+  }
 }
