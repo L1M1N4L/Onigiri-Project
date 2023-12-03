@@ -155,6 +155,17 @@ let questions = [
     answer: 1,
   },
   
+  {
+    instruction: "もんだい8では、まず　しつもんを　読んで　ください。それから　はなしを　きいて、もんだいようしの　A・B・C の中　から　いいものを　一つ　えらんで　ください",
+    question: "しゅくだいは　いつ　出しますか",
+    audio: "Images/Listeningn5p1.wav",
+    choice1: "つぎの　じゅうぎょう。",
+    choice2: "つぎの　つぎの　じゅうぎょう。",
+    choice3: "つぎの　火ようびの　じゅうぎょう",
+    choice4: "らいしゅうの　水ようびの　じゅうぎょう",
+    answer: 3,
+  },
+  
   // Add more questions as needed
 ];
 

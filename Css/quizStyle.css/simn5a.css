@@ -126,3 +126,7 @@
   input::placeholder {
     color: #aaa;
   }
+
+  audio {
+    display: none;
+  }

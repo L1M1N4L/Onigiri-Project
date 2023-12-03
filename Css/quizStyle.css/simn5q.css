@@ -64,3 +64,7 @@
   background-color: #df5e5b;
   width: 0%;
 }
+
+audio {
+  display: none;
+}
