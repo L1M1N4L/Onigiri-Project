@@ -17,13 +17,6 @@
   --c-text-tertiary: var(--c-gray-500);
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Be Vietnam Pro", sans-serif;
-    color:var(--c-gray-100)!important   ; 
-}
 .titlecyp{
     color: #000;
     font-family: Montserrat;
@@ -39,7 +32,7 @@
 .container h1{
     text-align: left;
     margin-bottom: 23px;
-    color: #fff;
+    color: #000;
 }
 
 .price-row{
@@ -61,7 +54,7 @@
     margin: 0px 12px;
     text-align: center;
     background: #fff;
-    color: #fff;
+    color: #000;;
     border-radius: 17px;
     padding: 0 12px;
     border: solid;
@@ -93,7 +86,7 @@
 
 .box ul{
     list-style: none;
-    color: #ddd;
+    color: #000;
     text-align: left;
     margin: 20px 0;
 }

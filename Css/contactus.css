@@ -1,135 +1,171 @@
-.Contact-us{
-  background-color: white;
-}
-
-.app-body {
-  grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1400px) !important;
-}
-
-.app-body-sidebar{
-  display: none;
-}
-
-.contact-info-container{
-width: 90%;
-height: 100%;
-display: flex;
-margin: auto;
-}
-
-.user-info{
-width: 70%;
-height: 100%;
-background-color: #f4F4F4;
-border: 1px solid #ddd;
-padding: 20px;
-border-radius: 10px 0 0 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.onigiri-contact-info{
-width: 30%;
-height: 100%;
-background-color: #EE5B5B;
-padding: 20px;
-border-radius: 0 10px 10px 0;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header {
-display: flex;
-justify-content: space-between; 
-align-items: center; 
-font-size: 1.5rem;
-font-weight: 600;
-}
-
-.header h1 {
-margin: 0; 
-}
-
-.fa-regular.fa-envelope {
-vertical-align: middle; 
-}
-
-.text-box {
-display: flex;
-flex-direction: column;
-margin-bottom: 20px; 
-margin-top: 30px;
-}
-
-label {
-margin-bottom: 5px; 
-}
-
-input[type="text"] {
-padding: 8px;
+input[type="text"],  input[type="email"]{
 border: none; 
 border-bottom: 1px solid rgb(100, 99, 99); 
-width: 300px; 
 background-color: transparent; 
-border-radius: 0px;
 cursor: text;
 }
 
 textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 300px; 
-  resize: none;
-  margin-bottom: 10px;
   background-color: #e3e3e3;
 }
 
-.submit-button {
-margin-top: 10px;
-padding: 5px 10px; 
-background-color: #EE5B5B;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-font-size: 14px; 
-height: 30px; 
-width: 80px; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.onigiri-contact-info h1{
-color: white;
-margin-bottom: 50px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: none;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.onigiri-contact-info {
-display: flex;
-flex-direction: column;
+.form-title{
+  text-align: center !important;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.phone-info, .email-info, .instagram-info, .address-info {
-display: flex;
-align-items: center;
-margin-bottom: 60px;
+.contact-info,
+.contact-form {
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.fa-solid.fa-phone, .fa-brands.fa-instagram, .fa-solid.fa-location-dot {
-color: white;
-margin-right: 10px; 
-margin-left: 15px;
+.contact-form{
+  border-radius: 8px 0 0 8px;
+  background-color: #FFF;
 }
 
-.email-info i{
-color: white;
-margin-right: 10px; 
-margin-left: 15px;
+.contact-info {
+  background-color: #EE5B5B; /* Changed background color */
+  color: #fff; /* Set text color to white */
+  border-radius: 0 8px 8px 0;
 }
 
-.contact-info-text{
-color: white;
+form {
+  display: grid;
+  gap: 20px;
 }
 
-@media only screen and (max-width: 1400px) {
-  .app-body {
-    grid-template-columns: 2fr !important;
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 16px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none; /* Make the message box fixed size */
+  height: 120px; /* Fixed height for the message box */
+}
+
+button {
+  background-color: #EE5B5B; /* Changed button color */
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.info-content {
+  padding: 10px;
+  background-color: #EE5B5B; /* Changed background color */
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-content i {
+  margin-right: 8px;
+}
+
+.info-content p {
+  margin-bottom: 12px; /* Increased margin for more spacing */
+  display: flex;
+  align-items: center;
+}
+
+.info-content h3 {
+  color: #fff; /* Make the company info title white */
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.additional-text {
+  flex-grow: 1;
+  color: #fff;
+  margin: 30px 0;
+  font-size: 18px; /* Increased font size */
+  line-height: 1.5; /* Adjust line height for better spacing */
+}
+
+.instagram-info {
+  padding: 10px;
+  background-color: #EE5B5B; /* Changed background color */
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+
+  .contact-form{
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .contact-info {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .form-title{
+    font-size: 3rem;
+  }
+
+  .info-content p {
+    font-size: 25px;
+  }
+
+  .additional-text {
+    font-size: 18px; 
+  }
+
+  label {
+    font-size: 2rem;
+  }
+
+    input,
+  textarea,button {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  textarea {
+    height: 240px; 
   }
 }

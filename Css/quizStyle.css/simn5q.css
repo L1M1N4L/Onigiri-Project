@@ -40,7 +40,16 @@
 
 #hud {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+#hud-item{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
 }
 
 .hud-prefix {
@@ -52,15 +61,49 @@
   text-align: center;
 }
 
+.score-container{
+  width: 15%;
+  height: 10rem;
+  border-radius: 3rem;
+  border: 5px solid #ce3e3c;
+}
+
 #progressBar {
-  width: 20rem;
-  height: 4rem;
-  border: 0.3rem solid #df5e5b;
-  margin-top: 1.5rem;
+  width: 80%;
+  height: 2rem;
+  border-radius: 25rem;
+  border: none;
+  background-color: #ebebeb;
+  margin: 1.5rem 0;
 }
 
 #progressBarFull {
-  height: 3.4rem;
+  height: 2rem;
+  border-radius:25rem;
   background-color: #df5e5b;
   width: 0%;
+}
+
+#progressText{
+  width: 100%;
+  text-align: left;
+}
+
+#scoreText{
+  width: 100%;
+  background-color: #ce3e3c;
+  border-color: #ce3e3c;
+  border-radius: 3rem 3rem 0 0;
+  color: white;
+}
+
+#score{
+  margin: 0;
+}
+
+@media only screen and (max-width: 1000px){
+  #progressText{
+    width: 100%;
+    text-align: center;
+  }
 }
