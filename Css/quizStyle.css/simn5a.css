@@ -130,3 +130,15 @@
   audio {
     display: none;
   }
+
+@media only screen and (max-width: 1000px){
+  h2 {
+    font-size: 2.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  
+}

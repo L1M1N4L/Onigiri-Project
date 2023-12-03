@@ -356,7 +356,7 @@ a {
 .d-pathways-block {
   max-width: 900px;
   width: 100%;
-  height: 76vh;
+  height: 45.8rem;
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 20px;
@@ -710,58 +710,55 @@ a {
   padding: 10px
 }
 
-/* For Hamburger Button and Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px; 
-  height: 100%;
-  width: 250px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: left 0.3s ease;
-  z-index: 1000; 
-}
 
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #eee;
-}
+@media only screen and (max-width: 1400px){
+  /* For Hamburger Button and Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    height: 100%;
+    width: 100%;
+    transition: left 0.3s ease;
+    z-index: 1; 
+    backdrop-filter: blur(5px);
+  }
 
-.sidebar-header h2 {
-  margin: 0;
-  font-size: 1.2rem;
-}
+  .sidebar-content{
+    height: 100%;
+    width: 65%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 
-.sidebar nav {
-  padding-top: 20px;
-}
+  .sidebar nav {
+    padding-top: 20px;
+  }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
 
-.sidebar ul li {
-  margin-bottom: 15px;
-}
+  .sidebar ul li {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+  }
 
-.sidebar ul li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
 
-.sidebar ul li a:hover {
-  background-color: #f5f5f5;
-}
+  .sidebar ul li a:hover {
+    background-color: #f5f5f5;
+  }
 
-.show-sidebar {
-  left: 0;
+  .show-sidebar {
+    left: 0;
+    display: block;
+  }
 }
-
