@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --c-gray-100: #000000;
+  --c-gray-200: #1f1f1f;
+  --c-gray-300: #2e2e2e;
+  --c-gray-400: #313131;
+  --c-gray-500: #969593;
+  --c-gray-600: #a6a6a6;
+  --c-gray-700: #bdbbb7;
+  --c-gray-800: #f1f1f1;
+  --c-gray-900: #ffffff;
+  --c-olive-500: #BF4146; 
+  --c-green-500: #A62C2C;
+  --c-white: var(--c-gray-100);
+  --c-text-primary: var(--c-gray-100);
+  --c-text-secondary: var(--c-gray-200);
+  --c-text-tertiary: var(--c-gray-500);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Be Vietnam Pro", sans-serif;
+    color:var(--c-gray-100)!important   ; 
+}
+.titlecyp{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: left;
+    justify-content: left;
+    text-alignL: left;
+
+    
+}
+
+
+.container h1{
+    text-align: center;
+    margin-bottom: 23px;
+    color: #fff;
+}
+
+.price-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; 
+    font-size: 30px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding-left:2rem;
+}
+
+.box{
+    margin: 0px 12px;
+    text-align: center;
+    background: #fff;
+    color: #fff;
+    border-radius: 17px;
+    padding: 0 12px;
+    border: solid;
+    border-width: thin;
+}
+
+.caption{
+    
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align:left;
+    padding-left:2rem;
+
+    
+}
+
+.box .package{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    margin: 12px 0 3px;
+    padding: 0.4rem;
+    font-weight: bold;
+}
+
+.box ul{
+    list-style: none;
+    color: #ddd;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.box ul li{
+    padding: 9px 63px;
+}
+
+.box ul li::before{
+    content: '\2713';
+    color: #e33058;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.box .btn{
+    font-size: 16px;
+    margin: 23px 23px;
+    border: 2px solid #e33058;
+    padding: 12px 0px;
+    border-radius: 5px;
+    margin: 25px 35px 25px 35px;
+    transition: all 0.5s;
+}
+
+.meow{
+    font-size: 16px;
+    margin: 23px 23px;
+    border: 2px solid #878787;
+    padding: 12px 0px;
+    border-radius: 5px;
+    margin: 25px 35px 25px 35px;
+    transition: all 0.5s;
+}
+.meow:hover{
+    background-color: #878787;
+}
+
+.box .btn:hover{
+    background-color: #e33058;
+    cursor: pointer;
+}
+.box span{
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1000px){
+    .price-row{
+        flex-wrap: wrap;
+    }
+
+    .box{
+        margin: 12px 23px;
+    }
+}
