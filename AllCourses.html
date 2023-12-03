@@ -36,9 +36,21 @@
 			</button>
 		</div>
 		<div class="app-header-mobile">
-			<button class="icon-button large">
+			<!--Hamburger Button-->
+			<button id="hamburger-btn" class="icon-button large">
 				<i class="ph-list"></i>
 			</button>
+			<div id="sidebar" class="sidebar">
+			<nav>
+				<ul>
+				<li><a href="Dashboard.html">Dashboard</a></li>
+				<li><a href="AllCourses.html">All Courses</a></li>
+				<li><a href="pricing.html">Pricing</a></li>
+				<li><a href="Simulation.html">Simulation</a></li>
+				<li><a href="About.html">About us</a></li>
+				</ul>
+			</nav>
+			</div>
 		</div>
 
 	</header>
@@ -193,6 +205,28 @@
 <!-- partial -->
   <script src='https://unpkg.com/phosphor-icons'></script><script  src="./script.js"></script>
   <script  src="js/dashboard.js"></script>
-  
+  <script>
+	const hamburgerBtn = document.getElementById('hamburger-btn');
+	const sidebar = document.getElementById('sidebar');
+	const body = document.querySelector('body');
+	
+	// Function to close sidebar and remove blur effect
+	function closeSidebar() {
+	  sidebar.classList.remove('show-sidebar');
+	  body.classList.remove('sidebar-open');
+	}
+	
+	hamburgerBtn.addEventListener('click', () => {
+	  sidebar.classList.toggle('show-sidebar');
+	  body.classList.toggle('sidebar-open');
+	});
+	
+	// Close sidebar when clicking outside
+	document.addEventListener('click', (e) => {
+	  if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+		closeSidebar();
+	  }
+	});
+	  </script>
 </body>
 </html>

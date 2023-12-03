@@ -144,6 +144,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <!-- partial -->
   <script src='https://unpkg.com/phosphor-icons'></script><script  src="./script.js"></script>
-
+  <script>
+	const hamburgerBtn = document.getElementById('hamburger-btn');
+	const sidebar = document.getElementById('sidebar');
+	const body = document.querySelector('body');
+	
+	// Function to close sidebar and remove blur effect
+	function closeSidebar() {
+	  sidebar.classList.remove('show-sidebar');
+	  body.classList.remove('sidebar-open');
+	}
+	
+	hamburgerBtn.addEventListener('click', () => {
+	  sidebar.classList.toggle('show-sidebar');
+	  body.classList.toggle('sidebar-open');
+	});
+	
+	// Close sidebar when clicking outside
+	document.addEventListener('click', (e) => {
+	  if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+		closeSidebar();
+	  }
+	});
+	</script>
 </body>
 </html>
