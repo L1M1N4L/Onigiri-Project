@@ -31,16 +31,13 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    align-items: left;
-    justify-content: left;
-    text-alignL: left;
-
+    padding-bottom: 20px;
     
 }
 
 
 .container h1{
-    text-align: center;
+    text-align: left;
     margin-bottom: 23px;
     color: #fff;
 }
@@ -130,9 +127,11 @@
     border-radius: 5px;
     margin: 25px 35px 25px 35px;
     transition: all 0.5s;
+    cursor: default;
 }
 .meow:hover{
     background-color: #878787;
+    cursor: default;
 }
 
 .box .btn:hover{
