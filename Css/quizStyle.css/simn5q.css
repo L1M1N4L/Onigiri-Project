@@ -84,26 +84,6 @@
   width: 0%;
 }
 
-#progressText{
-  width: 100%;
-  text-align: left;
-}
-
-#scoreText{
-  width: 100%;
-  background-color: #ce3e3c;
-  border-color: #ce3e3c;
-  border-radius: 3rem 3rem 0 0;
-  color: white;
-}
-
-#score{
-  margin: 0;
-}
-
-@media only screen and (max-width: 1000px){
-  #progressText{
-    width: 100%;
-    text-align: center;
-  }
+audio {
+  display: none;
 }
