@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --c-gray-100: #1f1f1f;
+    --c-gray-200: #2e2e2e;
+    --c-gray-300: #313131;
+    --c-gray-400: #969593;
+    --c-gray-500: #a6a6a6;
+    --c-gray-600: #bdbbb7;
+    --c-gray-700: #f1f1f1;
+    --c-gray-800: #ffffff;
+    --c-olive-500: #BF4146;
+    --c-green-500: #A62C2C;
+    --c-white: var(--c-gray-100);
+    --c-text-primary: var(--c-gray-100);
+    --c-text-secondary: var(--c-gray-200);
+    --c-text-tertiary: var(--c-gray-500);
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: var(--c-gray-800);
+    color: var(--c-text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--c-green-500);
+    margin-top: 20px;
+}
+
+section {
+    background-color: var(--c-gray-800);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--c-green-500);
+}
+
+strong {
+    color: var(--c-olive-500);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--c-gray-200);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--c-gray-600);
+    border-radius: 5px;
+    background-color: var(--c-gray-700);
+    color: var(--c-text-primary);
+}
+
+button {
+    background-color: var(--c-green-500);
+    color: var(--c-white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--c-olive-500);
+}
+
+footer {
+    margin-top: 20px;
+    color: var(--c-gray-500);
+    text-align: center;
+    padding: 10px;
+    background-color: var(--c-gray-700);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+    </style>
+</head>
+<body>
+        <h1>N5 Language Proficiency Test Online Quiz</h1>
+    
+        <section>
+            <h2>言語知識(文字・語彙・文法)・読解・聴解</h2>
+            <h2>Language Knowledge (Vocabulary/Grammar)/Reading/Listening</h2>
+            <p><strong>詳しい内容なら、下記の通りになります:</strong></p>
+            <p><strong>The details are as follows:</strong></p>
+        </section>
+    
+        <section>
+            <p><strong>注意 - Notes:</strong></p>
+            <p><strong>このプロセスにおいて行う決定は不可逆的です。一度オプションを選択されますと、再考や修正の余地は一切ございませんので、慎重にお選びください。</strong></p>
+            <p><strong>Understand that the decisions you make in this process are irreversible. Once you select an option, there is no allowance for reconsideration or modification.</strong></p>
+            <p><strong>この試験は全部で17問があります。各問にはそれぞれ1ページずつ対応しています。</strong></p>
+            <p><strong>In this exam, there are a total of 17 questions, with each question corresponding to one page.</strong></p>
+
+        </section>
+    
+        <h2>名前 - Name:</h2>
+        <form>
+    
+            <label for="name">名前 - Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <button type="submit">Start Quiz</button>
+        </form>
+    
+        <footer>
+            <p><strong>Note:</strong> Ensure that you have carefully reviewed the information before proceeding with the quiz. Once
+                submitted, changes cannot be made. Good luck with your N5 Language Proficiency Test!</p>
+        </footer>
+    
+</body>
+</html>
