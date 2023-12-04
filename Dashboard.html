@@ -27,13 +27,22 @@
 		</div>
 
 		<div class="app-header-actions">
-			<button class="user-profile">
+			<div class="dropdown">
+			  <button class="user-profile">
 				<span>Ida Bagus Kerthayayana M.</span>
 				<span>
-					<img src="Images/1537709864705.jpeg" />
+				  <img src="Images/1537709864705.jpeg" alt="User Avatar" />
 				</span>
-			</button>
-		</div>
+			  </button>
+			  <ul class="dropdown-menu">
+				<a href="#"><li><i class="ph-user"></i> Profile</li></a>
+				<a href="#"><li><i class="ph-gear"></i> Settings</li></a>
+				<a href="index.html"><li><i class="ph-sign-out"></i> Logout</li></a>
+				<!-- Add more menu items as needed -->
+			  </ul>
+			</div>
+		  </div>
+
 		<div class="app-header-mobile">
 			<!--Hamburger Button-->
 			<button id="hamburger-btn" class="icon-button large">
