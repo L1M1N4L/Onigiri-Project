@@ -175,7 +175,8 @@
 }
 
 .box .btn:hover{
-    background-color: #FD9434;
+    color: white;
+    background-color: #44a251;
     cursor: pointer;
 }
 
@@ -204,5 +205,16 @@
 
     .box{
         margin: 12px 23px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .price-row{
+        flex-wrap: wrap;
+    }
+
+    .box{
+        margin: 50px auto;
+        width: 60%;
     }
 }
