@@ -188,21 +188,33 @@
 	
 	// Function to close sidebar and remove blur effect
 	function closeSidebar() {
-	  sidebar.classList.remove('show-sidebar');
-	  body.classList.remove('sidebar-open');
+	sidebar.classList.remove('show-sidebar');
+	body.classList.remove('sidebar-open');
 	}
+
+	function toggleDropdown() {
+	var dropdownMenu = document.getElementById("dropDownMenu");
+		dropdownMenu.classList.toggle("dropdown-open")
+	}
+
 	
 	hamburgerBtn.addEventListener('click', () => {
-	  sidebar.classList.toggle('show-sidebar');
-	  body.classList.toggle('sidebar-open');
+	sidebar.classList.toggle('show-sidebar');
+	body.classList.toggle('sidebar-open');
 	});
 	
 	// Close sidebar when clicking outside
 	document.addEventListener('click', (e) => {
-	  if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+	if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
 		closeSidebar();
-	  }
+	}
 	});
-	  </script>
+
+	document.addEventListener('click', function(event) {
+	if (event.target === sidebar) {
+		closeSidebar();
+	}
+	   });
+  </script>
 </body>
 </html>

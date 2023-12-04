@@ -42,10 +42,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 				</span>
 			</button>
 		</div>
+
 		<div class="app-header-mobile">
-			<button class="icon-button large">
+			<!--Hamburger Button-->
+			<button id="hamburger-btn" class="icon-button large">
 				<i class="ph-list"></i>
 			</button>
+			<div id="sidebar" class="sidebar">
+				<div class="sidebar-content">
+					<nav>
+						<ul>
+						<li><a href="Dashboard.html">Dashboard</a></li>
+						<li><a href="AllCourses.html">All Courses</a></li>
+						<li><a href="pricing.html">Pricing</a></li>
+						<li><a href="Simulation.html">Simulation</a></li>
+						<li><a href="About.html">About us</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 		</div>
 
 	</header>
@@ -148,6 +163,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </div>
 
   <script src='https://unpkg.com/phosphor-icons'></script><script  src="./script.js"></script>
+  <script>
+	const hamburgerBtn = document.getElementById('hamburger-btn');
+	const sidebar = document.getElementById('sidebar');
+	const body = document.querySelector('body');
+	
+	// Function to close sidebar and remove blur effect
+	function closeSidebar() {
+	sidebar.classList.remove('show-sidebar');
+	body.classList.remove('sidebar-open');
+	}
 
+	function toggleDropdown() {
+	var dropdownMenu = document.getElementById("dropDownMenu");
+		dropdownMenu.classList.toggle("dropdown-open")
+	}
+
+	
+	hamburgerBtn.addEventListener('click', () => {
+	sidebar.classList.toggle('show-sidebar');
+	body.classList.toggle('sidebar-open');
+	});
+	
+	// Close sidebar when clicking outside
+	document.addEventListener('click', (e) => {
+	if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+		closeSidebar();
+	}
+	});
+
+	document.addEventListener('click', function(event) {
+	if (event.target === sidebar) {
+		closeSidebar();
+	}
+	   });
+  </script>
 </body>
 </html>
