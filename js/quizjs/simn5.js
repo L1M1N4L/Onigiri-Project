@@ -49,7 +49,7 @@ let questions = [
   },
   {
     instruction: "もんだい３）（　　）に　なかが　はいりますか。A・B・C・D から　いちばん　いい　ものを　ひとつ　えらんで　ください。",
-    question: "ゆう（　　）でニュースを　みました",
+    question: "ゆうさんは（　　）でニュースを　みました",
     choice1: "ボタン",
     choice2: "テレビ",
     choice3: "フォーク",
@@ -119,8 +119,8 @@ let questions = [
     choice1: "おんがくを",
     choice2: "しゅくだいを",
     choice3: "きき",
-    choice4: "を",
-    answer: 1,
+    choice4: "ながら",
+    answer: 2,
   },
 
   {
@@ -152,7 +152,7 @@ let questions = [
     choice2: "やさいが　きらいでした。",
     choice3: "さかなが　きらいでした",
     choice4: "あまいものが　きらいでした",
-    answer: 1,
+    answer: 3,
   },
   
   {
@@ -182,7 +182,7 @@ let questions = [
 ];
 
 // CONSTANTS
-const CORRECT_BONUS = Math.round(5.882 * 10) ;
+const CORRECT_BONUS = Math.round(5.882) ;
 const MAX_QUESTIONS = questions.length; // Adjust based on the number of questions
 
 startGame = () => {
