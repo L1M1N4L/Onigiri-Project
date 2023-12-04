@@ -762,3 +762,43 @@ a {
     display: block;
   }
 }
+
+.app-header-actions {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transform-origin: top center;
+  animation: rotateX 300ms ease-in-out forwards;
+  opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  animation: rotateX 300ms ease-in-out forwards;
+  opacity: 1;
+}
+
+@keyframes rotateX {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
