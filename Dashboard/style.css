@@ -329,9 +329,11 @@ a {
   z-index: 10; /* Ensure the dropdown is above other elements */
   min-width: 241px; /* Adjust as needed */
 }
+
 a{
   text-decoration: none;
 }
+
 .dropdown-menu li {
   padding: 12px;
   font-size: 14px;
@@ -344,7 +346,15 @@ a{
   color:#fff
 }
 
-.dropdown:hover .dropdown-menu {
+.first-dropdown {
+  border-radius: 4px 4px 0 0 ;
+}
+
+.last-dropdown {
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-open {
   display: block;
   animation: fadeInDown 300ms ease-in-out forwards;
   opacity: 1;
@@ -361,7 +371,6 @@ a{
   }
 }
 
-
 @keyframes rotateX {
   0% {
     transform: rotateX(-90deg);
@@ -370,6 +379,7 @@ a{
     transform: rotateX(0deg);
   }
 }
+
 .icon-button {
   width: 32px;
   height: 32px;
@@ -828,7 +838,3 @@ a{
   }
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}

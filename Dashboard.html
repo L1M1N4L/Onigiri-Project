@@ -27,17 +27,17 @@
 		</div>
 
 		<div class="app-header-actions">
-			<div class="dropdown">
+			<div class="dropdown" onclick="toggleDropdown()">
 			  <button class="user-profile">
 				<span>Ida Bagus Kerthayayana M.</span>
 				<span>
 				  <img src="Images/1537709864705.jpeg" alt="User Avatar" />
 				</span>
 			  </button>
-			  <ul class="dropdown-menu">
-				<a href="#"><li><i class="ph-user"></i> Profile</li></a>
+			  <ul class="dropdown-menu"  id="dropDownMenu">
+				<a href="#"><li class="first-dropdown"><i class="ph-user"></i> Profile</li></a>
 				<a href="#"><li><i class="ph-gear"></i> Settings</li></a>
-				<a href="index.html"><li><i class="ph-sign-out"></i> Logout</li></a>
+				<a href="index.html"><li class="last-dropdown"><i class="ph-sign-out"></i> Logout</li></a>
 				<!-- Add more menu items as needed -->
 			  </ul>
 			</div>
@@ -216,6 +216,12 @@
 		sidebar.classList.remove('show-sidebar');
 		body.classList.remove('sidebar-open');
 		}
+
+		function toggleDropdown() {
+		var dropdownMenu = document.getElementById("dropDownMenu");
+			dropdownMenu.classList.toggle("dropdown-open")
+		}
+	
 		
 		hamburgerBtn.addEventListener('click', () => {
 		sidebar.classList.toggle('show-sidebar');

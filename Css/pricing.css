@@ -18,9 +18,8 @@
 }
 
 .app-body {
-    grid-template-columns: minmax(min-content, 175px) 1400px !important;
-  }
-
+    grid-template-columns: minmax(min-content, 175px) minmax(min-content, 1600px);
+}
 
 .titlecyp{
     color: #000;
@@ -71,7 +70,7 @@
 
 .box {
     height: 40rem;
-    width: 20%;
+    width: 20rem;
     margin: 3%;
     text-align: center;
     background: #FFFFFF; 
@@ -112,6 +111,7 @@
   }
 
 .caption{
+    height: 5rem;
     color: #7F7F7F;
     font-size: 14px;
     font-style: normal;
@@ -128,10 +128,11 @@
 }
 
 .box ul{
+    height: 19rem;
     list-style: none;
     color: #000;
     text-align: left;
-    margin: 20px 0;
+    margin-top: 20px;
     font-size: 13px;
 }
 
@@ -149,27 +150,27 @@
 .box .btn{
     font-size: 16px;
     font-weight: 600;
-    margin: 23px 23px;
+    width: 10rem;
+    margin: auto;
     border: 2px solid grey;
     padding: 12px 0px;
     border-radius: 5px;
-    margin: 25px 35px 25px 35px;
     transition: all 0.5s;
 }
 
 .meow{
     font-weight: 600;
     font-size: 16px;
-    margin: 23px 23px;
+    width: 10rem;
+    margin: auto;
     border: 2px solid gray;
     padding: 12px 0px;
     border-radius: 5px;
-    margin: 25px 35px 25px 35px;
     transition: all 0.5s;
     cursor: default;
 }
 .meow:hover{
-    background-color: gray;
+    background-color: #bbbbbb;
     cursor: default;
 }
 
@@ -178,9 +179,22 @@
     cursor: pointer;
 }
 
-
 .box span{
     font-size: 16px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .app-body {
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px;
+      padding-top: 1.5rem;
+    }
+
+    .app-body > * {
+      margin-bottom: 3.5rem;
+    }
+
+
 }
 
 @media only screen and (max-width: 1000px){
