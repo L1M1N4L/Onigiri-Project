@@ -165,17 +165,29 @@ let questions = [
     choice4: "らいしゅうの　水ようびの　じゅうぎょう",
     answer: 3,
   },
+
+  {
+    instruction: "もんだい9) まず　しつもんを　きいてで　ください。それから　はなしを　きいて、もんだいようしの　A・B・C の中　から　いちばん　いいものを　一つ　えらんで　ください",
+    question: "しゅくだいは　いつ　出しますか",
+    image: "",
+    audio: "Images/n5listening2.wav",
+    choice1: "A",
+    choice2: "B",
+    choice3: "C",
+    choice4: "D",
+    answer: 4,
+  },
   
   // Add more questions as needed
 ];
 
 // CONSTANTS
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = Math.round(5.882 * 10) ;
 const MAX_QUESTIONS = questions.length; // Adjust based on the number of questions
 
 startGame = () => {
   questionCounter = 0;
-  score = 0;
+  score = Math.round(0);
   getNewQuestion();
 };
 
