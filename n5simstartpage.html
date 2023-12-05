@@ -129,6 +129,26 @@
                 width: 80%;
             }
         }
+        .go-back-button {
+        text-decoration: none; /* Remove underline from the link */
+    }
+
+    .go-back-button button {
+        width: 100%;
+        max-width: 25rem;
+        background-color: var(--c-olive-100); /* Use the olive color */
+        color: var(--c-white);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px; /* Adjust the spacing from the previous button */
+    }
+
+    .go-back-button button:hover {
+        background-color: var(--c-gray-600); /* Use the olive color */
+    }
     </style>
 
 </head>
@@ -152,6 +172,7 @@
         <label for="name">名前 - Name:</label>
         <input type="text" id="name" name="name" required>
         <button type="submit">Start Quiz</button>
+        <a href="simulation.html" class="go-back-button"><button type="button">Go Back to Simulation</button></a>
     </form>
 
     <footer>

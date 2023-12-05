@@ -19,7 +19,7 @@ label.btn {
 }
 
 .btn-outline-primary {
-    border-color: #26B4FF;
+    border-color: #BF4146;
     background  : transparent;
     color       : #26B4FF;
 }
@@ -42,6 +42,27 @@ label.btn {
     border-color: rgba(0, 0, 0, 0);
     background  : #000;
     color       : #fff;
+}
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background: rgba(0, 0, 0, 0);
+    color: #4E5155;
+}
+
+.btn-outline-primary {
+    border-color: #BF4146;
+    background: transparent;
+    color: #BF4146;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #BF4146;
+    border-color: #BF4146;
+    color: #fff;
 }
 
 .card {
