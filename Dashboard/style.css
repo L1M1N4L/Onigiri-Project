@@ -442,6 +442,8 @@ a{
 @media only screen and (max-width: 1400px) {
   .d-pathways-block {
     height: 100%;
+    margin: auto;
+    max-width: 1200px;
   }
 }
 
@@ -734,9 +736,6 @@ a{
 
 .front, .back {
   width: 200px;
-  position: relative;
-  top: 0;
-  left: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -757,6 +756,11 @@ a{
   cursor: pointer;
   transform: rotateX(180deg); /* Initially flipped */
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
   border-radius: 50px;
   height: 100%;
   background: #fff;
@@ -776,7 +780,6 @@ a{
 
 .wrapper, .single-card {
 	height: 100%;
-	max-width: 300px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -784,6 +787,65 @@ a{
 	perspective: 900px;
   padding: 10px
 }
+
+@media only screen and (max-width: 1400px){
+  .app-body-main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-body-sidebar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .app-body-sidebar{
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .wordoftheday-container{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  .wordoftheday-container h1{
+    font-size: 2.5rem;
+  }
+
+  .wordoftheday-container h5{
+    font-size: 1.5rem;
+  }
+
+  .front, .back {
+    width:57%;
+    margin: 5% auto;
+  }
+
+  .back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    padding-top: 0;
+  }
+
+  .content h2{
+    font-size: 3.5rem;
+  }
+
+  .content h4{
+    font-size: 2rem;
+  }
+}
+
 
 
 @media only screen and (max-width: 1400px){
@@ -800,8 +862,10 @@ a{
   }
 
   .sidebar-content{
+    box-sizing: border-box;
+    padding: 50px;
     height: 100%;
-    width: 65%;
+    width: 50%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
@@ -816,8 +880,8 @@ a{
   }
 
   .sidebar ul li {
-    margin-bottom: 15px;
-    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-size: 2.25rem;
   }
 
   .sidebar ul li a {
