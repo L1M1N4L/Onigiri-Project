@@ -135,5 +135,30 @@
     color: var(--c-gray-400);
   }
   
-  
+  .status {
+    font-weight: bold;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.unlocked {
+    color: green; /* Adjust the color as needed */
+}
+
+.locked {
+    color: red; /* Adjust the color as needed */
+}
+
+/* Add styles for Phosphor Icons, assuming they are using a web font */
+@font-face {
+    font-family: 'Phosphor Icons';
+    src: url('path-to-phosphor-icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i[class^="phosphor-"] {
+    font-family: 'Phosphor Icons';
+    font-weight: normal;
+    font-style: normal;
+}
   /* Modify other styles as needed */

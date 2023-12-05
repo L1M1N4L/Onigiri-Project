@@ -16,16 +16,12 @@
             color: #fff;
         }
 
-        .btn-primary:hover {
-        background-color: #8F2D31; /* Adjust the color for hover state */
+        .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #8F2D31; /* Adjust the color for hover and focus states */
         border-color: #8F2D31;
         color: #fff;
-    }
-
-    .btn-primary:active {
-        background-color: #5F1A1E; /* Adjust the color for active/click state */
-        border-color: #5F1A1E;
-        color: #fff;
+        box-shadow: 0 0 0 0.2rem rgba(143, 45, 49, 0.5); /* Optional: add a box-shadow for focus effect */
     }
     </style>
 
@@ -45,7 +41,7 @@
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-connections">Connections</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-notifications">Notifications</a>
+                            hrdef="#account-notifications">Notifications</a>
                     </div>
                 </div>
                 <div class="col-md-9">

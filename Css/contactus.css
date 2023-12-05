@@ -1,8 +1,90 @@
-input[type="text"],  input[type="email"]{
-border: none; 
-border-bottom: 1px solid rgb(100, 99, 99); 
-background-color: transparent; 
-cursor: text;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.wrapper {
+  width: 450px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .input-data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper .input-data input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #4158d0;
+}
+
+.wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-data .underline {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+
+/* Additional Styles */
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: none;
+  border-bottom: 1px solid rgb(100, 99, 99);
+  background-color: transparent;
+  cursor: text;
 }
 
 textarea {
@@ -25,7 +107,7 @@ textarea {
   grid-template-columns: 1fr 1fr;
 }
 
-.form-title{
+.form-title {
   text-align: center !important;
   color: #333;
   font-size: 24px;
@@ -38,14 +120,14 @@ textarea {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form{
+.contact-form {
   border-radius: 8px 0 0 8px;
   background-color: #FFF;
 }
 
 .contact-info {
-  background-color: #EE5B5B; /* Changed background color */
-  color: #fff; /* Set text color to white */
+  background-color: #4158d0;
+  color: #fff;
   border-radius: 0 8px 8px 0;
 }
 
@@ -73,12 +155,12 @@ textarea {
 }
 
 textarea {
-  resize: none; /* Make the message box fixed size */
-  height: 120px; /* Fixed height for the message box */
+  resize: none;
+  height: 120px;
 }
 
 button {
-  background-color: #EE5B5B; /* Changed button color */
+  background-color: #4158d0;
   color: #fff;
   padding: 12px 20px;
   border: none;
@@ -89,7 +171,7 @@ button {
 
 .info-content {
   padding: 10px;
-  background-color: #EE5B5B; /* Changed background color */
+  background-color: #4158d0;
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   color: #fff;
@@ -102,13 +184,13 @@ button {
 }
 
 .info-content p {
-  margin-bottom: 12px; /* Increased margin for more spacing */
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
 }
 
 .info-content h3 {
-  color: #fff; /* Make the company info title white */
+  color: #fff;
   font-size: 20px;
   margin-bottom: 8px;
 }
@@ -117,13 +199,13 @@ button {
   flex-grow: 1;
   color: #fff;
   margin: 30px 0;
-  font-size: 18px; /* Increased font size */
-  line-height: 1.5; /* Adjust line height for better spacing */
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .instagram-info {
   padding: 10px;
-  background-color: #EE5B5B; /* Changed background color */
+  background-color: #4158d0;
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   color: #fff;
@@ -132,40 +214,11 @@ button {
 
 @media only screen and (max-width: 1000px) {
   .container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
-  .contact-form{
+  .contact-form {
     border-radius: 8px 8px 0 0;
   }
-  
-  .contact-info {
-    border-radius: 0 0 8px 8px;
-  }
 
-  .form-title{
-    font-size: 3rem;
-  }
-
-  .info-content p {
-    font-size: 25px;
-  }
-
-  .additional-text {
-    font-size: 18px; 
-  }
-
-  label {
-    font-size: 2rem;
-  }
-
-    input,
-  textarea,button {
-    font-size: 1.75rem;
-    margin-bottom: 3rem;
-  }
-
-  textarea {
-    height: 240px; 
-  }
-}
+  .
