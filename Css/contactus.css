@@ -23,13 +23,13 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper .input-data {
+.input-data {
   height: 40px;
   width: 100%;
   position: relative;
 }
 
-.wrapper .input-data input {
+.input-data input {
   height: 100%;
   width: 100%;
   border: none;
@@ -44,7 +44,7 @@ body {
   color: #4158d0;
 }
 
-.wrapper .input-data label {
+.input-data label {
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -61,7 +61,6 @@ body {
 }
 
 .input-data .underline:before {
-  position: absolute;
   content: "";
   height: 100%;
   width: 100%;
@@ -89,12 +88,6 @@ textarea {
 
 textarea {
   background-color: #e3e3e3;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -220,5 +213,4 @@ button {
   .contact-form {
     border-radius: 8px 8px 0 0;
   }
-
-  .
+}
