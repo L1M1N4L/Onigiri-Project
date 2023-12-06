@@ -1,16 +1,19 @@
 /* ABOUT US */
 
-.app-body-main-content {
-  width: 70vw;
+.app-body {
+  grid-template-columns: minmax(min-content, 175px) minmax(min-content, 1300px) !important;
+}
+
+.about-us-section{
   height: 70vh;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 5rem;
   overflow-y: scroll;
   background-color: #FFF;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.app-body-main-content h1{
+.about-us-section h1{
   margin-top: -2vw;
   font-size: 2rem;
   font-weight: 400;
@@ -26,23 +29,27 @@
   margin: 1% 0;
 }
 
-.app-body-main-content p{
+.about-us-section p{
   text-align: justify;
   margin-bottom: 1.5em;
   font-size: 1rem;
 }
   
 @media only screen and (max-width: 1400px){
-  .app-body-main-content{
-    width: 87vw;
-    height: 80vh;
-    padding: 2rem;
+  .app-body {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 100px;
+    padding-top: 1.5rem;
+  }
+
+  .about-us-section{
+    height: 82vh;
   }
 }
 
 @media only screen and (max-width: 1000px){
 
-  .app-body-main-content h1{
+  .about-us-section h1{
     font-size: 3rem;
     margin-bottom: 10rem;
   }
@@ -52,7 +59,7 @@
     margin-bottom: 2rem;
   }
 
-  .app-body-main-content p{
+  .about-us-section p{
     font-size: 2rem;
   }
 }

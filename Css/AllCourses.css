@@ -1,5 +1,5 @@
 .app-body {
-    grid-template-columns: minmax(min-content, 175px) minmax(min-content, 1075px) 400px;
+    grid-template-columns: minmax(min-content, 175px) minmax(min-content, 1075px) 400px !important;
 }
 
 .course-container{
@@ -61,14 +61,40 @@
     font-size: 0.85rem;
 }
 
+/* Filter options */
+
+.course-filters{
+    height: 100%;
+    width: 80%;
+    padding: 12px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-title{
+    border-bottom: 1px solid #a6a6a6;
+    height: 3rem;
+    margin: auto;
+    font-size: 1.5rem;
+    width: 90%;
+}
+
 @media only screen and (max-width: 1400px) {
     .app-body {
-      grid-template-columns: 1fr;
-      grid-template-rows: 100px;
+      grid-template-columns: 1fr !important;
       padding-top: 1.5rem;
     }
     .app-body > * {
       margin-bottom: 3.5rem;
+    }
+    .app-body-main-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app-body-sidebar{
+        display:none;
     }
 
     .course-container{
@@ -83,11 +109,11 @@
     }
 
     .search-bar i{
-        font-size: 3rem;                                                                     
+        font-size: 2rem;                                                                     
     }
 
     .search-bar input{
-        height: 99px;
+        height: 75px;
         border: none;
     }
 

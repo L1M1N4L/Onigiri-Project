@@ -2,10 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Onigiri - Dashboard</title>
+  <title>Onigiri - Simulation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="Dashboard/style.css">
 <link rel="stylesheet" href="Css/simulation.css">
+<link rel="stylesheet" href="Css/AllCourses.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
@@ -23,30 +25,6 @@
 				</h1>
 			</div>
 		</div>
-		<!--
-		<div class="app-header-navigation">
-			<div class="tabs">
-				<a href="#">
-					Home
-				</a>
-				<a href="#" class="active">
-					Courses
-				</a>
-				<a href="#">
-					Lessons
-				</a>
-				<a href="#">
-					Account
-				</a>
-				<a href="#">
-					Resources
-				</a>
-				<a href="About.html">
-					About Us
-				</a>
-			</div>
-		</div>
-	-->
 		<div class="app-header-title">
 			<h1>Simulation</h1>
 		</div>
@@ -119,55 +97,59 @@
 		<div class="app-body-main-content">
 <!-- Quiz Section -->
 <div class="app-body-main-content">
-    <div class="dashboard-quizzes">
-        <section class="d-quiz-block">
-            <div class="d-quiz-block__top">
-                <div class="d-quiz-block__title-wrapper">
-                    <h2 class="d-quiz-block__title">JLPT Simulation</h2>
-                </div>
-            </div>
-            <div class="d-quiz-block__content">
-                <nav class="d-quizzes">
-                    <div class="d-quiz-block__empty">
-                        <a class="d-quiz-block__empty-cover" href="n5simstartpage.html" style="text-decoration: none;">
-                            <div class="icon-background"><div class="icon" style="background-color: #1E5897;"><span>N5</span></div></div>
-								<div class="quiz-info">
-									<h1 class="d-quiz-block__empty-text">JLPT N5</h1>
-									<p>Basic Japanese quiz covering essential vocabulary and grammar for everyday communication.</p>
-									<p class="status unlocked">Status: Unlocked</p>
-                            </div>
-                        </a>
-                        <div class="d-quiz-block__empty-cover">
-                            <div class="icon-background"><div class="icon" style="background-color: #BF4146;"><span>N4</span></div></div>
-                            <div class="quiz-info">
-                                <h1 class="d-quiz-block__empty-text">JLPT N4</h1>
-                            </div>
-                        </div>
-                        <div class="d-quiz-block__empty-cover">
-                            <div class="icon-background"><div class="icon" style="background-color: #12355B;"><span>N3</span></div></div>
-                            <div class="quiz-info">
-                                <h1 class="d-quiz-block__empty-text">JLPT N3</h1>
-                            </div>
-                        </div>
-                        <div class="d-quiz-block__empty-cover">
-                            <div class="icon-background"><div class="icon" style="background-color: #8C6C4A;"><span>N2</span></div></div>
-                            <div class="quiz-info">
-                                <h1 class="d-quiz-block__empty-text">JLPT N2</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="d-quiz-block__list">
-                        <li class="d-quiz-block__item js-d-quiz-li">
-                            <div class="d-quiz d-quizzes__quiz d-quiz--lesson" data-quiz-id="439" data-quiz-position="1">
-                                <!-- Quiz Content Goes Here -->
-                            </div>
-                            <a href="#" class="d-quiz-block__link">Browse All Quizzes</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-    </div>
+	<section class="d-quiz-block">
+		<div class="d-quiz-block__top">
+			<div class="d-quiz-block__title-wrapper">
+				<h2 class="d-quiz-block__title">JLPT Simulation</h2>
+			</div>
+		</div>
+		<div class="d-quiz-block__content">
+			<nav class="d-quizzes">
+				<div class="d-quiz-block__empty">
+					<a class="d-quiz-block__empty-cover" href="n5simstartpage.html" style="text-decoration: none;">
+						<div class="icon-background"><div class="icon" style="background-color: #1E5897;"><span>N5</span></div></div>
+							<div class="quiz-info">
+								<h1 class="d-quiz-block__empty-text">JLPT N5</h1>
+								<div class="course-description">Basic Japanese quiz covering essential vocabulary and grammar for everyday communication.</div>
+								<div class="course-details">17 Questions  •  Status: <span style="color:#026900">Unlocked</span></div>
+						</div>
+					</a>
+					<div class="d-quiz-block__empty-cover">
+						<div class="icon-background"><div class="icon" style="background-color: #BF4146;"><span>N4</span></div></div>
+						<div class="quiz-info">
+							<h1 class="d-quiz-block__empty-text">JLPT N4</h1>
+							<div class="course-description">information to be filled</div>
+							<div class="course-details">17 Questions  •  Status: <span style="color:#ce3e3c">Locked</span></div>
+						</div>
+					</div>
+					<div class="d-quiz-block__empty-cover">
+						<div class="icon-background"><div class="icon" style="background-color: #12355B;"><span>N3</span></div></div>
+						<div class="quiz-info">
+							<h1 class="d-quiz-block__empty-text">JLPT N3</h1>
+							<div class="course-description">information to be filled</div>
+							<div class="course-details">17 Questions  •  Status: <span style="color:#ce3e3c">Locked</span></div>
+						</div>
+					</div>
+					<div class="d-quiz-block__empty-cover">
+						<div class="icon-background"><div class="icon" style="background-color: #8C6C4A;"><span>N2</span></div></div>
+						<div class="quiz-info">
+							<h1 class="d-quiz-block__empty-text">JLPT N2</h1>
+							<div class="course-description">information to be filled</div>
+							<div class="course-details">17 Questions  •  Status: <span style="color:#ce3e3c">Locked</span></div>
+						</div>
+					</div>
+				</div>
+				<ul class="d-quiz-block__list">
+					<li class="d-quiz-block__item js-d-quiz-li">
+						<div class="d-quiz d-quizzes__quiz d-quiz--lesson" data-quiz-id="439" data-quiz-position="1">
+							<!-- Quiz Content Goes Here -->
+						</div>
+						<a href="#" class="d-quiz-block__link">Browse All Quizzes</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
 </div>
 		</div>
 

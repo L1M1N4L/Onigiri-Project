@@ -1,12 +1,6 @@
 /* Quiz Section Styles */
-
-.dashboard-quizzes {
-    display: flex;
-    width: 200%;
-  }
   
   .d-quiz-block {
-    max-width: 900px;
     width: 100%;
     margin: 1% 0;
     background-color: #fff;
@@ -24,7 +18,7 @@
   }
   
   .d-quiz-block__title {
-    color: #3498db;
+    color: black;
     font-size: 24px;
   }
   
@@ -102,19 +96,6 @@
 
 /* Quiz Section Styles */
 
-  
-  .d-quiz-block {
-    max-width: 900px;
-    width: 100%;
-    margin: 1% 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: auto; /* Move it to the left */
-  }
-  
   .d-quiz-block__empty-cover {
     transition: box-shadow 0.3s, transform 0.3s;
     cursor: pointer;
