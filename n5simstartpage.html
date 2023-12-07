@@ -133,7 +133,7 @@
         text-decoration: none; /* Remove underline from the link */
     }
 
-    .go-back-button button {
+    .go-back-button {
         width: 100%;
         max-width: 25rem;
         background-color: var(--c-olive-100); /* Use the olive color */
@@ -172,7 +172,9 @@
         <label for="name">名前 - Name:</label>
         <input type="text" id="name" name="name" required>
         <button type="submit">Start Quiz</button>
-        <a href="simulation.html" class="go-back-button"><button type="button">Go Back to Simulation</button></a>
+        <a href="simulation.html" class="go-back-button">
+            <button type="button" class="go-back-button">Go Back to Simulation</button>
+        </a>
     </form>
 
     <footer>
