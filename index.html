@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="./Css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="Css/Slogin.css">
-        <link rel="stylesheet" href="node_modules/sakura-js/dist/sakura.min.css">
         <title>Onigiri</title>
     </head>
     
@@ -151,42 +150,46 @@
 
              <!--Lesson Content-->
              
-            <div class="lesson-content-container">
-                <div class="lesson-content-title">
-                    <h1>Lesson Content</h1>
-                    <hr class="hr">
+            <div class="lesson-container">
+                <h1 class="lesson-title">Services</h1>
+                <div class="lesson-card slide-up">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-description">
+                        <h2 class="lesson-description-title">Beginner Japanese Course</h2>
+                        <p class="lesson-description-para">Learn basic Japanese vocabulary and grammar in a structured and interactive course.</p>
+                    </div>
                 </div>
 
-                <table>
-                    <tr>
-                        <th class="cell1">Level</th>
-                        <th class="cell1">Study Period</th>
-                        <th class="cell3">Extra Info</th>
-                    </tr>
-                    <tr>
-                        <td>N5</td>
-                        <td>200 Hours</td>
-                        <td>This program introduces basic communication skills, reading comprehension, and writing.</td>
-                      </tr>
-                      <tr>
-                        <td>N4</td>
-                        <td>400 Hours</td>
-                        <td>Study and practice daily conversation, comprehension in reading and writing.</td>
-                      </tr>
-                      <tr>
-                        <td>N3</td>
-                        <td>800 Hours</td>
-                        <td>This program focuses on high-level grammar lessons, including essay writing preparation and interview preparation for university entrance exams.</td>
-                      </tr>
-                      <tr>
-                        <td>N2</td>
-                        <td>1600 Hours</td>
-                        <td>Learn about Japanese culture and general knowledge. Using newspapers and videos as learning materials to develop high-level Japanese communication skills that students will need in life at university.</td>
-                      </tr>
-                </table>
+                <div class="lesson-card slide-up">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-description">
+                        <h2 class="lesson-description-title">Conversational Japanese Course</h2>
+                        <p class="lesson-description-para">Improve your speaking skills and fluency in everyday conversations with native Japanese teachers.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-card slide-up">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-description">
+                        <h2 class="lesson-description-title">Japanese Culture and Etiquette Course</h2>
+                        <p class="lesson-description-para">Gain a deeper understanding of Japanese customs, traditions, and social etiquette.</p>
+                    </div>
+                </div>
             </div>
-              <!--Lesson End-->
-               <!--Footer Start-->
+            
+            <!--Lesson End-->
+
+            <!--Location start-->
+            <div class="location-container">
+                    <div class="location-image"></div>
+                    <div class="location-text">
+                        <h1 class="location-h1" style="font-size: 3rem">Location</h1>
+                        <p class="location-p">Jl. Jenderal Sudirman, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</p>
+                    </div>
+            </div>
+            <!--Location end-->
+
+            <!--Footer Start-->
 
             <div class="footer-container">
                 <div class="contact-us" id="contact-us">
@@ -206,10 +209,22 @@
         <script src="js/scriptlogin.js"></script>
         <script src="js/observer.js"></script>
         <script src="js/mobile-popup.js"></script>
-        <script src="node_modules/sakura-js/dist/sakura.min.js" text="text/javascript"></script>
-        <script>
-          var sakura = new Sakura('body');
-        </script>
     </body>
     <script src="js/main.js"></script>
+    <script>
+    window.addEventListener('scroll', slideUp);
+
+    function slideUp(){
+        var sliders = document.querySelectorAll('.slide-up');
+        for(var i = 0; i < sliders.length; i++){
+    
+    var windowheight = window.innerHeight;
+    var revealtop = sliders[i].getBoundingClientRect().top; 
+    var revealpoint = 100;
+    if(revealtop < windowheight - revealpoint){ 
+        sliders[i].classList.add('active');
+    }
+    }
+}
+</script>
 </html>
