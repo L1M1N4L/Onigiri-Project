@@ -208,13 +208,49 @@
 		<div class="app-body-sidebar">
 			<div class="course-filters">
 				<div class="filter-title">Filters</div>
-				<input type="checkbox">
-				<input type="checkbox">
-				<input type="checkbox">
-				<input type="checkbox">
+				<!-- Level-based Filter -->
+				<div class="filter-category">
+					<div class="filter-subtitle">Level</div>
+					<div class="filter-options">
+					<label><input type="checkbox" name="level" value="beginner"> N2</label>
+					<label><input type="checkbox" name="level" value="intermediate"> N3</label>
+					<label><input type="checkbox" name="level" value="advanced"> N4</label>
+					<label><input type="checkbox" name="level" value="advanced"> N5</label>
+					</div>
+				</div>
+		
+				<!-- Lesson Type Filter -->
+				<div class="filter-category">
+					<div class="filter-subtitle">Lesson Type</div>
+					<div class="filter-options">
+					<label><input type="checkbox" name="lesson-type" value="grammar"> Grammar</label>
+					<label><input type="checkbox" name="lesson-type" value="vocabulary"> Vocabulary</label>
+					<label><input type="checkbox" name="lesson-type" value="kanji"> Kanji</label>
+					<label><input type="checkbox" name="lesson-type" value="speaking"> Speaking</label>
+					</div>
+				</div>
+		
+				<!-- Media Format Filter -->
+				<div class="filter-category">
+					<div class="filter-subtitle">Media Format</div>
+					<div class="filter-options">
+					<label><input type="checkbox" name="media" value="text"> Text</label>
+					<label><input type="checkbox" name="media" value="audio"> Audio</label>
+					<label><input type="checkbox" name="media" value="video"> Video</label>
+					</div>
+				</div>
+		
+				<!-- Progress Filter -->
+				<div class="filter-category">
+					<div class="filter-subtitle">Progress</div>
+					<div class="filter-options">
+					<label><input type="checkbox" name="progress" value="completed"> Completed</label>
+					<label><input type="checkbox" name="progress" value="partially-completed"> Partially Completed</label>
+					<label><input type="checkbox" name="progress" value="not-started"> Not Started</label>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
 </div>
 
 <!-- partial -->

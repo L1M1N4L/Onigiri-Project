@@ -80,6 +80,21 @@
     width: 90%;
 }
 
+.filter-category {
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.filter-options{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-subtitle {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 1400px) {
     .app-body {
       grid-template-columns: 1fr !important;
