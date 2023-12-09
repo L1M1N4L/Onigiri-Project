@@ -17,6 +17,20 @@ body {
     opacity: 1;
 }
 
+.slide-up{
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.slide-up.active{
+    transform: translate(0px);
+    opacity: 1;
+}
+
+
+
 /* HEADER */
 
 .topbar {
@@ -363,52 +377,190 @@ font-weight: 400;
     background-color: black;
 }
 
-/* Lesson Content */
+/* Lesson */
 
-table {
-    border-collapse: collapse;
-    width: 70%;
-    margin: auto;
-    margin-top: 2%;
-}
-
-td, th {
-    border: 0.1em solid #6e6e6e;
-    text-align: left;
-    padding: 2.5%;
-}
-
-.cell1{
-    width: 15%;
-}
-
-.cell3{
-    width: 60%;
-}
-  
-
-.lesson-content-container{
-    padding: 5% 0;
-}
-
-.lesson-content-title{
-    box-sizing: border-box;
-    width: 50%;
-    text-align: center;
-    margin: auto;
-}
-
-.lesson-content-title h1{
+.lesson-title{
+    width: 100%;
     font-size: 3rem;
+    margin-bottom: 2.5%;
 }
 
-.lesson-content-title hr{
-    border: 0.2em solid #B03131;
-    width: 15%;
-    margin:auto;
-    margin-top: 2%;
+.lesson-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem;
+    background: #fff;
 }
 
+.lesson-card{
+    width: 33rem;
+    height: 500px;
+    margin: auto;
+}
+
+.lesson-image{
+    width: 80%;
+    margin: auto;
+    height: 350px;
+    border-radius: 12px;
+    background-image: url("https://i.redd.it/9kaws8k67sc61.png");
+    background-size: cover;
+}
+
+.lesson-description{
+    width: 80%;
+    margin: auto;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.lesson-description-title, .lesson-description-para{
+    width: 100%;
+}
+
+@media (max-width: 1750px){
+    .lesson-title{
+        text-align: center;
+    }
+}
+
+ /* Location */
+
+.location-container{
+    background-color: #e5e5e5;
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-image, .location-text{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-h1, .location-p{
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.location-image{
+    background: url(../Images/location.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    border: 1px solid #cacaca;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px){
+    .location-image, .location-text{
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* TESTIMONY */
+
+.testimony-container{
+    width: 100%;
+    background-color: #fff;
+    padding: 5rem;
+}
+
+.testimony, .testimony-name{
+    width: 75%;
+    margin: auto;
+}
+
+.testimony-name{
+    text-align: center;
+}
+
+.mySlides {
+    display: none;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 90%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slideActive, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 600px) {
+    .testimony-container{
+        width: 100%;
+        background-color: #fff;
+        padding: 1.5rem;
+    }
+    .slideshow-container{
+        width: 100%;
+    }
+    .dot {
+       display: none;
+    }
+}
 
 /*Footer*/
 
@@ -543,14 +695,6 @@ td, th {
     .importance .heading, .eduprogram .heading{
         width: 100%;
         font-size: 3rem;
-    }
-
-
-
-    /* Lesson Content */
-
-    table {
-        width: 85%;
     }
 
     /*Footer*/
@@ -779,31 +923,22 @@ td, th {
         margin-top: 10%;
     }
 
-    /* Lesson Content */
+    /* Lesson */
 
-    .lesson-content-container{
-        padding: 10% 0;
+    .lesson-card{
+        height: 350px;
     }
 
-    .lesson-content-title{
-        font-size: 2rem;
+    .lesson-image{
+        height: 175px;
     }
 
-    .lesson-content-title hr{
-        width: 40%;
-        margin-top: 4%;
+    .lesson-description{
+        height: 150px;
     }
 
-    table {
-        width: 90%;
-        margin-top: 4%;
-    }
-    
-    td, th {
-        border: 0.1rem solid #6e6e6e;
-        text-align: left;
-        font-size: 1.3rem; 
-        padding: 0.35rem;
+    .lesson-title{
+        text-align: center;
     }
 
     /*Footer*/

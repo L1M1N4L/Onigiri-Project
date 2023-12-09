@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="./Css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="Css/Slogin.css">
-        <link rel="stylesheet" href="node_modules/sakura-js/dist/sakura.min.css">
         <title>Onigiri</title>
     </head>
     
@@ -151,42 +150,80 @@
 
              <!--Lesson Content-->
              
-            <div class="lesson-content-container">
-                <div class="lesson-content-title">
-                    <h1>Lesson Content</h1>
-                    <hr class="hr">
+            <div class="lesson-container">
+                <h1 class="lesson-title">Services</h1>
+                <div class="lesson-card slide-up">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-description">
+                        <h2 class="lesson-description-title">Beginner Japanese Course</h2>
+                        <p class="lesson-description-para">Learn basic Japanese vocabulary and grammar in a structured and interactive course.</p>
+                    </div>
                 </div>
 
-                <table>
-                    <tr>
-                        <th class="cell1">Level</th>
-                        <th class="cell1">Study Period</th>
-                        <th class="cell3">Extra Info</th>
-                    </tr>
-                    <tr>
-                        <td>N5</td>
-                        <td>200 Hours</td>
-                        <td>This program introduces basic communication skills, reading comprehension, and writing.</td>
-                      </tr>
-                      <tr>
-                        <td>N4</td>
-                        <td>400 Hours</td>
-                        <td>Study and practice daily conversation, comprehension in reading and writing.</td>
-                      </tr>
-                      <tr>
-                        <td>N3</td>
-                        <td>800 Hours</td>
-                        <td>This program focuses on high-level grammar lessons, including essay writing preparation and interview preparation for university entrance exams.</td>
-                      </tr>
-                      <tr>
-                        <td>N2</td>
-                        <td>1600 Hours</td>
-                        <td>Learn about Japanese culture and general knowledge. Using newspapers and videos as learning materials to develop high-level Japanese communication skills that students will need in life at university.</td>
-                      </tr>
-                </table>
+                <div class="lesson-card slide-up">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-description">
+                        <h2 class="lesson-description-title">Conversational Japanese Course</h2>
+                        <p class="lesson-description-para">Improve your speaking skills and fluency in everyday conversations with native Japanese teachers.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-card slide-up">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-description">
+                        <h2 class="lesson-description-title">Japanese Culture and Etiquette Course</h2>
+                        <p class="lesson-description-para">Gain a deeper understanding of Japanese customs, traditions, and social etiquette.</p>
+                    </div>
+                </div>
             </div>
-              <!--Lesson End-->
-               <!--Footer Start-->
+            
+            <!--Lesson End-->
+
+            <!--Location start-->
+            <div class="location-container">
+                    <div class="location-image"></div>
+                    <div class="location-text">
+                        <h1 class="location-h1" style="font-size: 3rem">Location</h1>
+                        <h3 class="location-p">Jl. Jenderal Sudirman, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</h3>
+                    </div>
+            </div>
+            <!--Location end-->
+
+            <!--Testimony start-->
+            <div class="testimony-container">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <h2 class="testimony">Onigiri offers an exceptional Japanese course experience! The instructors are knowledgeable and friendly, making learning enjoyable. The curriculum is well-structured, allowing me to quickly grasp the language. Thank you, Onigiri, for helping me achieve my language goals!</h2>
+                        <h1 class="testimony-name">- Name</h1>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <h2 class="testimony">Onigiri's Japanese Course is simply amazing! The instructors are knowledgeable and patient, making learning Japanese a breeze. The immersive experience and delicious food make it an unforgettable journey. Arigatou gozaimasu, Onigiri!</h2>
+                        <h1 class="testimony-name">- Name</h1>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <h2 class="testimony">Onigiri's Japanese Course is exceptional! Their authentic flavors and friendly staff made me feel like I was in Japan. Thank you for the delightful experience!</h2>
+                        <h1 class="testimony-name">- Name</h1>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                </div>
+            </div>
+            <!--Testimony end-->
+
+            <!--Footer Start-->
 
             <div class="footer-container">
                 <div class="contact-us" id="contact-us">
@@ -206,10 +243,50 @@
         <script src="js/scriptlogin.js"></script>
         <script src="js/observer.js"></script>
         <script src="js/mobile-popup.js"></script>
-        <script src="node_modules/sakura-js/dist/sakura.min.js" text="text/javascript"></script>
-        <script>
-          var sakura = new Sakura('body');
-        </script>
     </body>
     <script src="js/main.js"></script>
+    <script>
+    window.addEventListener('scroll', slideUp);
+
+    function slideUp(){
+        var sliders = document.querySelectorAll('.slide-up');
+        for(var i = 0; i < sliders.length; i++){
+    
+        var windowheight = window.innerHeight;
+        var revealtop = sliders[i].getBoundingClientRect().top; 
+        var revealpoint = 100;
+        if(revealtop < windowheight - revealpoint){ 
+            sliders[i].classList.add('active');
+        }
+    }
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" slideActive", "");
+  }
+  slides[slideIndex-1].style.display = "flex";  
+  dots[slideIndex-1].className += " slideActive";
+}
+
+</script>
 </html>
