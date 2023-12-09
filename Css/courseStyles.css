@@ -24,10 +24,54 @@ body {
     background-color: var(--c-gray-800);
     color: var(--c-text-primary);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
 
-.lesson-progress-container {
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #e5e5e5;
+}
+
+.course-header{
+    box-sizing: border-box;
+    width: 100%;
+    height: 10rem;
+    padding: 20px;
+    background-color: #1E5897;
+}
+
+.course-title{
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.course-nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 5rem;
+    background-color: #1f1f1f;
+}
+
+.nav-container{
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+}
+
+.nav-container span{
+    color: white;
+}
+
+.lesson-progress-container, .grade-container, .lesson-content-container {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -35,37 +79,42 @@ body {
     text-align: center;
     width: 90%;
     max-width: 900px;
-    height: 10rem;
+    margin-bottom: 2.5rem;
 }
 
-.lesson-progress-top{
+.lesson-content-title{
+    width: 100%;
+}
+
+.lesson-content-top, .lesson-progress-top, .grade-top{
     border-bottom: 1px solid gray;
     display: flex;
 }
 
-.lesson-progress-top h1{
-    width: 50%;
+h1{
+    width: 55%;
     min-width: 15rem;
     text-align: left;
     padding: 0 10px;
 }
 
 .progress-container{
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
 }
 
 .progress-container span{
-    width: 30%;
+    width: 40%;
     font-size: 0.75rem;
 }
 
 .progress-bar{
-    width: 70%;
+    width: 60%;
     height: 12px;
     background-color: #cacaca;
-    border-radius: 6px
+    border-radius: 6px;
+    float: right;
 }
 
 .progress{
@@ -74,3 +123,58 @@ body {
     background-color:#A62C2C;
     border-radius: 6px
 }
+
+.lesson-content{
+    display: flex;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.course-info{
+    width: 80%;
+}
+
+.course-desc{
+    text-align: left;
+    padding: 0 2.5rem;
+    width: 100%;
+}
+
+.course-button{
+    background-color: #A62C2C;
+    border: 1px solid #A62C2C;
+    padding: 12px 36px;
+    border-radius: 10px;
+}
+
+.course-button-container{
+    display: flex;
+    justify-content: right;
+    padding: 12px;
+}
+
+.icon-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+}
+  
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+}
+  
+.icon span{
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
