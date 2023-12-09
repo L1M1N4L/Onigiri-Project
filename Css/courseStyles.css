@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --c-gray-100: #000000;
+  --c-gray-200: #1f1f1f;
+  --c-gray-300: #2e2e2e;
+  --c-gray-400: #313131;
+  --c-gray-500: #969593;
+  --c-gray-600: #a6a6a6;
+  --c-gray-700: #bdbbb7;
+  --c-gray-800: #f1f1f1;
+  --c-gray-900: #ffffff;
+  --c-olive-500: #BF4146; 
+  --c-green-500: #A62C2C;
+  --c-white: var(--c-gray-100);
+  --c-text-primary: var(--c-gray-100);
+  --c-text-secondary: var(--c-gray-200);
+  --c-text-tertiary: var(--c-gray-500);
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: var(--c-gray-800);
+    color: var(--c-text-primary);
+    display: flex;
+    justify-content: center;
+}
+
+.lesson-progress-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+    height: 10rem;
+}
+
+.lesson-progress-top{
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+
+.lesson-progress-top h1{
+    width: 50%;
+    min-width: 15rem;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.progress-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.progress-container span{
+    width: 30%;
+    font-size: 0.75rem;
+}
+
+.progress-bar{
+    width: 70%;
+    height: 12px;
+    background-color: #cacaca;
+    border-radius: 6px
+}
+
+.progress{
+    width: 50%;
+    height: 100%;
+    background-color:#A62C2C;
+    border-radius: 6px
+}

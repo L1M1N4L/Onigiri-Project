@@ -559,6 +559,11 @@ a{
   transition: 0.3s;
 }
 
+.d-pathways-block__empty-cover-1:hover, .d-pathways-block__empty-cover-2:hover, .d-pathways-block__empty-cover-3:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
 .progress-bar{
   background-color: #dbdbdb;
   width: 70%;
