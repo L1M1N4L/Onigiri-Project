@@ -110,12 +110,20 @@
     <p>You have successfully passed the JLPT N5 Simulation Exam.</p>
     <p class="score">You scored: </p>
     <div class="score-number-container">
-      <h1 class="score-number" id="scoreTextElement">%</h1>
+      <h1 class="score-number" id="finalScore"></h1>
     </div>
     <div class="back-to-home">
       <a href="Simulation.html">Back to Home</a>
     </div>
   </div>
-  <script src="js/quizjs/simn5.js"></script>
+  <script>
+    const username = document.getElementById('username');
+    const finalScore = document.getElementById('finalScore');
+    const mostRecentScore = localStorage.getItem('mostRecentScore');
+    finalScore.innerText = mostRecentScore+"%";
+    saveHighScore = (e) => {
+        e.preventDefault();
+    };
+  </script>
 </body>
 </html>

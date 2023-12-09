@@ -195,7 +195,7 @@ getNewQuestion = () => {
   if (questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     // Go to the end page
-    return window.location.assign("../../Pass.html");
+    return window.location.assign("pass.html");
   }
 
   currentQuestion = questions[questionCounter];
