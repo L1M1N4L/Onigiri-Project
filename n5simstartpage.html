@@ -168,7 +168,7 @@
 
     </section>
 
-    <form method="get" action="simn5.html"> 
+    <form id="quizForm" method="get" action="simn5.html"> 
         <label for="name">名前 - Name:</label>
         <input type="text" id="name" name="name" required>
         <button type="submit">Start Quiz</button>
@@ -181,6 +181,13 @@
         <p><strong style="color: #BF4146">Note:</strong> Ensure that you have carefully reviewed the information before proceeding with the quiz. Once
             submitted, changes cannot be made. Good luck with your N5 Language Proficiency Test!</p>
     </footer>
-    
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('name').value;
+            localStorage.setItem('customUsernameKey', username);
+            window.location.href = 'simn5.html';
+        });
+    </script>
 </body>
 </html>

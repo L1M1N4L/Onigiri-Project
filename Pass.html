@@ -106,7 +106,7 @@
 </head>
 <body>
   <div class="pass-container">
-    <h1 class="title">Congratulations!</h1>
+    <h1 class="title">Congratulations, <span id="username"></span>!</h1>
     <p>You have successfully passed the JLPT N5 Simulation Exam.</p>
     <p class="score">You scored: </p>
     <div class="score-number-container">
@@ -117,13 +117,11 @@
     </div>
   </div>
   <script>
-    const username = document.getElementById('username');
     const finalScore = document.getElementById('finalScore');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
+    const username = localStorage.getItem('customUsernameKey');
     finalScore.innerText = mostRecentScore+"%";
-    saveHighScore = (e) => {
-        e.preventDefault();
-    };
+    document.getElementById('username').innerText = username;
   </script>
 </body>
 </html>
