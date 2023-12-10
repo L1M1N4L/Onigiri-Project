@@ -78,7 +78,7 @@
 }
 
 .filter-title{
-    border-bottom: 1px solid #a6a6a6;
+ 
     height: 3rem;
     margin: auto;
     font-size: 1.5rem;
@@ -99,6 +99,55 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+.search-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-mobile{
+    display: none;
+    width: 1%;
+    height: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidebar-filter {
+    position: fixed;
+    right: -100%; /* Initially hidden off-screen */
+    width: 40%; /* Adjust width */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000; /* Adjust z-index as needed */
+    overflow-y: auto;
+    padding: 20px; /* Add padding */
+    font-size: 1.2rem; /* Adjust text size */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidebar-filter.active {
+    right: 0; 
+}
+
+
+
 
 @media only screen and (max-width: 1400px) {
     .app-body {
@@ -140,4 +189,69 @@
     .d-course-block__empty-cover-1, .d-course-block__empty-cover-2, .d-course-block__empty-cover-3{
         width: 99%;
       }
+}
+
+@media only screen and (max-width: 1400px) {
+    /* Existing styles for other elements */
+
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .search-bar {
+        font-size: 2rem;
+        height: 100px;
+        width: calc(100% - 100px); /* Adjust width to accommodate filter mobile icon */
+        align-self: flex-start;
+    }
+
+    .filter-mobile {
+        display: block;
+        width: 100px; /* Set width for the filter mobile icon */
+        height: 100px;
+        background-color: #fff;
+        border: 1px solid rgb(157, 157, 157);
+        padding: 20px;
+        border-radius: 1px;
+        margin-left: 2%; /* Add margin for spacing */
+    }
+
+    .sidebar-filter label,.sidebar-filter h2,.sidebar-filter h1{
+        font-size: 2rem;
+    }
+
+    .filter-subtitle{
+        margin-top: 20px;
+    }
+    
+    .filter-options label {
+        display: flex; 
+        align-items: center; 
+        margin-bottom: 10px; 
+        margin-left: 5px;
+    }
+
+    .filter-options label input[type="checkbox"] {
+        margin-right: 20px; 
+    }
+    
+    .filter-options input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    
+    .filter-options input[type="checkbox"] {
+        transform: scale(2); 
+        margin-right: 5px; 
+    }
+
+    .filter-title h1 {
+        font-size: 2em; 
+    }
+
+    .filter-title{
+        margin-bottom: 2vw;
+    }
 }

@@ -102,7 +102,59 @@
 			</footer>
 		</div>
 		<div class="app-body-main-content">
-            <div class="search-bar" ><input type="text" placeholder="Search For Courses"><i class="ph ph-magnifying-glass"></i></div>
+
+			<div class="search-container">
+				<div class="search-bar" ><input type="text" id="courseSearch" placeholder="Search For Courses"><i class="ph ph-magnifying-glass"></i></div>
+				<button class="filter-mobile">
+					<i class="ph ph-funnel"></i>
+				</button>
+				<div class="sidebar-filter">
+					<div class="filter-title"><h1>Filters</h1></div>
+					<hr>
+					<div class="filter-category">
+						<div class="filter-subtitle"><h2>Level</h2></div>
+						<div class="filter-options">
+						<label><input type="checkbox" class="filter-checkbox filter-level" data-filter="categoryN2"> N2</label>
+						<label><input type="checkbox" class="filter-checkbox filter-level" data-filter="categoryN3"> N3</label>
+						<label><input type="checkbox" class="filter-checkbox filter-level" data-filter="categoryN4"> N4</label>
+						<label><input type="checkbox" class="filter-checkbox filter-level" data-filter="categoryN5"> N5</label>
+						</div>
+					</div>
+			
+					<!-- Lesson Type Filter -->
+					<div class="filter-category">
+						<div class="filter-subtitle"><h2>Lesson Type</h2></div>
+						<div class="filter-options">
+						<label><input type="checkbox" class="filter-checkbox filter-type" data-filter="categoryGrammar"> Grammar</label>
+						<label><input type="checkbox" class="filter-checkbox filter-type" data-filter="categoryPronounciation"> Pronounciation</label>
+						<label><input type="checkbox" class="filter-checkbox filter-type" data-filter="categoryKanji"> Kanji</label>
+						</div>
+					</div>
+			
+					<!-- Media Format Filter -->
+					<div class="filter-category">
+						<div class="filter-subtitle"><h2>Media Format</h2></div>
+						<div class="filter-options">
+						<label><input type="checkbox" class="filter-checkbox filter-media" data-filter="categoryText"> Text</label>
+						<label><input type="checkbox" class="filter-checkbox filter-media" data-filter="categoryAudio"> Audio</label>
+						<label><input type="checkbox" class="filter-checkbox filter-media" data-filter="categoryVideo"> Video</label>
+						</div>
+					</div>
+			
+					<!-- Progress Filter -->
+					<div class="filter-category">
+						<div class="filter-subtitle"><h2>Progress</h2></div>
+						<div class="filter-options">
+						<label><input type="checkbox" class="filter-checkbox filter-progress" data-filter="categoryCompleted"> Completed</label>
+						<label><input type="checkbox" class="filter-checkbox filter-progress" data-filter="categoryStudying"> Studying</label>
+						<label><input type="checkbox" class="filter-checkbox filter-progress" data-filter="categoryNotStarted"> Not Started</label>
+						</div>
+					</div>
+					<button class="close-btn">Close</button>
+				</div>
+				</div>
+				
+
             <div class="course-container">
 				<div class="item" data-category="categoryN5 categoryGrammar categoryStudying categoryText">
                 <a href="n5Grammar.html" class="d-course-block__empty-cover-1">
@@ -368,14 +420,33 @@ $(document).ready(function() {
 });
   </script>
   <script>
-		$(document).ready(function() {
-		$("#courseSearch").on("keyup", function() {
-			var searchText = $(this).val().toLowerCase();
-			$(".d-course-block__empty-cover-1, .d-course-block__empty-cover-2, .d-course-block__empty-cover-3").filter(function() {
-				$(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
-			});
-		});
-	});
+$(document).ready(function() {
+    $('.filter-mobile').on('click', function(e) {
+        e.stopPropagation(); // Prevent the click event from propagating to the document
+        $('.sidebar-filter').toggleClass('active');
+    });
+
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.sidebar-filter').length) {
+            // If the clicked element is not inside the sidebar, remove the 'active' class
+            $('.sidebar-filter').removeClass('active');
+        }
+    });
+});
+
+$('.close-btn').on('click', function() {
+        $('.sidebar-filter').removeClass('active');
+    });
+
+	$(document).ready(function() {
+    $("#courseSearch").on("keyup", function() {
+        var searchText = $(this).val().toLowerCase();
+        $(".d-course-block__empty-cover-1, .d-course-block__empty-cover-2, .d-course-block__empty-cover-3").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+        });
+    });
+});
+
   </script>
 </body>
 </html>
