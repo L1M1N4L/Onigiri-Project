@@ -192,10 +192,14 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
-  if (questionCounter >= MAX_QUESTIONS) {
+  if ((questionCounter >= MAX_QUESTIONS) && (score >= 60)) {
     localStorage.setItem("mostRecentScore", score);
-    // Go to the end page
+    // Go to the pass page
     return window.location.assign("Pass.html");
+  } else if ((questionCounter >= MAX_QUESTIONS) && (score <= 60)){
+    localStorage.setItem("mostRecentScore", score);
+    // Go to the fail page
+    return window.location.assign("Fail.html");
   }
 
   currentQuestion = questions[questionCounter];

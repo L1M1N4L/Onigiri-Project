@@ -72,12 +72,6 @@
     margin-bottom: 10px;
   }
   
-  /* Remove progress bar styles */
-  
-  .d-quizzes__quiz {
-    /* Add styles for individual quizzes if needed */
-  }
-  
   .d-quiz-block__list {
     list-style: none;
     padding: 0;
@@ -118,15 +112,7 @@
   
   .status {
     font-weight: bold;
-    margin-bottom: 10px; /* Adjust as needed */
-}
-
-.unlocked {
-    color: green; /* Adjust the color as needed */
-}
-
-.locked {
-    color: red; /* Adjust the color as needed */
+    margin-bottom: 10px;
 }
 
 /* Add styles for Phosphor Icons, assuming they are using a web font */
