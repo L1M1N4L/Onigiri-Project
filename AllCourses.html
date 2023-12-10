@@ -367,5 +367,15 @@ $(document).ready(function() {
     });
 });
   </script>
+  <script>
+		$(document).ready(function() {
+		$("#courseSearch").on("keyup", function() {
+			var searchText = $(this).val().toLowerCase();
+			$(".d-course-block__empty-cover-1, .d-course-block__empty-cover-2, .d-course-block__empty-cover-3").filter(function() {
+				$(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+			});
+		});
+	});
+  </script>
 </body>
 </html>
