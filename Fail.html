@@ -120,7 +120,7 @@
     const finalScore = document.getElementById('finalScore');
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     const username = localStorage.getItem('customUsernameKey');
-    finalScore.innerText = mostRecentScore+"%";
+    finalScore.innerText = Math.round(mostRecentScore)+"%";
     document.getElementById('username').innerText = username;
   </script>
 </body>

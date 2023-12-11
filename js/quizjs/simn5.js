@@ -182,7 +182,7 @@ let questions = [
 ];
 
 // CONSTANTS
-const CORRECT_BONUS = Math.round(5.882) ;
+let CORRECT_BONUS = 5.882 ;
 const MAX_QUESTIONS = questions.length; // Adjust based on the number of questions
 
 startGame = () => {
@@ -264,7 +264,7 @@ choicesElements.forEach((choice) => {
 
 incrementScore = (num) => {
   score += num;
-  scoreTextElement.innerText = score;
+  scoreTextElement.innerText = Math.round(score);
 };
 
 startGame();
