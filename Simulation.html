@@ -30,13 +30,21 @@
 		</div>
 
 		<div class="app-header-actions">
-			<button class="user-profile">
+			<div class="dropdown" onclick="toggleDropdown()">
+			  <button class="user-profile">
 				<span>Ida Bagus Kerthayayana M.</span>
 				<span>
-					<img src="Images/1537709864705.jpeg" />
+				  <img src="Images/1537709864705.jpeg" alt="User Avatar" />
 				</span>
-			</button>
-		</div>
+			  </button>
+			  <ul class="dropdown-menu"  id="dropDownMenu">
+				<a href="#"><li class="first-dropdown"><i class="ph-user"></i> Profile</li></a>
+				<a href="settings.html"><li><i class="ph-gear"></i> Settings</li></a>
+				<a href="index.html"><li class="last-dropdown"><i class="ph-sign-out"></i> Logout</li></a>
+				<!-- Add more menu items as needed -->
+			  </ul>
+			</div>
+		  </div>
 		<div class="app-header-mobile">
 			<!--Hamburger Button-->
 			<button id="hamburger-btn" class="icon-button large">
@@ -57,7 +65,7 @@
 							<li><a href="pricing.html"><i class="ph-credit-card"></i> Pricing</a></li>
 							<li><a href="Simulation.html"><i class="ph-crosshair-simple"></i> Simulation</a></li>
 							<li><a href="About.html"><i class="ph-info"></i> About us</a></li>
-							<li><a href="profile.html"><i class="ph-user-circle"></i> Profile</a></li>
+							<li><a href="#"><i class="ph-user-circle"></i> Profile</a></li>
 							<li><a href="settings.html"><i class="ph-gear"></i> Settings</a></li>
 							<li class="logout"><a href="index.html"><i class="ph-exit"></i> Log Out</a></li>
 						</ul>
