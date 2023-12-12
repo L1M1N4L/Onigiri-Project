@@ -119,3 +119,39 @@ input[type="date"] {
     margin-bottom: 20px;
     text-align: left !important; 
 }
+
+/* For screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+        width: 90%; 
+    }
+
+    .user-info {
+        padding-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .user-profile-picture {
+        width: 100%; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-heading {
+        margin-left: 0; 
+        text-align: center; 
+        margin-bottom: 10px; 
+    }
+
+    .action-buttons {
+        margin-left: 0; 
+    }
+
+    .cancel-button,
+    .save-button {
+        margin-left: 0; 
+        margin-bottom: 10px; 
+        width: 45%; 
+    }
+}
