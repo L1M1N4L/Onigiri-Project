@@ -40,6 +40,8 @@ a:hover{
 
 .course-header{
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 10rem;
     padding: 20px;
@@ -224,6 +226,7 @@ h1{
     position: relative;
     z-index:10;
     color: transparent;
+    user-select: none;
 }
 .progress-count:after{
     content: "";
@@ -327,7 +330,7 @@ h1, h2 {
 Modules - reusable parts of our design
 
 -------------------------------- */
-.cd-container {
+.cd-container, .kanji-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
   max-width: 1170px;
@@ -472,6 +475,7 @@ header h1 {
 
 .cd-timeline-img.cd-picture {
   background: #75ce66;
+  transition: 0.3s ease;
 }
 .cd-timeline-img.cd-movie {
   background: #c03b44;
@@ -599,16 +603,7 @@ header h1 {
   padding: .8em 0;
   opacity: .7;
 }
-.cd-timeline-content::before {
-  content: '';
-  position: absolute;
-  top: 16px;
-  right: 100%;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-right: 7px solid white;
-}
+
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
     font-size: 20px;
@@ -796,4 +791,89 @@ header h1 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.button-pulse {
+  height: 40px;
+  width:40px;
+  background-color: #68cee3;
+  content: " ";
+  animation: pulse 3s infinite;
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  margin: 0 auto;
+  position: relative;
+}
+
+.button-pulse:hover {
+  background-color: #4fa9c6; /* Darken color_scooter by 10% */
+  transition: all 1s ease-in-out;
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 3px #d3767c,
+                0 0 0 6px rgba(224, 157, 162, 0.5),
+                0 0 0 9px rgba(230, 177, 180, 0.33);
+  }
+}
+
+.step-number{
+  user-select: none;
+}
+
+.cd-timeline-img:hover, .cd-timeline-img:focus {
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05),
+              0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary), 0 0 0 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ; 
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------
+------KANJI SECTION-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.kanji-container{
+  margin: 2rem auto;
+}
+
+.level-container{
+  height: 1299px;
+  background: var(--c-gray-800);
+  border-radius: 20px;
+}
+
+.level-header{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: #d3767c;
+  height: 78px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  font-size: x-large;
+  color: white;
+}
+
+.level-content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 39px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1221px;
+  width: 100%;
+  padding: 30px;
+}
+
+.level-box{
+  background: #d9d9d9;
+  box-shadow: inset 0 0 10px var(--c-gray-700);
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
 }

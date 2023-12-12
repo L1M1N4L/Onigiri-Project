@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese Course</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    :root {
+    --c-gray-100: #000000;
+    --c-gray-200: #1f1f1f;
+    --c-gray-300: #2e2e2e;
+    --c-gray-400: #313131;
+    --c-gray-500: #969593;
+    --c-gray-600: #a6a6a6;
+    --c-gray-700: #bdbbb7;
+    --c-gray-800: #f1f1f1;
+    --c-gray-900: #ffffff;
+    --c-olive-500: #BF4146; 
+    --c-green-500: #A62C2C;
+    --c-white: var(--c-gray-100);
+    --c-text-primary: var(--c-gray-100);
+    --c-text-secondary: var(--c-gray-200);
+    --c-text-tertiary: var(--c-gray-500);
+    }
+
+    body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--c-gray-800);
+    }
+
+    a{
+    text-decoration: none;
+    color: white;
+    }
+
+    a:hover{
+        color: #e5e5e5;
+    }
+
+    h2{
+        padding: 16px 8px;
+        border-bottom: 1px solid gray;
+        user-select: none;
+    }
+
+    .course-header{
+        box-sizing: border-box;
+        width: 100%;
+        height: 10rem;
+        padding: 20px;
+        background-color: #1E5897;
+    }
+
+    .course-title{
+        text-align: center;
+        color: white;
+        width: 100%;
+    }
+
+    .course-nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        margin-bottom: 5rem;
+        background-color: #1f1f1f;
+    }
+
+    .nav-container{
+        max-width: 900px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .nav-container span{
+        color: white;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    main {
+      margin: 20px;
+    }
+
+    section {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 20px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 900px;
+        position: relative;
+    }
+
+    .complete-button-label{
+        cursor: pointer;
+        margin: 2.5rem auto;
+    }
+
+    input[type="checkbox"]{
+        display: none;
+    }
+
+    .complete-button-label span{
+        position: relative;
+        display: inline-block;
+        border: 2px solid #1f1f1f;
+        padding: 15px 30px;
+        color: #1f1f1f;
+        border-radius: 30px;
+        transition: 0.3s;
+        user-select: none;
+        overflow: hidden;
+    }
+
+    .complete-button-label span:hover{
+        transform: translateY(-5px);
+    }
+
+    .complete-button-label span::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+
+    input[type="checkbox"]:checked ~ span{
+        background: #4caf50;
+        color: white;
+        border-color: transparent;
+    }
+
+    .grammar-section {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .grammar-content {
+      margin-top: 10px;
+    }
+
+    .lesson-progress-tracker{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 90%;
+        max-width: 900px;
+        margin: 2.5rem auto;
+        padding: 20px;
+    }
+
+    .lesson-progress-title{
+        border-bottom: 1px solid gray;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .lesson-progress{
+        display: flex;
+        flex-direction: column;
+        margin: 2.5rem 0;
+    }
+
+    .lesson-progress span{
+        width: 90%;
+        margin: auto;
+    }
+
+    #progress-bar-container {
+        background-color: #ddd;
+        height: 20px;
+        overflow: hidden;
+        border-radius: 20px;
+        width: 90%;
+        margin: 1rem auto;
+  }
+
+  #progress-bar {
+        background-color: #A62C2C;
+        height: 100%;
+        width: 0;
+        border-radius: 20px;
+        transition: 0.5s;
+  }
+
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    margin-top: 5rem;
+    background-color: #1E5897;
+  }
+
+  .footer div{
+    text-align: center;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="course-header">
+        <h1 class="course-title">Course Introduction - Grammar N5</h1>
+    </div>
+    <div class="course-nav">
+        <div class="nav-container">
+            <span><a href="AllCourses.html">All Courses </a> > Course Introduction - Grammar N5</span>
+        </div>
+    </div>
+
+  <main>
+
+    <div class="lesson-progress-tracker">
+        <h1 class="lesson-progress-title">Lesson Progress</h1>
+        <div class="lesson-progress">
+            <span id="progress-number">0% Completed</span>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="chapter1" class="grammar-section">
+        <h2>Chapter 1: Greetings and Introductions</h2>
+        <div class="grammar-content">
+          <p>Learn basic greetings and self-introductions to start conversations.</p>
+          <p>Key Phrases:</p>
+          <ul>
+            <li>こんにちは (Konnichiwa) - Hello</li>
+            <li>おはようございます (Ohayou gozaimasu) - Good morning</li>
+            <li>こんばんは (Konbanwa) - Good evening</li>
+            <li>私は [Your Name] です (Watashi wa [Your Name] desu) - I am [Your Name]</li>
+            <li>どうぞよろしくお願いします (Douzo yoroshiku onegaishimasu) - Nice to meet you</li>
+          </ul>
+          <p>Practice Sentences:</p>
+          <ul>
+            <li>あなたの名前は何ですか？ (Anata no namae wa nan desu ka?) - What is your name?</li>
+            <li>初めまして、[Your Name] と申します (Hajimemashite, [Your Name] to moushimasu) - Nice to meet you, my name is [Your Name].</li>
+          </ul>
+        </div>
+
+        <label class="complete-button-label">
+            <input type="checkbox" class="chapter-checkbox" data-chapter="chapter1">
+            <span>Complete</span>
+        </label>
+      </section>
+      
+      <!-- Chapter 2: Numbers and Time -->
+      <section id="chapter2" class="grammar-section">
+        <h2>Chapter 2: Numbers and Time</h2>
+        <div class="grammar-content">
+          <p>Master counting objects and telling time in Japanese.</p>
+          <p>Counting Objects:</p>
+          <ul>
+            <li>一つ (Hitotsu) - One</li>
+            <li>二つ (Futatsu) - Two</li>
+            <li>三つ (Mittsu) - Three</li>
+            <li>十 (Juu) - Ten</li>
+            <li>百 (Hyaku) - One hundred</li>
+          </ul>
+          <p>Telling Time:</p>
+          <ul>
+            <li>今、何時ですか？ (Ima, nan-ji desu ka?) - What time is it now?</li>
+            <li>午前9時半 (Gozen ku-ji han) - 9:30 AM</li>
+            <li>午後3時 (Gogo san-ji) - 3:00 PM</li>
+          </ul>
+          <p>Practice Sentences:</p>
+          <ul>
+            <li>昼ご飯は何時ですか？ (Hirugohan wa nan-ji desu ka?) - What time is lunch?</li>
+            <li>先週、日本に行きました。 (Senshuu, Nihon ni ikimashita) - Last week, I went to Japan.</li>
+          </ul>
+        </div>
+
+        <label class="complete-button-label">
+            <input type="checkbox" class="chapter-checkbox" data-chapter="chapter2">
+            <span>Complete</span>
+        </label>
+      </section>
+      
+      <!-- New Grammar Section: Basic Sentences Practice -->
+      <section id="grammar-sentences" class="grammar-section">
+        <h2>Basic Sentences Practice</h2>
+        <div class="grammar-content">
+          <p>Practice constructing basic sentences in Japanese.</p>
+          <p>Example Sentences:</p>
+          <ul>
+            <li>これはペンです (Kore wa pen desu) - This is a pen.</li>
+            <li>私の趣味は音楽を聴くことです (Watashi no shumi wa ongaku o kiku koto desu) - My hobby is listening to music.</li>
+            <li>日本の料理が好きです (Nihon no ryouri ga suki desu) - I like Japanese food.</li>
+          </ul>
+          <p>Practice Sentences:</p>
+          <ul>
+            <li>新しい友達に会いました (Atarashii tomodachi ni aimashita) - I met a new friend.</li>
+            <li>今週末、映画を見に行きます (Konshuumatsu, eiga o mi ni ikimasu) - This weekend, I will go to see a movie.</li>
+          </ul>
+        </div>
+
+        <label class="complete-button-label">
+            <input type="checkbox" class="chapter-checkbox" data-chapter="chapter3">
+            <span>Complete</span>
+        </label>
+      </section>
+
+      <section id="chapter3" class="accordion-content grammar-section">
+        <h2>Chapter 3: Basic Vocabulary</h2>
+        <div class="grammar-content">
+          <p>Learn essential vocabulary for everyday communication.</p>
+          <p>Common Words:</p>
+          <ul>
+            <li>家 (ie) - House</li>
+            <li>食べ物 (tabemono) - Food</li>
+            <li>動物 (doubutsu) - Animal</li>
+          </ul>
+          <p>Useful Phrases:</p>
+          <ul>
+            <li>これは何ですか？ (Kore wa nan desu ka?) - What is this?</li>
+            <li>どうしてですか？ (Doushite desu ka?) - Why?</li>
+          </ul>
+        </div>
+
+        <label class="complete-button-label">
+            <input type="checkbox" class="chapter-checkbox" data-chapter="chapter4">
+            <span>Complete</span>
+        </label>
+      </section>
+    
+      <!-- Chapter 4: Common Expressions -->
+      <section id="chapter4" class="accordion-content grammar-section">
+        <h2>Chapter 4: Common Expressions</h2>
+        <div class="grammar-content">
+          <p>Explore common expressions used in various situations.</p>
+          <p>Everyday Phrases:</p>
+          <ul>
+            <li>お疲れ様でした (Otsukaresama deshita) - Thank you for your hard work.</li>
+            <li>お願いします (Onegaishimasu) - Please/Kindly.</li>
+            <li>失礼いたします (Shitsurei itashimasu) - Excuse me/Goodbye.</li>
+          </ul>
+          <p>Politeness in Speech:</p>
+          <ul>
+            <li>敬語 (Keigo) - Polite language in Japanese.</li>
+            <li>尊敬語 (Sonkeigo) - Respectful language.</li>
+            <li>謙譲語 (Kenjougo) - Humble language.</li>
+          </ul>
+        </div>
+
+        <label class="complete-button-label">
+            <input type="checkbox" class="chapter-checkbox" data-chapter="chapter5">
+            <span>Complete</span>
+        </label>
+      </section>
+    
+      <!-- Chapter 5: Cultural Insights -->
+      <section id="chapter5" class="accordion-content grammar-section">
+        <h2>Chapter 5: Cultural Insights</h2>
+        <div class="grammar-content">
+          <p>Gain insights into Japanese culture and customs.</p>
+          <p>Traditional Celebrations:</p>
+          <ul>
+            <li>お花見 (Ohanami) - Cherry blossom viewing in spring.</li>
+            <li>お正月 (Oshogatsu) - New Year celebrations, including traditions and customs.</li>
+          </ul>
+          <p>Etiquette and Politeness:</p>
+          <ul>
+            <li>礼儀正しい (Reigi tadashii) - The importance of politeness in Japanese culture.</li>
+            <li>靴の脱ぎ履き (Kutsu no nugihaki) - Custom of taking off shoes when entering a home.</li>
+            <li>お辞儀 (Ojigi) - Bowing as a form of greeting and respect.</li>
+          </ul>
+        </div>
+
+        <label class="complete-button-label">
+            <input type="checkbox" class="chapter-checkbox" data-chapter="chapter6">
+            <span>Complete</span>
+        </label>
+      </section>
+    
+      <!-- Chapter 6: Travel Phrases -->
+      <section id="chapter6" class="accordion-content grammar-section">
+        <h2>Chapter 6: Travel Phrases</h2>
+        <div class="grammar-content">
+          <p>Useful phrases for traveling in Japan.</p>
+          <p>Travel Situations:</p>
+          <ul>
+            <li>ホテルでのチェックイン (Hoteru de no chekkuin) - Hotel check-in</li>
+            <li>レストランでの注文 (Resutoran de no chuumon) - Ordering at a restaurant</li>
+            <li>駅での案内 (Eki de no annai) - Asking for directions at a station</li>
+          </ul>
+        </div>
+
+        <label class="complete-button-label">
+            <input type="checkbox" class="chapter-checkbox" data-chapter="chapter7">
+            <span>Complete</span>
+        </label>
+      </section>
+
+  </main>
+
+  <div class="footer">
+	<div>
+    Onigiri ©<br />
+    All Rights Reserved 2023
+	</div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get progress bar and checkboxes
+      const progressText = document.getElementById('progress-number')
+      const progressBar = document.getElementById('progress-bar');
+      const checkboxes = document.querySelectorAll('.chapter-checkbox');
+    
+      // Load saved progress
+      const savedProgress = localStorage.getItem('progress');
+      const savedNumber = localStorage.getItem('progressNumber')
+      if (savedProgress) {
+        progressBar.style.width = savedProgress;
+        progressText.innerText = savedNumber;
+      }
+    
+      // Load saved checkbox states
+      checkboxes.forEach(function(checkbox) {
+        const chapterId = checkbox.getAttribute('data-chapter');
+        const isChecked = localStorage.getItem(chapterId) === 'true';
+        checkbox.checked = isChecked;
+      });
+    
+      // Update progress and save checkbox states when a checkbox is clicked
+      checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          // Update progress
+          const completedCheckboxes = document.querySelectorAll('.chapter-checkbox:checked').length;
+          const progressText = document.getElementById('progress-number')
+          const totalCheckboxes = checkboxes.length;
+          const progress = (completedCheckboxes / totalCheckboxes) * 100;
+          progressBar.style.width = `${progress}%`;
+          progressText.innerText = Math.round(progress)+"% Completed"
+    
+          // Save progress
+          localStorage.setItem('progress', `${progress}%`);
+          localStorage.setItem('progressNumber', `${Math.round(progress)}% Completed`);
+    
+          // Save checkbox state
+          const chapterId = checkbox.getAttribute('data-chapter');
+          localStorage.setItem(chapterId, checkbox.checked);
+        });
+      });
+    });
+    </script>
+
+</body>
+</html>
