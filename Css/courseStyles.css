@@ -941,21 +941,81 @@ header h1 {
   cursor: pointer;
 }
 
-#kanji-info-popup {
-    display: none;
+
+.popup-container{
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+  .kanji-info-popup {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #fff;
     border: 1px solid var(--c-gray-600);
     z-index: 999;
+    transform: scale(0.7);
+    opacity: 0;
+    animation: popupIntro .3s ease .1s forwards;
+    z-index: 1000;
   }
-
+  
   .close-button {
     position: absolute;
     top: 5px;
     right: 5px;
     cursor: pointer;
   }
+
+  #kanji-info-popup h2{
+    opacity: 0;
+    animation: titleIntro .3s ease .3s forwards;
+  }
+
+  #kanji-info-popup div{
+    opacity: 0;
+    animation: textIntro .3s ease .3s forwards;
+  }
+
+  @keyframes popupIntro {
+    from{
+      transform: scale(0.7);
+      opacity: 0;
+    }
+
+    to{
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes titleIntro {
+    from {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes textIntro {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

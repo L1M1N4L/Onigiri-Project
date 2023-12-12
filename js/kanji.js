@@ -25,7 +25,7 @@ function openPopup(kanjiCharacter) {
       document.getElementById('jlpt').textContent = `JLPT Level: ${data.jlpt || 'N/A'}`;
 
       // Show the popup
-      document.getElementById('kanji-info-popup').style.display = 'block';
+      document.querySelector('.popup-container').style.display = 'flex';
     })
     .catch(error => {
       console.error('Error fetching kanji information:', error);
@@ -34,5 +34,5 @@ function openPopup(kanjiCharacter) {
 
 function closePopup() {
   // Close the popup
-  document.getElementById('kanji-info-popup').style.display = 'none';
+  document.querySelector('.popup-container').style.display = 'none';
 }
