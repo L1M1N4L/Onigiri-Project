@@ -10,14 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function openPopup(kanjiCharacter) {
-  const apiUrl = `https://kanjiapi.dev/v1/kanji/${kanjiCharacter}`;
+  const apiUrl = `https://kanjiapi.dev/v1/kanji/${kanjiCharacter}`; // KANJI API
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
       document.getElementById('kanji-info-title').textContent = `Kanji Information for ${data.kanji}`;
       document.getElementById('meanings').textContent = `Meanings: ${data.meanings.join(', ')}`;
-      document.getElementById('readings').textContent = `Readings: Kun - ${data.kun_readings.join(', ')}, On - ${data.on_readings.join(', ')}`;
+      document.getElementById('readingsKunyomi').textContent = `Kunyomi: ${data.kun_readings.join(', ')}`;
+      document.getElementById('readingsOnyomi').textContent = `Onyomi: ${data.on_readings.join(', ')}`;
       document.getElementById('stroke-count').textContent = `Stroke Count: ${data.stroke_count}`;
       document.getElementById('grade').textContent = `Grade: ${data.grade || 'N/A'}`;
       document.getElementById('heisig-en').textContent = `Heisig Keyword: ${data.heisig_en || 'N/A'}`;

@@ -114,6 +114,7 @@ h1{
 
 .progress-bar{
     width: 60%;
+    min-width: 7.5rem;
     height: 12px;
     background-color: #cacaca;
     border-radius: 6px;
@@ -121,10 +122,14 @@ h1{
 }
 
 .progress{
-    width: 50%;
+    width: 52%;
     height: 100%;
     background-color:#A62C2C;
     border-radius: 6px
+}
+
+#mobile-only-progress{
+  display: none;
 }
 
 .lesson-content{
@@ -220,6 +225,17 @@ h1{
 @media only screen and (max-width: 800px){
   .step-wizard{
     overflow-x: scroll;
+  }
+
+  .progress-container{
+    display: none;
+    width: 50%;
+    min-width: 13.3rem;
+  }
+
+  #mobile-only-progress{
+    display: flex !important;
+    margin-top: 2rem;
   }
 }
 
@@ -933,7 +949,7 @@ header h1 {
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #fff;
-    border: 2px solid #333;
+    border: 1px solid var(--c-gray-600);
     z-index: 999;
   }
 
