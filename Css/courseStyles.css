@@ -67,6 +67,7 @@ a:hover{
     max-width: 900px;
     width: 90%;
     margin: auto;
+    font-size: small;
 }
 
 .nav-container span{
@@ -179,6 +180,7 @@ h1{
     font-weight: 600;
     font-size: 16px;
 }
+
 .step-wizard-list{
     background: #fff;
     color: var( --c-olive-500);
@@ -214,6 +216,13 @@ h1{
     transform: translateX(-50%);
     z-index: -10;
 }
+
+@media only screen and (max-width: 800px){
+  .step-wizard{
+    overflow-x: scroll;
+  }
+}
+
 .progress-count{
     height: 40px;
     width:40px;
@@ -831,6 +840,28 @@ header h1 {
   cursor: pointer;
 }
 
+.reveal.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal{
+  position: relative;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: .5s all ease;
+}
+.revealleft.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+.revealleft{
+  position: relative;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: .5s all ease;
+}
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------
 ------KANJI SECTION-------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -840,7 +871,6 @@ header h1 {
 }
 
 .level-container{
-  height: 1299px;
   background: var(--c-gray-800);
   border-radius: 20px;
 }
@@ -849,7 +879,6 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: left;
-  background: #d3767c;
   height: 78px;
   width: 100%;
   border-radius: 20px 20px 0 0;
@@ -861,41 +890,37 @@ header h1 {
 .level-content{
   display: flex;
   flex-wrap: wrap;
-  gap: 39px;
-  flex-direction: column;
+  gap: 35px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 1221px;
   width: 100%;
   padding: 30px;
 }
 
 .level-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #d9d9d9;
   box-shadow: inset 0 0 10px var(--c-gray-700);
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
-.reveal.active{
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-.reveal{
-    position: relative;
-    transform: translateX(-50px);
-    opacity: 0;
-    transition: .5s all ease;
-  }
-.revealleft.active{
-    transform: translateX(0);
-    opacity: 1;
+.level-box h1{
+  width: 100%;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 200;
+  font-size: 5rem;
+  text-align: center;
 }
-  .revealleft{
-    position: relative;
-    transform: translateX(50px);
-    opacity: 0;
-    transition: .5s all ease;
-  }
+
+.level-box:hover, .level-box:focus{
+  box-shadow: 0 0 0 4px transparent, 0 3px 0 4px rgba(0, 0, 0, 0.05),
+              0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary), 0 0 0 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease; 
+  cursor: pointer;
+}
