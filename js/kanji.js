@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   kanjiBoxes.forEach(box => {
+    popupmeow.classList.remove('hidden');
+    loader.classList.add('hidden');
     box.addEventListener('click', function () {
       const kanjiCharacter = this.id;
       openPopup(kanjiCharacter);
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const studiedKanji = getstudiedkanji();
   applyCompletedStyles(studiedKanji);
+  
 });
 
 function openPopup(kanjiCharacter) {
@@ -39,8 +42,7 @@ function openPopup(kanjiCharacter) {
       console.error('Error fetching kanji information:', error);
     });
 
-    popupmeow.classList.remove('hidden');
-    loader.classList.add('hidden');
+
 }
 
 function isKanjiComplete(kanjiCharacter) {
