@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N5 - Kanji</title>
     <link href="./Css/courseStyles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@2.2.0/dist/hanzi-writer.min.js"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -258,6 +259,9 @@
         <div class="kanji-info-popup" id="kanji-info-popup">
             <span class="close-button" onclick="closePopup()">ｘ</span>
             <h2 id="kanji-info-title"></h2>
+            <h3>Stroke order(書き順)</h3>
+            <div id="stroke-order-container"></div>
+            <button id="replay-button" onclick="replayAnimation()">Replay Animation</button>
             <h3>Meanings(意味)</h3>
             <div id="meanings"></div>
             <h3>Kunyomi (訓)</h3>
@@ -272,5 +276,47 @@
     </div>
     
     <script src="js/kanji.js"></script>
+    
+    <script>
+   let currentKanjiCharacter = null;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const kanjiBoxes = document.querySelectorAll('.level-box');
+
+  kanjiBoxes.forEach(box => {
+    box.addEventListener('click', function () {
+      const kanjiCharacter = this.id;
+      clearStrokeOrder();
+      displayStrokeOrder(kanjiCharacter);
+      currentKanjiCharacter = kanjiCharacter;
+    });
+  });
+});
+
+function displayStrokeOrder(kanjiCharacter) {
+  // Initialize Hanzi Writer for stroke order
+  const writer = HanziWriter.create('stroke-order-container', kanjiCharacter, {
+    width: 300,
+    height: 300,
+    padding: 5, // Add padding to the stroke order animation
+  });
+
+  // Animate the stroke order
+  writer.animateCharacter();
+}
+
+function clearStrokeOrder() {
+  // Clear the contents of the stroke order container
+  const container = document.getElementById('stroke-order-container');
+  container.innerHTML = '';
+}
+
+function replayAnimation() {
+  if (currentKanjiCharacter) {
+    clearStrokeOrder();
+    displayStrokeOrder(currentKanjiCharacter);
+  }
+}
+      </script>
 </body>
 </html>
