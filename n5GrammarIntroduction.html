@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N5 - Grammar</title>
+    <link href="./Css/courseStyles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="grammar-header-container">
+        <div class="grammar-header-content">
+            <div class="header-image"></div>
+            <div class="header-items">
+                <div class="grammar-header-text">
+                    <h1>Introduction to Grammar N5</h1>
+                    <span>Start your journey in learning Grammar N5</span>
+                </div>
+                <div class="mark-complete-button">
+                    <button class="grammarComplete" onclick='toggleClass()'">Mark Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="course-nav">
+        <div class="nav-container">
+            <span><a href="AllCourses.html">All Courses </a> > <a href="n5Grammar.html">Course Introduction - Grammar N5</a> > Introduction</span>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="grammar-content">
+        <div class="grammar-top">
+            <h1>Title of section</h1>
+        </div>
+
+    </div>
+
+    <script>
+        // Check localStorage for the initial toggle state
+        var isToggled = localStorage.getItem('isToggled') === 'true';
+    
+        // Update the button and class based on the initial state
+        var button = document.querySelector('.grammarComplete');
+        button.classList.toggle('active', isToggled);
+        button.textContent = isToggled ? 'Completed' : 'Mark Complete';
+    
+        function toggleClass() {
+            // Toggle the state
+            isToggled = !isToggled;
+    
+            // Update the button and class based on the new state
+            button.classList.toggle('active', isToggled);
+            button.textContent = isToggled ? 'Completed' : 'Mark Complete';
+    
+            // Store the state in localStorage
+            localStorage.setItem('isToggled', isToggled);
+        }
+    </script>
+
+</body>
+</html>
