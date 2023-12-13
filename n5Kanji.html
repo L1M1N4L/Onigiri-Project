@@ -258,7 +258,7 @@
         <div class="loader" id="loader"></div>
         <div class="kanji-info-popup" id="kanji-info-popup">
             <span class="close-button" onclick="closePopup()">ｘ</span>
-            <h2 id="kanji-info-title"></h2>
+            <h2>Kanji info: <span id="kanji-info-title"></span></h2>
             <h3>Stroke order(書き順)</h3>
             <div id="stroke-order-container"></div>
             <button id="replay-button" onclick="replayAnimation()">Replay Animation</button>
@@ -296,8 +296,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function displayStrokeOrder(kanjiCharacter) {
   // Initialize Hanzi Writer for stroke order
   const writer = HanziWriter.create('stroke-order-container', kanjiCharacter, {
-    width: 150,
-    height: 150,
+    width: 300,
+    height: 300,
     padding: 5, // Add padding to the stroke order animation
   });
 
@@ -317,8 +317,6 @@ function replayAnimation() {
     displayStrokeOrder(currentKanjiCharacter);
   }
 }
-
-
       </script>
 </body>
 </html>
