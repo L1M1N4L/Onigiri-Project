@@ -296,8 +296,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function displayStrokeOrder(kanjiCharacter) {
   // Initialize Hanzi Writer for stroke order
   const writer = HanziWriter.create('stroke-order-container', kanjiCharacter, {
-    width: 300,
-    height: 300,
+    width: 150,
+    height: 150,
     padding: 5, // Add padding to the stroke order animation
   });
 
@@ -317,6 +317,8 @@ function replayAnimation() {
     displayStrokeOrder(currentKanjiCharacter);
   }
 }
+
+
       </script>
 </body>
 </html>
