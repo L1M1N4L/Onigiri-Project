@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   kanjiBoxes.forEach(box => {
-    popupmeow.classList.remove('hidden');
-    loader.classList.add('hidden');
     box.addEventListener('click', function () {
       const kanjiCharacter = this.id;
       openPopup(kanjiCharacter);
@@ -15,13 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const studiedKanji = getstudiedkanji();
   applyCompletedStyles(studiedKanji);
-  
 });
 
 function openPopup(kanjiCharacter) {
   const apiUrl = `https://kanjiapi.dev/v1/kanji/${kanjiCharacter}`; // KANJI API
   // Show the popup
-  document.querySelector('.popup-container').style.display = 'flex';
+      document.querySelector('.popup-container').style.display = 'flex';
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -44,7 +41,8 @@ function openPopup(kanjiCharacter) {
       console.error('Error fetching kanji information:', error);
     });
 
-
+    popupmeow.classList.remove('hidden');
+    loader.classList.add('hidden');
 }
 
 function isKanjiComplete(kanjiCharacter) {
