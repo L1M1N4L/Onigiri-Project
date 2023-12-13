@@ -1043,6 +1043,7 @@ header h1 {
 }
 
 .level-content{
+  user-select: none; /* Disable text selection */
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
