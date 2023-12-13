@@ -653,60 +653,58 @@ a{
 }
 
 .streak {
-  width: 250px;
-  height: 250px;
   margin: auto;
-  background: #df5e5b; 
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.streak-circle {
-  fill: none;
+@property --progress-value {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
 }
 
-.streak-svg {
-  transform: rotate(-90deg);
+@property --dayProgress-value {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
 }
 
-.streak-circle:nth-child(1) {
-  stroke: #fff; /* Set stroke color to white */
-  stroke-width: 12px;
+@keyframes progress {
+ to { --progress-value: 70; }
 }
 
-.streak-circle:nth-child(2) {
-  stroke: #598dc4; /* Set stroke color to matching color */
-  stroke-dasharray: 1413; /* Circumference of a circle with radius 135 (2 * π * 135) */
-  stroke-dashoffset: calc(1413*(70/100)); /* For a 15-day streak (half of a 30-day month) */
-  stroke-linecap: round;
-  stroke-width: 16px;
-  animation: streak-progress 1s ease;
+@keyframes dayProgress {
+  to { --dayProgress-value: 21; }
+ }
+
+.progress-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(#A62C2C calc(var(--progress-value) * 1%), var(--c-gray-800) 0);
+  animation: progress 2s 1 forwards;
 }
 
-@keyframes streak-progress {
-  from {
-      stroke-dashoffset: 1413;
-  }
-}
-
-.streak-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Poppins', sans-serif;
-  font-size: 36px;
-  color: #fff; /* Set text color to white */
-  font-weight: 500;
-  text-align: center;
-}
-
-.streak-text span {
-  font-size: 20px;
-  color: #eee; /* Set span text color to a slightly off-white */
+.progress-circle::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px var(--c-gray-600);
+  counter-reset: percentage var(--dayProgress-value);
+  content: counter(percentage) '/30 Days';
+  animation: dayProgress 2s 1 forwards;
 }
 
 /* Word Of The Day */
@@ -810,13 +808,22 @@ a{
     flex-direction: row;
   }
 
-  .wordoftheday-container{
+  .wordoftheday-container, .streak-container{
     width: 100%;
     height: auto;
     aspect-ratio: 4/3;
   }
 
-  .wordoftheday-container h1{
+  .progress-circle {
+    width: 450px;
+    height: 450px;
+  }
+
+  .progress-circle:before {
+    font-size: 2.25rem;
+  }
+
+  .d-pathways-block__title, .wordoftheday-container h1, .streak-container h1{
     font-size: 2.5rem;
   }
 

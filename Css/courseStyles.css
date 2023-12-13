@@ -941,13 +941,18 @@ header h1 {
   cursor: pointer;
 }
 
-#loader {
-    border: 1.6rem solid white;
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #BF4146;
     border-radius: 50%;
-    border-top: 1.6rem solid #56a5eb;
-    width: 12rem;
-    height: 12rem;
-    animation: spin 2s linear infinite;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
   }
   
   @keyframes spin {
@@ -971,6 +976,8 @@ header h1 {
   }
   
   .kanji-info-popup {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     padding: 30px;
     background: linear-gradient(to bottom, #ffffff, #f7f7f7);
@@ -1021,6 +1028,23 @@ header h1 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     animation: textIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s forwards;
   }
+
+  #markAsCompleteButton{
+    font-family: "Be Vietnam Pro", sans-serif !important;
+    margin: 30px auto;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #75ce66;
+    border-radius: 20px;
+    background-color: #fff;
+    animation: textIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s forwards;
+    transition: 0.3s;
+  }
+
+  #markAsCompleteButton:hover{
+    background-color: #f5f5f5 !important;
+    cursor: pointer;
+  }
   
   @keyframes popupIntro {
     from {
@@ -1061,5 +1085,9 @@ header h1 {
 /* Add these styles to your existing styles */
 
 .level-box.completed {
-    background-color: green; /* Color when marked as complete */
+  background-color: #75ce66;
+  transition: 0.3s;
 }
+
+
+

@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function openPopup(kanjiCharacter) {
   const apiUrl = `https://kanjiapi.dev/v1/kanji/${kanjiCharacter}`; // KANJI API
-
+  // Show the popup
+  document.querySelector('.popup-container').style.display = 'flex';
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -32,8 +33,9 @@ function openPopup(kanjiCharacter) {
       markAsCompleteButton.textContent = isKanjiComplete(kanjiCharacter) ? 'Marked as Complete' : 'Mark as Complete';
 
 
-      // Show the popup
-      document.querySelector('.popup-container').style.display = 'flex';
+      markAsCompleteButton.textContent = isKanjiComplete(kanjiCharacter) ? 'Completed' : 'Mark as Complete';
+      markAsCompleteButton.style.backgroundColor='#fff';
+      
     })
     .catch(error => {
       console.error('Error fetching kanji information:', error);
@@ -75,12 +77,14 @@ function toggleMarkAsComplete() {
   if (isKanjiComplete(kanjiCharacter)) {
     // Remove the "completed" class from the corresponding level-box
     markAsCompleteButton.textContent = 'Mark as Complete';
+    markAsCompleteButton.style.backgroundColor='#fff';
     levelBox.classList.remove('completed');
     localStorage.setItem(`complete_${kanjiCharacter}`, 'false');
     console.log(`Unmarked ${kanjiCharacter}.`);
   } else {
     // Add the "completed" class to the corresponding level-box
-    markAsCompleteButton.textContent = 'Marked as Complete';
+    markAsCompleteButton.textContent = 'Completed';
+    markAsCompleteButton.style.backgroundColor='#75ce66';
     levelBox.classList.add('completed');
     localStorage.setItem(`complete_${kanjiCharacter}`, 'true');
     console.log(`Marked ${kanjiCharacter} as complete.`);
