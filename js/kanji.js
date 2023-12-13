@@ -94,7 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
   toggleMarkAsComplete(kanjiCharacter);
 });
 
+document.addEventListener('click', function(event) {
+  if (event.target === document.querySelector('.popup-container')) {
+      closePopup();
+  }
+ });
+
 function closePopup() {
   // Close the popup
   document.querySelector('.popup-container').style.display = 'none';
 }
+

@@ -1129,6 +1129,13 @@ header h1 {
     opacity: 0;
     animation: popupIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.1s forwards;
   }
+
+  @media only screen and (max-height: 900px){
+    .kanji-info-popup {
+      height: 90%;
+      overflow-y: scroll;
+    }
+  }
   
   .close-button {
     position: absolute;
@@ -1184,6 +1191,27 @@ header h1 {
   #markAsCompleteButton:hover{
     background-color: #f5f5f5 !important;
     cursor: pointer;
+  }
+
+  #replay-button{
+    font-family: "Be Vietnam Pro", sans-serif !important;
+    margin: 30px auto;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #c03b44;
+    border-radius: 20px;
+    background-color: #fff;
+    animation: textIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s forwards;
+    transition: 0.3s;
+  }
+
+  #replay-button:hover{
+    background-color: #f5f5f5 !important;
+    cursor: pointer;
+  }
+
+  #stroke-order-container{
+    margin: auto;
   }
   
   @keyframes popupIntro {
