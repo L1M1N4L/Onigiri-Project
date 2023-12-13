@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadCompletedKanjiStyles();
   const kanjiBoxes = document.querySelectorAll('.level-box');
+  const loader = document.getElementById('loader');
+  const popupmeow = document.getElementById('popup-container');
 
   kanjiBoxes.forEach(box => {
     box.addEventListener('click', function () {
@@ -28,12 +30,16 @@ function openPopup(kanjiCharacter) {
       const markAsCompleteButton = document.getElementById('markAsCompleteButton');
       markAsCompleteButton.textContent = isKanjiComplete(kanjiCharacter) ? 'Marked as Complete' : 'Mark as Complete';
 
+
       // Show the popup
       document.querySelector('.popup-container').style.display = 'flex';
     })
     .catch(error => {
       console.error('Error fetching kanji information:', error);
     });
+
+    popupmeow.classList.remove('hidden');
+    loader.classList.add('hidden');
 }
 
 function isKanjiComplete(kanjiCharacter) {
