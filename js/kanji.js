@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const loader = document.getElementById('loader');
-  const popupmeow = document.getElementById('popup-container');
   loadCompletedKanjiStyles();
   const kanjiBoxes = document.querySelectorAll('.level-box');
 
