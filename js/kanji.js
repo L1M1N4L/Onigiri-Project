@@ -20,7 +20,7 @@ function openPopup(kanjiCharacter) {
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      document.getElementById('kanji-info-title').textContent = `${data.kanji}`;
+      document.getElementById('kanji-info-title').textContent = `Kanji info for: ${data.kanji}`;
       document.getElementById('meanings').textContent = `${data.meanings.join(', ')}`;
       document.getElementById('readingsKunyomi').textContent = `${data.kun_readings.join(', ')}`;
       document.getElementById('readingsOnyomi').textContent = `${data.on_readings.join(', ')}`;
