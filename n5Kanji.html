@@ -53,22 +53,22 @@
                     <h2>Level 2</h2>
                 </div>
                 <div class="level-content">
-                    <div class="level-box" id="日"><h1></h1></div>
-                    <div class="level-box" id="日"><h1></h1></div>
-                    <div class="level-box" id="本"><h1></h1></div>
-                    <div class="level-box" id="人"><h1></h1></div>
-                    <div class="level-box" id="月"><h1></h1></div>
-                    <div class="level-box" id="火"><h1></h1></div>
-                    <div class="level-box" id="水"><h1></h1></div>
-                    <div class="level-box" id="木"><h1></h1></div>
-                    <div class="level-box" id="金"><h1></h1></div>
-                    <div class="level-box" id="土"><h1></h1></div>
-                    <div class="level-box" id="曜"><h1></h1></div>
-                    <div class="level-box" id="上"><h1></h1></div>
-                    <div class="level-box" id="下"><h1></h1></div>
-                    <div class="level-box" id="中"><h1></h1></div>
-                    <div class="level-box" id="半"><h1></h1></div>
-                </div>                
+                    <div class="level-box" id="日"><h1>日</h1></div>
+                    <div class="level-box" id="日"><h1>日</h1></div>
+                    <div class="level-box" id="本"><h1>本</h1></div>
+                    <div class="level-box" id="人"><h1>人</h1></div>
+                    <div class="level-box" id="月"><h1>月</h1></div>
+                    <div class="level-box" id="火"><h1>火</h1></div>
+                    <div class="level-box" id="水"><h1>水</h1></div>
+                    <div class="level-box" id="木"><h1>木</h1></div>
+                    <div class="level-box" id="金"><h1>金</h1></div>
+                    <div class="level-box" id="土"><h1>土</h1></div>
+                    <div class="level-box" id="曜"><h1>曜</h1></div>
+                    <div class="level-box" id="上"><h1>上</h1></div>
+                    <div class="level-box" id="下"><h1>下</h1></div>
+                    <div class="level-box" id="中"><h1>中</h1></div>
+                    <div class="level-box" id="半"><h1>半</h1></div>
+                </div>      
             </div>
 
             <div class="level-container" style="margin-top: 5rem;">
@@ -256,15 +256,17 @@
     </div>
     <div class="popup-container">
         <div class="kanji-info-popup" id="kanji-info-popup">
-            <span class="close-button" onclick="closePopup()">X</span>
+            <div class="loader" id="loader"></div>
+            <span class="close-button" onclick="closePopup()">ｘ</span>
             <h2 id="kanji-info-title"></h2>
+            <h3>Meanings(意味)</h3>
             <div id="meanings"></div>
+            <h3>Kunyomi (訓)</h3>
             <div id="readingsKunyomi"></div>
+            <h3>Onyomi (音)</h3>
             <div id="readingsOnyomi"></div>
+            <h3>Stroke Count (総画数)</h3>
             <div id="stroke-count"></div>
-            <div id="grade"></div>
-            <div id="heisig-en"></div>
-            <div id="jlpt"></div>
         </div>
     </div>
     

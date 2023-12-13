@@ -15,15 +15,11 @@ function openPopup(kanjiCharacter) {
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      document.getElementById('kanji-info-title').textContent = `Kanji Information for ${data.kanji}`;
-      document.getElementById('meanings').textContent = `Meanings: ${data.meanings.join(', ')}`;
-      document.getElementById('readingsKunyomi').textContent = `Kunyomi: ${data.kun_readings.join(', ')}`;
-      document.getElementById('readingsOnyomi').textContent = `Onyomi: ${data.on_readings.join(', ')}`;
-      document.getElementById('stroke-count').textContent = `Stroke Count: ${data.stroke_count}`;
-      document.getElementById('grade').textContent = `Grade: ${data.grade || 'N/A'}`;
-      document.getElementById('heisig-en').textContent = `Heisig Keyword: ${data.heisig_en || 'N/A'}`;
-      document.getElementById('jlpt').textContent = `JLPT Level: ${data.jlpt || 'N/A'}`;
-
+      document.getElementById('kanji-info-title').textContent = `${data.kanji}`;
+      document.getElementById('meanings').textContent = `${data.meanings.join(', ')}`;
+      document.getElementById('readingsKunyomi').textContent = `${data.kun_readings.join(', ')}`;
+      document.getElementById('readingsOnyomi').textContent = `${data.on_readings.join(', ')}`;
+      document.getElementById('stroke-count').textContent = `${data.stroke_count}`;
       // Show the popup
       document.querySelector('.popup-container').style.display = 'flex';
     })

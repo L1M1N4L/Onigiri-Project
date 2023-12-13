@@ -941,64 +941,105 @@ header h1 {
   cursor: pointer;
 }
 
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
 
-.popup-container{
-  display: none;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(1px);
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+.popup-container {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
   .kanji-info-popup {
     position: fixed;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid var(--c-gray-600);
-    z-index: 999;
+    padding: 30px;
+    background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+    border: 2px solid #4a4a4a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
     transform: scale(0.7);
     opacity: 0;
-    animation: popupIntro .3s ease .1s forwards;
-    z-index: 1000;
+    animation: popupIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.1s forwards;
   }
   
   .close-button {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
+    font-size: 20px;
+    color: #666;
+    transition: color 0.3s ease-in-out;
   }
-
-  #kanji-info-popup h2{
+  
+  .close-button:hover {
+    color: #ff6347;
+  }
+  
+  #kanji-info-popup h2 {
     opacity: 0;
-    animation: titleIntro .3s ease .3s forwards;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: titleIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s forwards;
   }
-
-  #kanji-info-popup div{
+  
+  #kanji-info-popup h3 {
     opacity: 0;
-    animation: textIntro .3s ease .3s forwards;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #555;
+    animation: textIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s forwards;
   }
-
+  
+  #kanji-info-popup div {
+    opacity: 0;
+    margin-bottom: 12px;
+    color: #666;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    animation: textIntro 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s forwards;
+  }
+  
   @keyframes popupIntro {
-    from{
+    from {
       transform: scale(0.7);
       opacity: 0;
     }
-
-    to{
+  
+    to {
       transform: scale(1);
       opacity: 1;
     }
   }
-
+  
   @keyframes titleIntro {
     from {
       opacity: 0;
-      transform: translateY(-25px);
+      transform: translateY(-20px);
     }
   
     to {
@@ -1010,7 +1051,7 @@ header h1 {
   @keyframes textIntro {
     from {
       opacity: 0;
-      transform: translateY(25px);
+      transform: translateY(20px);
     }
   
     to {
