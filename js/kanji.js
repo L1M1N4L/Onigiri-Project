@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function openPopup(kanjiCharacter) {
   const apiUrl = `https://kanjiapi.dev/v1/kanji/${kanjiCharacter}`; // KANJI API
   // Show the popup
-      document.querySelector('.popup-container').style.display = 'flex';
+   document.querySelector('.popup-container').style.display = 'flex';
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -29,18 +29,13 @@ function openPopup(kanjiCharacter) {
       // Set the initial state of the mark as complete button
       const markAsCompleteButton = document.getElementById('markAsCompleteButton');
       markAsCompleteButton.textContent = isKanjiComplete(kanjiCharacter) ? 'Marked as Complete' : 'Mark as Complete';
-
-
       markAsCompleteButton.textContent = isKanjiComplete(kanjiCharacter) ? 'Completed' : 'Mark as Complete';
-      markAsCompleteButton.style.backgroundColor='#fff';
-      
+      markAsCompleteButton.style.backgroundColor=isKanjiComplete(kanjiCharacter) ? '#75ce66' : '#fff';;
     })
     .catch(error => {
       console.error('Error fetching kanji information:', error);
     });
-
-    popupmeow.classList.remove('hidden');
-    loader.classList.add('hidden');
+  
 }
 
 function isKanjiComplete(kanjiCharacter) {
