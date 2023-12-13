@@ -1060,4 +1060,8 @@ header h1 {
     }
   }
 
-  
+/* Add these styles to your existing styles */
+
+.level-box.completed {
+    background-color: green; /* Color when marked as complete */
+}

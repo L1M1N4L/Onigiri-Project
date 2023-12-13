@@ -1,20 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  loadCompletedKanjiStyles();
   const kanjiBoxes = document.querySelectorAll('.level-box');
-  const kanjiProgressDisplay = document.getElementById('kanjiProgressDisplay');
-  
+
   kanjiBoxes.forEach(box => {
     box.addEventListener('click', function () {
       const kanjiCharacter = this.id;
       openPopup(kanjiCharacter);
     });
   });
-
-  const studiedKanji = getStudiedKanji();
+  const studiedKanji = getstudiedkanji();
   applyCompletedStyles(studiedKanji);
-  updateKanjiProgressDisplay(studiedKanji.length);
-
-  const kanjiCharacter = document.getElementById('kanji-info-title').textContent;
-  toggleMarkAsComplete(kanjiCharacter);
 });
 
 function openPopup(kanjiCharacter) {
@@ -35,9 +30,6 @@ function openPopup(kanjiCharacter) {
 
       // Show the popup
       document.querySelector('.popup-container').style.display = 'flex';
-
-      // Toggle mark as complete after the popup is displayed
-      toggleMarkAsComplete();
     })
     .catch(error => {
       console.error('Error fetching kanji information:', error);
@@ -45,17 +37,19 @@ function openPopup(kanjiCharacter) {
 }
 
 function isKanjiComplete(kanjiCharacter) {
+  // Check if the kanji is marked as complete based on your logic (e.g., local storage)
   return localStorage.getItem(`complete_${kanjiCharacter}`) === 'true';
 }
 
-function applyCompletedStyles(studiedKanji) {
+function loadCompletedKanjiStyles() {
   const kanjiBoxes = document.querySelectorAll('.level-box');
 
   kanjiBoxes.forEach(box => {
     const kanjiCharacter = box.id;
     const levelBox = document.getElementById(kanjiCharacter);
 
-    if (studiedKanji.includes(kanjiCharacter)) {
+    if (isKanjiComplete(kanjiCharacter)) {
+      // Add the "completed" class to the corresponding level-box
       levelBox.classList.add('completed');
     }
   });
@@ -72,39 +66,31 @@ function toggleMarkAsComplete() {
   const levelBox = document.getElementById(kanjiCharacter);
 
   if (isKanjiComplete(kanjiCharacter)) {
+    // Remove the "completed" class from the corresponding level-box
     markAsCompleteButton.textContent = 'Mark as Complete';
     levelBox.classList.remove('completed');
     localStorage.setItem(`complete_${kanjiCharacter}`, 'false');
     console.log(`Unmarked ${kanjiCharacter}.`);
   } else {
+    // Add the "completed" class to the corresponding level-box
     markAsCompleteButton.textContent = 'Marked as Complete';
     levelBox.classList.add('completed');
     localStorage.setItem(`complete_${kanjiCharacter}`, 'true');
     console.log(`Marked ${kanjiCharacter} as complete.`);
   }
 
-  updateKanjiProgressDisplay();
 }
-function getStudiedKanji() {
+function getstudiedkanji() {
   const studiedKanji = localStorage.getItem('studiedKanji');
-  return Array.isArray(studiedKanji) ? studiedKanji : [];
+  return studiedKanji ? JSON.parse(studiedKanji) : [];
 }
 
-function updateKanjiProgressDisplay() {
-  const studiedKanjiCount = getStudiedKanji().length;
-  localStorage.setItem('kanjiprogress', studiedKanjiCount.toString());
-
-  // Update the display if the element is found
-  const kanjiProgressDisplay = document.getElementById('kanji-progress-display');
-  if (kanjiProgressDisplay) {
-    kanjiProgressDisplay.textContent = `Studied Kanji: ${studiedKanjiCount}`;
-    console.log(`Studied Kanji Count: ${studiedKanjiCount}`);
-  }
-}
-
-
-
+document.addEventListener('DOMContentLoaded', function () {
+  const kanjiCharacter = document.getElementById('kanji-info-title').textContent;
+  toggleMarkAsComplete(kanjiCharacter);
+});
 
 function closePopup() {
+  // Close the popup
   document.querySelector('.popup-container').style.display = 'none';
 }
