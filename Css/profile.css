@@ -152,6 +152,8 @@ input[type="date"] {
     .save-button {
         margin-left: 0; 
         margin-bottom: 10px; 
-        width: 45%; 
+        height: 2.5rem;
+        width: 5rem;
+        padding: 0px;
     }
 }
