@@ -22,21 +22,23 @@
 
     <div class="payment">
       <div class="payment-container">
-              <div class="payment-option paypal"><img class="logoc paypallo" src="Images/paypal.png"></div>
-              <div class="payment-option qris"><img class="logoc qrislo" src="Images/qris.png"></div>
-              <div class="payment-option mastercard"><img class="logoc mastercardlo" src="Images/mastercard.png"></div>
-              <div class="payment-option visab"><img class="logoc visalo" src="Images/visa.png"></div>
+              <div class="payment-option paypal" onclick="changeCard('paypal')"><img class="logoc paypallo" src="Images/paypal.png"></div>
+              <div class="payment-option qris" onclick="changeCard('qris')"><img class="logoc qrislo" src="Images/qris.png"></div>
+              <div class="payment-option mastercard" onclick="changeCard('masterCard')"><img class="logoc mastercardlo" src="Images/mastercard.png"></div>
+              <div class="payment-option visab paymentActive" onclick="changeCard('visa')"><img class="logoc visalo" src="Images/visa.png"></div>
       </div>
-      <p class="checkouttextdesc">Pick a payment option and complete your payment to confirm your order.</p>
+      <p class="checkouttextdesc">Select a payment option and complete your payment to confirm your order.</p>
     </div>    
     <div class="gridContainer">
         <div class="creditCard">
-          <div class="visaLogo">
+         <div class="visaLogo">
             <svg class="visa" enable-background="new 0 0 291.764 291.764" version="1.1" viewbox="5 70 290 200" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
               <path class="svgcolor" d="m119.26 100.23l-14.643 91.122h23.405l14.634-91.122h-23.396zm70.598 37.118c-8.179-4.039-13.193-6.765-13.193-10.896 0.1-3.756 4.24-7.604 13.485-7.604 7.604-0.191 13.193 1.596 17.433 3.374l2.124 0.948 3.182-19.065c-4.623-1.787-11.953-3.756-21.007-3.756-23.113 0-39.388 12.017-39.489 29.204-0.191 12.683 11.652 19.721 20.515 23.943 9.054 4.331 12.136 7.139 12.136 10.987-0.1 5.908-7.321 8.634-14.059 8.634-9.336 0-14.351-1.404-21.964-4.696l-3.082-1.404-3.273 19.813c5.498 2.444 15.609 4.595 26.104 4.705 24.563 0 40.546-11.835 40.747-30.152 0.08-10.048-6.165-17.744-19.659-24.035zm83.034-36.836h-18.108c-5.58 0-9.82 1.605-12.236 7.331l-34.766 83.509h24.563l6.765-18.08h27.481l3.51 18.153h21.664l-18.873-90.913zm-26.97 54.514c0.474 0.046 9.428-29.514 9.428-29.514l7.13 29.514h-16.558zm-160.86-54.796l-22.931 61.909-2.498-12.209c-4.24-14.087-17.533-29.395-32.368-36.999l20.998 78.33h24.764l36.799-91.021h-24.764v-0.01z" fill="#A9CBDC"></path>
               <path class="svgtipcolor" d="m51.916 111.98c-1.787-6.948-7.486-11.634-15.226-11.734h-36.316l-0.374 1.686c28.329 6.984 52.107 28.474 59.821 48.688l-7.905-38.64z" fill="#DDEAF1"></path>
             </svg>
           </div>
+          <div class="masterCardLogo"><img class="logoc mastercardlo" src="Images/mastercard.png"></div>
+          <div class="paypalLogo" ><img class="logoc paypallo" src="Images/paypalWhite.png"></div>
           <div class="chipLogo">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 230 384.4 300.4" width="38" height="70">
                           <path d="M377.2 266.8c0 27.2-22.4 49.6-49.6 49.6H56.4c-27.2 0-49.6-22.4-49.6-49.6V107.6C6.8 80.4 29.2 58 56.4 58H328c27.2 0 49.6 22.4 49.6 49.6v159.2h-.4z" data-original="#FFD66E" data-old_color="#00FF0C" fill="rgb(237,237,237)"/>
@@ -50,7 +52,7 @@
           <h4 class="year">   </h4>
         </div>
         <a href="pricing.html">
-        <div class="div previousStep"> 
+        <div class="previousStep"> 
           <div class="arrow">
           
                       <svg version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -104,5 +106,50 @@ function showPopup() {
 // Attach a click event listener to the "Pay" button
 payButton.addEventListener('click', showPopup);
 
+  function changeCard(name) {
+    const creditCard = document.querySelector('.creditCard');
+    const master = document.querySelector('.masterCardLogo');
+    const visa = document.querySelector('.visaLogo');
+    const paypal = document.querySelector('.paypalLogo');
+
+    if (name == "visa") {
+      visa.style.display = 'block'
+      master.style.display = 'none'
+      paypal.style.display = 'none'
+      creditCard.style.background = 'linear-gradient(to right, #4092b5 60%, #3580aa 90%)';
+      document.querySelector('.mastercard').classList.remove('paymentActive')
+      document.querySelector('.qris').classList.remove('paymentActive')
+      document.querySelector('.paypal').classList.remove('paymentActive')
+      document.querySelector('.visab').classList.add('paymentActive')
+    } 
+    else if (name == "masterCard") {
+      master.style.display = 'block'
+      visa.style.display = 'none'
+      paypal.style.display = 'none'
+      creditCard.style.background = 'linear-gradient(#1c1c1c, #3b3b3b)';
+      document.querySelector('.visab').classList.remove('paymentActive')
+      document.querySelector('.qris').classList.remove('paymentActive')
+      document.querySelector('.paypal').classList.remove('paymentActive')
+      document.querySelector('.mastercard').classList.add('paymentActive')
+    }
+    else if (name == "paypal") {
+      visa.style.display = 'none'
+      master.style.display = 'none'
+      paypal.style.display = 'block'
+      creditCard.style.background = 'linear-gradient(49deg, rgba(30,61,109,1) 0%, rgba(13,112,178,1) 100%)';
+      document.querySelector('.mastercard').classList.remove('paymentActive')
+      document.querySelector('.qris').classList.remove('paymentActive')
+      document.querySelector('.visab').classList.remove('paymentActive')
+      document.querySelector('.paypal').classList.add('paymentActive')
+    }
+    else if (name == "qris") {
+      alert("Feature Not Available Yet");
+      document.querySelector('.mastercard').classList.remove('paymentActive')
+      document.querySelector('.visab').classList.remove('paymentActive')
+      document.querySelector('.paypal').classList.remove('paymentActive')
+      document.querySelector('.qris').classList.add('paymentActive')
+    }
+    
+  }
 </script>
 </html>

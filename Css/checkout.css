@@ -56,9 +56,6 @@
   min-width: 0;
   min-height: 0;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #4092b5), color-stop(90%, #3580aa));
-  background: -webkit-linear-gradient(left, #4092b5 60%, #3580aa 90%);
-  background: -o-linear-gradient(left, #4092b5 60%, #3580aa 90%);
   background: linear-gradient(to right, #4092b5 60%, #3580aa 90%);
   margin-top: 82px;
   border-radius: 8px;
@@ -80,10 +77,14 @@
   overflow: hidden;
 }
 
-.creditCard .visaLogo {
+.creditCard .visaLogo, .masterCardLogo, .paypalLogo {
   grid-area: visa;
   overflow: hidden;
   justify-self: right;
+}
+
+.masterCardLogo, .paypalLogo{
+  display: none;
 }
 
 .creditCard .visaLogo svg {
@@ -325,6 +326,17 @@ button span {
     height: 56px;
     flex-shrink: 0;
     border-radius: 8px;
+    transition: 0.5s
+}
+
+.paymentActive{
+  box-shadow: 0 0 0 4px #f1f1f1, 0 0 0 5px #969593;
+} 
+
+.payment-option:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 4px #f1f1f1, 0 0 0 5px #969593;
 }
 
 .paypal{
@@ -446,13 +458,13 @@ button span {
   width: 40%;
 }
 
-
 .gridContainer{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
-  height: 37rem
+  min-width: 270px;
+  height: 40rem;
 }
 
 .creditCard{
@@ -465,18 +477,20 @@ button span {
 
 }
 
-
 .checkouttextdesc{
-  font-size: 0.8rem;
-  margin: 1rem 2rem 5rem 2rem;
+  font-size: 1.2rem;
+  margin: 1rem 2rem 7.5rem 2rem;
 }
 
-#paymentForm{
+form {
   box-sizing: border-box;
-  position: static;
   width: 80%;
   padding: 0px 50px;
   margin-bottom: 82px;
+}
+
+.inputCon{
+  margin-top: 1rem;
 }
 
 .payment-container{
@@ -491,6 +505,44 @@ button span {
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
+}
 
+@media only screen and (max-width: 500px){
+  form{
+    box-sizing: border-box;
+    width: 80%;
+    padding: 0px;
+    margin-bottom: 82px;
+  }
 
+  form button{
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+
+  .creditCard{
+    display: none;
+  }
+
+  .checkouttextdesc{
+    margin-bottom: 2.5rem;
+  }
+
+  .previousStep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+  }
+
+  .previousStep p {
+  margin: 0;
+  font-size: 12px;
+}
+
+  .gridContainer{
+    height: 30rem;
+  }
 }

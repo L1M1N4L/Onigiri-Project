@@ -404,8 +404,19 @@ font-weight: 400;
     margin: auto;
     height: 350px;
     border-radius: 12px;
-    background-image: url("https://i.redd.it/9kaws8k67sc61.png");
     background-size: cover;
+}
+
+#beginner{
+    background-image: url("../Images/beginnerCourse.jpg")
+}
+
+#conversational{
+    background-image: url("../Images/conversationalCourse.jpg")
+}
+
+#culture{
+    background-image: url("../Images/cultureCourse.jpg")
 }
 
 .lesson-description{

@@ -1066,6 +1066,37 @@ header h1 {
   transition: all 0.3s ease;
 }
 
+@media only screen and (max-width: 762px){
+
+  .level-content{
+    gap: 24px;
+  }
+  .level-box{
+    width: 100px;
+    height: 100px;
+  }
+
+  .level-box h1{
+    font-size: 3.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 570px){
+  .level-content{
+    gap: 12px;
+  }
+
+  .level-box{
+    width: 75px;
+    height: 75px;
+    border-radius: 12px;
+  }
+
+  .level-box h1{
+    font-size: 2rem !important;
+  }
+}
+
 .level-box h1{
   width: 100%;
   font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
