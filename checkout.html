@@ -14,6 +14,7 @@
     </style>
 </head>
 <body>
+    
     <div class="logo">
       <h1 class="checkouttext">Check Out</h1>
       <img src="Images/Logo.svg">
@@ -75,9 +76,33 @@
           <div class="inputCon" id="cvv" data-top="CVV">
             <input type="text" placeholder="444"/>
           </div>
-          <button>pay<span>$9.99</span></button>
+          <button id="payButton">pay<span>$9.99</span></button>
         </form>
+      </div>
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <div class="checkmark-icon">
+            <img src="Images/checkmarKsvg.svg">
+          </div>
+          <p class="thank-you-text">Payment Successful!</p>
+          <p class="small-text">Your support means the world to us - thank you for choosing us!</p>
+          <a href="dashboard.html" class="back-to-dashboard-btn">Go To Dashboard</a>
+        </div>
       </div>
 </body>
 <script src="js/card.js"></script>
+<script>
+  // Get references to the button and the pop-up
+const payButton = document.getElementById('payButton');
+const popup = document.getElementById('popup');
+
+// Function to show the pop-up
+function showPopup() {
+  popup.style.display = 'block';
+}
+
+// Attach a click event listener to the "Pay" button
+payButton.addEventListener('click', showPopup);
+
+</script>
 </html>
