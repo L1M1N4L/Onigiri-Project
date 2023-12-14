@@ -493,10 +493,12 @@ font-weight: 400;
 .testimony, .testimony-name{
     width: 75%;
     margin: auto;
+    font-weight: 200;
 }
 
 .testimony-name{
     text-align: center;
+    font-weight: 700;
 }
 
 .mySlides {
