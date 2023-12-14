@@ -371,6 +371,7 @@ font-weight: 400;
 }
 
 .vid{
+    height: 30rem;
     width: 100%;
     border: 3px solid black;
     border-radius: 5px;
@@ -405,6 +406,7 @@ font-weight: 400;
     height: 350px;
     border-radius: 12px;
     background-size: cover;
+    background-position: center;
 }
 
 #beginner{
