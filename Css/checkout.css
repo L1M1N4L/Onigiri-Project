@@ -31,9 +31,9 @@
 }
 
 .gridContainer {
-  position: absolute;
+  position: relative;
   left: 50%;
-	top: 50%;
+	margin-top: 15rem;
 	transform: translate(-50%,-50%);
   height: 420px;
   width: 670px;
@@ -180,7 +180,7 @@
 }
 
 form {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   grid-area: form;
   overflow: visible;
@@ -298,8 +298,9 @@ button span {
 /* styles.css */
 
 .payment{
-  width: 600px;
-  margin: 2.2rem auto;
+  border: solid white 1px;
+  width: auto;
+  margin: 2rem
 }
 
 .checkouttextdesc{
@@ -308,10 +309,11 @@ button span {
 }
 
 .payment-container {
+    position: relative;
     text-align: center;
     display: flex;
-    width: 540px;
-    justify-content: space-between;
+    width: 600px;
+    gap: 5%;
     margin: auto;
 }
 
@@ -359,4 +361,63 @@ button span {
 .visalo{
   width: auto;
   height: 30px;
+}
+
+@media only screen and (max-width: 1000px){
+.logo{
+  font-size: 0.5rem;
+}
+
+.logo img{
+  width: 40%;
+}
+
+
+.gridContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  height: 37rem
+}
+
+.creditCard{
+  position: relative;
+  
+}
+
+.previousStep {
+  bottom: 20px;
+
+}
+
+
+.checkouttextdesc{
+  font-size: 0.8rem;
+  margin: 1rem 2rem 5rem 2rem;
+}
+
+#paymentForm{
+
+  box-sizing: border-box;
+  position: static;
+  width: 80%;
+  padding: 0px 50px;
+  margin-bottom: 82px;
+}
+
+.payment-container{
+  width: auto;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-option{
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+
 }
