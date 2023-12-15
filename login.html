@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+  --widtContainer: 500px;
+  --colorButton: #05c46b;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  background-image: url('data:image/svg+xml,%3Csvg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E');
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.log-in {
+  width: var(--widtContainer);
+  background: #fff;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.log-in__header {   
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 100px;
+  padding: 0 16px;
+  position: relative;
+}
+
+.log-in__header:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
+  z-index: 1;
+}
+
+.log-in__header span {
+  position: relative;
+  z-index: 3;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.log-in__form {
+  padding: 16px;
+  width: 100%;
+}
+
+.log-in__form-label {
+  display: block;
+  padding: 16px 0;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.log-in__form-input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.log-in__form-submit {
+  background: #f4f4f4;
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  margin: 16px 0;
+  width: 100%;
+  padding: 16px;
+  outline: 0;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.2s linear;
+}
+
+.log-in__form-submit:hover {
+  background: var(--colorButton);
+  color: #fff;
+  cursor: pointer;
+}
+
+.log-in__form-submit:active {
+  box-shadow: 0 -15px 10px inset rgba(0, 0, 0, 0.1);
+}
+
+.log-in__action {
+  padding: 16px;
+  padding-top: 0;
+}
+
+.log-in__action a {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 4px;
+  transition: all 0.2s linear;
+}
+
+.log-in__action a:hover {
+  background: var(--colorButton);
+  color: #fff;
+}
+
+.log-in__action a:active {
+  box-shadow: 0 -5px 15px inset rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div class="log-in">
+        <div class="log-in__wrapper">
+          <div class="log-in__header">
+            <h1>
+              <span>Log in</span>
+            </h1>
+          </div>
+          <form class="log-in__form">
+            <label for="username" class="log-in__form-label">Username</label>
+            <input type="text" placeholder="username" value="Your username" class="log-in__form-input" id="username">
+            <label for="password" class="log-in__form-label">Password</label>
+            <input type="password" placeholder="password" class="log-in__form-input" id="password">
+            <button type="submit" class="log-in__form-submit">Log-in</button>
+          </form>
+          <div class="log-in__action">
+            <a href="javascript:;">Forgot password?</a>
+            <a href="javascript:;">Sign up</a>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
