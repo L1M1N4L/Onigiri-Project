@@ -1017,7 +1017,7 @@ header h1 {
   display: flex;
 }
 
-.content-heading, .content-para, .content-list{
+.content-heading, .content-para, .content-list, .content-subheading{
   text-align: left;
   width: 90%;
 }
@@ -1030,6 +1030,10 @@ header h1 {
 .content-heading{
   margin-top: 4rem;
   padding: 0;
+}
+
+.content-subheading{
+  margin-top: 2rem;
 }
 
 .content-list{
@@ -1086,6 +1090,25 @@ header h1 {
 
 .japanese-text{
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+}
+
+.vocab-table{
+  font-size: 1.5rem;
+  margin: 5rem auto;
+}
+
+.vocab-table td{
+  padding: 7px;
+  width: 20rem;
+}
+
+.vocab-table th{
+  height: 5rem;
+}
+
+.how-to-use td{
+  padding: 10px;
+  font-size: 1.25em;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------
