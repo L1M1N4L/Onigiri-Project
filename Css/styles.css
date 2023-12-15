@@ -106,19 +106,6 @@ body {
     border: 2px solid #6e6e6e;
 }
 
-.Dropdown {
-    margin-left: -2%;
-    background-color: transparent;
-    border: transparent;
-    font-size:calc(0.3em + 0.75vw);
-    font-family: 'Montserrat', sans-serif;
-    height: 3.15vw;
-}
-
-.Dropdown:hover {
-    cursor:pointer;
-}
-
 .RightButtons {
     display:flex;
     gap: 1.5vw;
@@ -681,7 +668,7 @@ font-weight: 400;
         color:white;
     }
 
-    .Dropdown,  .LogIn, .Dropdown img{
+    .LogIn{
         display:none;
         
     }
@@ -796,7 +783,7 @@ font-weight: 400;
         font-size: 0 
     }
 
-    .Dropdown,  .LogIn, .Dropdown img{
+    .LogIn{
         display:none;
     }
 

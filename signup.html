@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Sign Up</title>
     <style>
         :root {
   --widtContainer: 500px;
@@ -158,18 +158,20 @@ h1 {
         <div class="log-in__wrapper">
           <div class="log-in__header">
             <h1>
-              <span>Log in</span>
+              <span>Sign Up</span>
             </h1>
           </div>
           <form class="log-in__form" method="get" action="Dashboard.html">
             <label for="username" class="log-in__form-label">Username</label>
             <input type="text" placeholder="Enter Username" class="log-in__form-input" id="username" required>
-            <label for="password" class="log-in__form-label">Password <a href="javascript:;">Forgot password?</a></label>
-            <input type="password" placeholder="Enter Password" class="log-in__form-input" id="password" required>
-            <button type="submit" class="log-in__form-submit">Log in</button>
+            <label for="email" class="log-in__form-label">Email</label>
+            <input type="email" placeholder="Enter Email" class="log-in__form-input" id="email" required>
+            <label for="password" class="log-in__form-label">Password</label>
+            <input type="password" placeholder="Enter Password" class="log-in__form-input" id="confirmPassword" required>
+            <button type="submit" class="log-in__form-submit" onclick="validateForm()">Sign Up</button>
           </form>
           <div class="log-in__action">
-            <span>New to Onigiri?<a href="signup.html">Sign up</a></span>
+            <span>Already have an account?<a href="login.html">Log In</a></span>
           </div>
         </div>
       </div>
