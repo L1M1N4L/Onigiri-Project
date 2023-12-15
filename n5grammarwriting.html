@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N5 - Grammar</title>
+    <link href="./Css/courseStyles.css" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="grammar-header-container">
+        <div class="grammar-header-content">
+            <div class="header-image"></div>
+            <div class="header-items">
+                <div class="grammar-header-text">
+                    <h1>Introduction to Grammar N5</h1>
+                    <span>Start your journey in learning Grammar N5</span>
+                </div>
+                <div class="mark-complete-button">
+                    <button class="grammarComplete" onclick='toggleClass()'">Mark Complete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="course-nav">
+        <div class="nav-container">
+            <span><a href="AllCourses.html">All Courses </a> > <a href="n5Grammar.html">Course Introduction - Grammar N5</a> > Introduction</span>
+        </div>
+    </div>
+    <!-- CONTENT -->
+
+    <div class="grammar-content">
+        <div class="grammar-top">
+            <h1>Japanese Writing Systems</h1>
+        </div>
+    
+        <h2>Types of Letters in Japanese</h2>
+        <ol>
+            <li><strong>Hiragana:</strong> Phonetic sounds, used for particles, words, and parts of words.</li>
+            <li><strong>Katakana:</strong> Phonetic sounds, used for foreign/loan words.</li>
+            <li><strong>Kanji:</strong> Chinese characters, used for the stem of words, conveying meaning and sound.</li>
+        </ol>
+        <img src="Images/japanese writing.png">
+        <h2>About Hiragana</h2>
+        <p>Hiragana is used to express 46 different sounds in the Japanese language. It is recommended to start learning Hiragana, followed by Katakana and then Kanji. Learning Hiragana first makes it easier to learn Katakana. Hiragana helps in proper Japanese pronunciation, reading beginners' textbooks, and writing sentences in Japanese. Mastery of Hiragana makes studying Japanese more accessible and facilitates writing emails in Hiragana.</p>
+    
+        <h2>About Katakana</h2>
+        <p>Katakana is helpful for reading Japanese menus at restaurants. Both Hiragana and Katakana support Japanese study and comfortable living in Japan.</p>
+    
+        <h2>Furigana</h2>
+        <p><strong>Furigana:</strong> Furigana is a Japanese reading aid, consisting of smaller-sized kana or syllabic characters, printed above or alongside kanji characters. It is used to help learners or readers who may not be familiar with the kanji characters or to indicate the correct pronunciation of uncommon or difficult words.</p>
+    
+        <h2>Mastering Hiragana</h2>
+        <p>To master Hiragana, practice writing it regularly. Revision is crucial, so go over what you've learned several times.</p>
+    </div>
+    <div id="next-button" class="next-button"></div>
+    
+
+    <script>
+        // Check localStorage for the initial toggle state
+        var isToggled = localStorage.getItem('isToggled') === 'true';
+    
+        // Update the button and class based on the initial state
+        var button = document.querySelector('.grammarComplete');
+        button.classList.toggle('active', isToggled);
+        button.textContent = isToggled ? 'Completed' : 'Mark Complete';
+    
+        function toggleClass() {
+            // Toggle the state
+            isToggled = !isToggled;
+    
+            // Update the button and class based on the new state
+            button.classList.toggle('active', isToggled);
+            button.textContent = isToggled ? 'Completed' : 'Mark Complete';
+    
+            // Store the state in localStorage
+            localStorage.setItem('isToggled', isToggled);
+        }
+    </script>
+
+</body>
+</html>
