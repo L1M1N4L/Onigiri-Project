@@ -267,24 +267,27 @@ button {
   grid-area: btn;
   height: 36px;
   width: 198px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #3580aa), color-stop(90%, #4092b5));
-  background: -webkit-linear-gradient(left, #3580aa 60%, #4092b5 90%);
-  background: -o-linear-gradient(left, #3580aa 60%, #4092b5 90%);
-  background: linear-gradient(to right, #3580aa 60%, #4092b5 90%);
+  background-color: #BF4146;
   border-radius: 5px;
   border: none !important;
   text-transform: uppercase;
   letter-spacing: .5px;
   font-size: 13.5px;
-  color: #acccdd;
+  color: #ffffff;
   cursor: pointer;
-  -webkit-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 button:focus {
   outline: none;
+  box-shadow: 0 0 0 4px #f1f1f1, 0 0 0 5px #969593;
+}
+
+button:hover, .back-to-dashboard-btn:hover{
+  background-color: #A62C2C;
+  box-shadow: 0 0 0 4px #f1f1f1, 0 0 0 5px #969593;
 }
 
 button span {
@@ -445,6 +448,7 @@ button span {
   border-radius: 4px;
   transition: background-color 0.3s ease;
   margin-bottom: 3rem;
+  transition: all 0.3s ease;
 }
 
 

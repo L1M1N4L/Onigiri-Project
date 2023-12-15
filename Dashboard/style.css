@@ -341,7 +341,7 @@ a{
 
 .dropdown-menu li:hover {
   background-color: var(--c-olive-500);
-  color:#fff
+  color:#fff;
 }
 
 .first-dropdown {

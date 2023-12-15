@@ -1017,6 +1017,73 @@ header h1 {
   display: flex;
 }
 
+.content-heading, .content-para, .content-list{
+  text-align: left;
+  width: 90%;
+}
+
+.content-para{
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.content-heading{
+  margin-top: 4rem;
+  padding: 0;
+}
+
+.content-list{
+  list-style-type: disc;
+}
+
+.content-list li{
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.nextpreviousbuttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  height: 5rem;
+  width: 100%;
+}
+
+.previous-button, .next-button{
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  font-weight: 500;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 3rem;
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.previous-button:hover, .next-button:hover{
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.previous-button{
+  background: linear-gradient(90deg, rgba(128,128,128,1) 0%, rgba(117,117,117,1) 100%);
+}
+
+.next-button{
+  background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(117,117,117,1) 100%);
+}
+
+@media only screen and (max-width: 600px){
+  .content-heading{
+    font-size: 1.75rem;
+  }
+
+  .content-para, .content-list li{
+    font-size: 1rem;
+  }
+}
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------
 ------KANJI SECTION-------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------- */
