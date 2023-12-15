@@ -371,6 +371,7 @@ font-weight: 400;
 }
 
 .vid{
+    height: 30rem;
     width: 100%;
     border: 3px solid black;
     border-radius: 5px;
@@ -404,8 +405,20 @@ font-weight: 400;
     margin: auto;
     height: 350px;
     border-radius: 12px;
-    background-image: url("https://i.redd.it/9kaws8k67sc61.png");
     background-size: cover;
+    background-position: center;
+}
+
+#beginner{
+    background-image: url("../Images/beginnerCourse.jpg")
+}
+
+#conversational{
+    background-image: url("../Images/conversationalCourse.jpg")
+}
+
+#culture{
+    background-image: url("../Images/cultureCourse.jpg")
 }
 
 .lesson-description{
@@ -480,10 +493,12 @@ font-weight: 400;
 .testimony, .testimony-name{
     width: 75%;
     margin: auto;
+    font-weight: 200;
 }
 
 .testimony-name{
     text-align: center;
+    font-weight: 700;
 }
 
 .mySlides {

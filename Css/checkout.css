@@ -31,9 +31,9 @@
 }
 
 .gridContainer {
-  position: absolute;
+  position: relative;
   left: 50%;
-	top: 50%;
+	margin-top: 15rem;
 	transform: translate(-50%,-50%);
   height: 420px;
   width: 670px;
@@ -56,9 +56,6 @@
   min-width: 0;
   min-height: 0;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #4092b5), color-stop(90%, #3580aa));
-  background: -webkit-linear-gradient(left, #4092b5 60%, #3580aa 90%);
-  background: -o-linear-gradient(left, #4092b5 60%, #3580aa 90%);
   background: linear-gradient(to right, #4092b5 60%, #3580aa 90%);
   margin-top: 82px;
   border-radius: 8px;
@@ -80,10 +77,14 @@
   overflow: hidden;
 }
 
-.creditCard .visaLogo {
+.creditCard .visaLogo, .masterCardLogo, .paypalLogo {
   grid-area: visa;
   overflow: hidden;
   justify-self: right;
+}
+
+.masterCardLogo, .paypalLogo{
+  display: none;
 }
 
 .creditCard .visaLogo svg {
@@ -180,7 +181,7 @@
 }
 
 form {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   grid-area: form;
   overflow: visible;
@@ -298,8 +299,9 @@ button span {
 /* styles.css */
 
 .payment{
-  width: 600px;
-  margin: 2.2rem auto;
+  border: solid white 1px;
+  width: auto;
+  margin: 2rem
 }
 
 .checkouttextdesc{
@@ -308,10 +310,11 @@ button span {
 }
 
 .payment-container {
+    position: relative;
     text-align: center;
     display: flex;
-    width: 540px;
-    justify-content: space-between;
+    width: 600px;
+    gap: 5%;
     margin: auto;
 }
 
@@ -323,6 +326,17 @@ button span {
     height: 56px;
     flex-shrink: 0;
     border-radius: 8px;
+    transition: 0.5s
+}
+
+.paymentActive{
+  box-shadow: 0 0 0 4px #f1f1f1, 0 0 0 5px #969593;
+} 
+
+.payment-option:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 4px #f1f1f1, 0 0 0 5px #969593;
 }
 
 .paypal{
@@ -359,4 +373,176 @@ button span {
 .visalo{
   width: auto;
   height: 30px;
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darken the background */
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #fff;
+  width: 80%; /* Adjust the width of the pop-up */
+  max-width: 600px; /* Set a maximum width if needed */
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Additional styles to center the pop-up */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.checkmark-icon {
+  margin-top: 3rem;
+  color: #2ecc71;
+  margin-bottom: 20px;
+}
+
+.thank-you-text {
+  font-size: 2rem;
+}
+
+.small-text {
+  color: 4D4D4D;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+
+
+.back-to-dashboard-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #B03131; 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+
+
+@media only screen and (max-width: 1000px){
+.logo{
+  font-size: 0.5rem;
+}
+
+.logo img{
+  width: 40%;
+}
+
+.gridContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  min-width: 270px;
+  height: 40rem;
+}
+
+.creditCard{
+  position: relative;
+  
+}
+
+.previousStep {
+  bottom: 20px;
+
+}
+
+.checkouttextdesc{
+  font-size: 1.2rem;
+  margin: 1rem 2rem 7.5rem 2rem;
+}
+
+form {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 0px 50px;
+  margin-bottom: 82px;
+}
+
+.inputCon{
+  margin-top: 1rem;
+}
+
+.payment-container{
+  width: auto;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-option{
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+}
+
+@media only screen and (max-width: 500px){
+  form{
+    box-sizing: border-box;
+    width: 80%;
+    padding: 0px;
+    margin-bottom: 82px;
+  }
+
+  form button{
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+
+  .creditCard{
+    display: none;
+  }
+
+  .checkouttextdesc{
+    margin-bottom: 2.5rem;
+  }
+
+  .previousStep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+  }
+
+  .previousStep p {
+  margin: 0;
+  font-size: 12px;
+}
+
+  .gridContainer{
+    height: 30rem;
+  }
 }
