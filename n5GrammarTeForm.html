@@ -35,7 +35,11 @@
             <h1>Dialogues</h1>
         </div>
             
-        <h1 class="content-heading">Dialogue - After Class</h1>
+        <h1 class="content-heading dialogue-heading">
+          <button id="play-pause-button">&#9658;</button>
+          <audio id="audio-player" src="audio.mp3"></audio>
+          Dialogue - After Class
+        </h1>
    
         <p class="content-para japanese-text">
             <ruby>ス</ruby>ー：<ruby>ロバ</ruby>ート<ruby>（</ruby>と<ruby>）</ruby>さん、<ruby>今日<rp>（</rp><rt>きょう</rt><rp>）</rp></ruby>は<ruby>大変<rp>（</rp><rt>たいへん</rt><rp>）</rp></ruby>ですね。<br>
@@ -56,7 +60,11 @@
             <span id="translation"></span><br>
         </p>
 
-        <h1 class="content-heading">Dialogue - On the Bus</h1>
+        <h1 class="content-heading dialogue-heading">
+          <button id="play-pause-button">&#9658;</button>
+          <audio id="audio-player" src="audio.mp3"></audio>
+          Dialogue - On the Bus
+        </h1>
         <p class="content-para japanese-text">
             <ruby>おばあさん</ruby>：
             あの、すみません。この<ruby>バス</ruby>は<ruby>市民病院<rp>（</rp><rt>しみんびょういん</rt><rp>）</rp></ruby>へ<ruby>行<rp>（</rp><rt>い</rt><rp>）</rp></ruby>きますか。<br>
@@ -568,7 +576,7 @@
   
   </div>
     <div class="nextpreviousbuttons">
-      <button class="previous-button" onclick="window.location.href='n5GrammarIntroduction.html'"><< Previous</button>
+      <button class="previous-button"><< Previous</button>
       <button class="next-button">Next >></button>
   </div>
     <script>
@@ -591,6 +599,24 @@
             // Store the state in localStorage
             localStorage.setItem('isToggled', isToggled);
         }
+    </script>
+
+    <!-- Audio Player Script -->
+    <script>
+      const audioPlayer = document.getElementById('audio-player');
+      const playPauseButton = document.getElementById('play-pause-button');
+
+      playPauseButton.addEventListener('click', function () {
+          if (audioPlayer.paused) {
+              audioPlayer.play();
+              playPauseButton.innerHTML = '&#10074;&#10074;'; // Pause icon
+              playPauseButton.classList.add('playing');
+          } else {
+              audioPlayer.pause();
+              playPauseButton.innerHTML = '&#9658;'; // Play icon
+              playPauseButton.classList.remove('playing');
+          }
+      });
     </script>
 </body>
 </html>

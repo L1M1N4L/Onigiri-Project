@@ -64,7 +64,7 @@
           <p>Previous Step   </p>
         </div>
         </a>
-        <form action="#" id="paymentForm">
+        <form id="paymentForm">
           <h6>Payment Details</h6>
           <div class="inputCon" id="name" data-top="Name on Card">
             <input type="text" placeholder="Ida Bagus Kerthayayana"/>
@@ -78,7 +78,7 @@
           <div class="inputCon" id="cvv" data-top="CVV">
             <input type="text" placeholder="444"/>
           </div>
-          <button id="payButton">pay<span>$9.99</span></button>
+          <button type="button" id="payButton" onclick="showPopup()">pay<span>$9.99</span></button>
         </form>
       </div>
       <div class="popup" id="popup">
@@ -98,13 +98,20 @@
 const payButton = document.getElementById('payButton');
 const popup = document.getElementById('popup');
 
-// Function to show the pop-up
-function showPopup() {
-  popup.style.display = 'block';
-}
+  function showPopup() {
+    const name = document.getElementById('name').querySelector('input').value.trim();
+    const cardNum = document.getElementById('cardNum').querySelector('input').value.trim();
+    const validYear = document.getElementById('validYear').querySelector('input').value.trim();
+    const cvv = document.getElementById('cvv').querySelector('input').value.trim();
 
-// Attach a click event listener to the "Pay" button
-payButton.addEventListener('click', showPopup);
+    if (name === '' || cardNum === '' || validYear === '' || cvv === '') {
+        
+        alert('Please fill out all the required fields.');
+    } else {
+        
+        popup.style.display = 'block';
+    }
+  }
 
   function changeCard(name) {
     const creditCard = document.querySelector('.creditCard');

@@ -286,11 +286,13 @@
             </div>
         </div>
     </div>
-
-    <div class="nextpreviousbuttons">
-        <button class="next-button" onclick="window.location.href='n5grammarwriting.html'">Next >></button>
     </div>
 
+    <div class="nextpreviousbuttons">
+        <button class="previous-button" onclick="window.location.href='n5grammarwriting.html'"><< Previous</button>
+        <button class="next-button">Next >></button>
+    </div>
+    
     <script>
         // Check localStorage for the initial toggle state
         var isToggled = localStorage.getItem('isToggled') === 'true';
@@ -312,6 +314,6 @@
             localStorage.setItem('isToggled', isToggled);
         }
     </script>
-
+    
 </body>
 </html>
