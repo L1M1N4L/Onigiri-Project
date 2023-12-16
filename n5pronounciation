@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N5 - Pronounciation</title>
+    <link href="./Css/courseStyles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="course-header">
+        <h1 class="course-title">Course Introduction - Pronounciation N5</h1>
+    </div>
+    <div class="course-nav">
+        <div class="nav-container">
+            <span><a href="AllCourses.html">All Courses </a> > Course Introduction - Pronounciation N5</span>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    
+    <div class="lesson-progress-container">
+        <div class="lesson-progress-top">
+            <h1>Lesson Progress</h1>
+            <div class="progress-container">
+                <span>0% Complete</span>
+                <div class="progress-bar">
+                    <div class="progress">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="lesson-progress">
+            
+        </div>
+        <section class="step-wizard current-item">
+            <ul class="step-wizard-list">
+                <li class="step-wizard-item">
+                    <div class="button-pulse"><span class="progress-count">1</span></div>
+                    <span class="progress-label">What is Pitch Accent</span>
+                </li>
+                <li class="step-wizard-item">
+                    <span class="progress-count">2</span>
+                    <span class="progress-label">Pitch Accent Basics</span>
+                </li>
+                <li class="step-wizard-item">
+                    <span class="progress-count">3</span>
+                    <span class="progress-label">Pitch Accent Golden Rules</span>
+                </li>
+                <li class="step-wizard-item">
+                    <span class="progress-count">4</span>
+                    <span class="progress-label">Pitch Accent 0 vs 2</span>
+                </li>
+                <li class="step-wizard-item">
+                    <span class="progress-count">5</span>
+                    <span class="progress-label">Polite Verb conjugation</span>
+                </li>
+            </ul>
+        </section>
+        <div class="progress-container" id="mobile-only-progress">
+            <span>52% Complete</span>
+            <div class="progress-bar">
+                <div class="progress">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grade-container">
+        <div class="grade-top">
+            <h1>Lesson Chapters</h1>
+        </div>
+        <section id="cd-timeline" class="cd-container">
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture" style="background: #d78d96;">
+                    <h2 class="step-number" style="color: white;">1</h2>
+                </div> <!-- cd-timeline-img -->
+    <!-- ---------------------------------------------------------- -->
+    <!-- -------------------------Chapter 1------------------------ -->
+    <!-- ---------------------------------------------------------- -->
+                <div class="cd-timeline-content reveal ">
+                    <h2>What is Pitch Accent</h2>
+                    <p>Pitch accent is a crucial element in Japanese pronunciation, where variations in pitch or tone affect the meaning of words. Mastering pitch accent is essential for clear and accurate communication.</p>
+                    <a href="#0" class="cd-read-more">Read more</a>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img" style="background: #d78d96;">
+                    <h2 class="step-number" style="color: white;">2</h2>
+                </div> <!-- cd-timeline-img -->
+    
+                <div class="cd-timeline-content revealleft">
+                    <h2>Pitch Accent Basics</h2>
+                    <p>Pitch accent basics delve into the foundational aspects of Japanese pronunciation, focusing on recognizing and applying high and low pitch patterns in syllables. This knowledge forms the basis for effective spoken communication.</p>
+                    <a href="#0" class="cd-read-more">Read more</a>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+            
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture" style="background: #d78d96;">
+                    <h2 class="step-number" style="color: white;">3</h2>
+                </div> <!-- cd-timeline-img -->
+    
+                <div class="cd-timeline-content reveal">
+                    <h2>Pitch Accent Golden Rules</h2>
+                    <p>The pitch accent golden rules serve as essential guidelines for placing pitch correctly in Japanese words. Understanding and following these rules is key to ensuring accurate pronunciation and conveying intended meanings.</p>
+                    <a href="#0" class="cd-read-more">Read more</a>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture" style="background: #d78d96;">
+                    <h2 class="step-number" style="color: white;">4</h2>
+                </div> <!-- cd-timeline-img -->
+    
+                <div class="cd-timeline-content revealleft">
+                    <h2>Pitch Accent 0 vs 2</h2>
+                    <p>Exploring the differences between pitch accent patterns with a pitch of 0 (unaccented) and 2 (accented), this topic hones in on the nuances of pronunciation. Precise pitch placement is crucial to avoid misunderstandings and articulate words accurately.</p>
+                    <a href="#0" class="cd-read-more">Read more</a>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+    
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-movie" style="background: #d78d96;">
+                    <h2 class="step-number" style="color: white;">4</h2>
+                </div> <!-- cd-timeline-img -->
+                <div class="cd-timeline-img cd-picture" style="background: #d78d96;">
+                    <h2 class="step-number" style="color: white;">5</h2>
+                </div> <!-- cd-timeline-img -->
+    
+                <div class="cd-timeline-content reveal">
+                    <h2>Polite Verb Conjugation</h2>
+                    <p>Polite verb conjugation is a crucial aspect of Japanese pronunciation, particularly in social contexts. Mastering the art of conjugating verbs politely enhances one's ability to express respect and navigate various conversational situations with clarity.</p>
+                    <a href="#0" class="cd-read-more">Read more</a>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+    
+            
+    
+    
+        </section> <!-- cd-timeline --> 
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function show(elements, offset) {
+        for (var i = 0; i < elements.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = elements[i].getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - offset) {
+            elements[i].classList.add("active");
+          } else {
+            elements[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", function () {
+        clearTimeout(window.scrollTimer);
+        window.scrollTimer = setTimeout(function () {
+          // Call show for elements with the class "reveal"
+          show(document.querySelectorAll(".reveal"), 50);
+
+          // Call show for elements with the class "revealleft"
+          show(document.querySelectorAll(".revealleft"), 50);
+        }, 50);
+      });
+
+      // Initial check in case elements are already in the viewport
+      show(document.querySelectorAll(".reveal"), 50);
+      show(document.querySelectorAll(".revealleft"), 50);
+    });
+    </script>
+</body>
+</html>
