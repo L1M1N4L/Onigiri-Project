@@ -1,4 +1,3 @@
-<!-- Website: www.codingdung.com -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +7,7 @@
     <title>Onigiri - Settings</title>
     <link rel="stylesheet" href="Css/settings.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css">
     <style>
         /* Add or update the styles for the button color */
         .btn-primary {
@@ -17,14 +17,85 @@
         }
 
         .btn-primary:hover,
-    .btn-primary:focus {
-        background-color: #8F2D31; /* Adjust the color for hover and focus states */
-        border-color: #8F2D31;
-        color: #fff;
-        box-shadow: 0 0 0 0.2rem rgba(143, 45, 49, 0.5); /* Optional: add a box-shadow for focus effect */
-    }
-    </style>
+        .btn-primary:focus {
+            background-color: #8F2D31;
+            border-color: #8F2D31;
+            color: #fff;
+            box-shadow: 0 0 0 0.2rem rgba(143, 45, 49, 0.5);
+        }
 
+        /* Add styles for the connection buttons */
+        .btn-connection {
+            color: #BF4146;
+            border-color: #BF4146;
+        }
+
+        .btn-connection:hover,
+        .btn-connection:focus {
+            background-color: #F8F9FA;
+            color: #BF4146;
+        }
+
+/* Notification Tab Styles */
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+input[type=checkbox] {
+    height: 16px;
+    width: 16px;
+    visibility: hidden;
+}
+
+.switch-label-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch-label {
+    cursor: pointer;
+    text-indent: 0;
+    width: 40px;
+    height: 20px;
+    background: #EF5350;
+    border-radius: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.switch-label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .switch-label {
+    background: #81C784;
+}
+
+input:checked + .switch-label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.switch-label:active:after {
+    width: 20px;
+}
+
+.switch-content {
+    font-size: 18px;
+    color: #333;
+}
+    </style>
 </head>
 
 <body>
@@ -39,9 +110,11 @@
                         <a class="list-group-item list-group-item-action active" data-toggle="list"
                             href="#account-change-password">Change password</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-connections">Connections</a>
+                            href="#account-connections">
+                            <i class="bi bi-link"></i> Connections
+                        </a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
-                            hrdef="#account-notifications">Notifications</a>
+                            href="#account-notifications">Notifications</a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -50,7 +123,7 @@
                             <div class="card-body pb-2">
                                 <div class="form-group">
                                     <label class="form-label">Current password</label>
-                                    <input type="p  assword" class="form-control">
+                                    <input type="password" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">New password</label>
@@ -64,25 +137,37 @@
                         </div>
                         <div class="tab-pane fade" id="account-connections">
                             <div class="card-body">
-                                <button type="button" class="btn btn-twitter">Connect to
-                                    <strong>Twitter</strong></button>
+                                <button type="button" class="btn btn-connection">
+                                    <i class="bi bi-twitter"></i> Connect to <strong>Twitter</strong>
+                                </button>
+                                <button type="button" class="btn btn-connection">
+                                    <i class="bi bi-facebook"></i> Connect to <strong>Facebook</strong>
+                                </button>
+                                <button type="button" class="btn btn-connection">
+                                    <i class="bi bi-linkedin"></i> Connect to <strong>LinkedIn</strong>
+                                </button>
+                                <!-- Add more buttons for other social media platforms as needed -->
                             </div>
-                            <!-- Add other content for Connections tab if needed -->
                         </div>
                         <div class="tab-pane fade" id="account-notifications">
                             <div class="card-body pb-2">
-                                <h6 class="mb-4">Activity</h6>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked>
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone comments on my article</span>
-                                    </label>
+                                <div class="switch-container">
+                                    <input type="checkbox" id="notification-switch-comments" class="styled-checkbox" />
+                                    <label class="switch-label" for="notification-switch-comments"></label>
+                                    <div class="switch-content">
+                                        <strong>Email me when someone comments on my article</strong>
+                                
+                                    </div>
+
+                                    <input type="checkbox" id="notification-switch-updates" class="styled-checkbox" />
+                                    <label class="switch-label" for="notification-switch-updates"></label>
+                                    <div class="switch-content">
+                                        <strong>Email me about important updates</strong>
+                        
+                                    </div>
+
+                                    <!-- Add more options as needed -->
                                 </div>
-                                <!-- Add other content for Notifications tab if needed -->
                             </div>
                         </div>
                     </div>
@@ -91,15 +176,11 @@
         </div>
         <div class="text-right mt-3">
             <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
-            <a href="Dashboard.html"><button type="button" class="btn btn-default">Cancel</button></a>
-        </div>
-    </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-
-    </script>
+<a href="Dashboard.html"><button type="button" class="btn btn-default">Cancel</button></a>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
