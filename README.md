@@ -1,7 +1,7 @@
 # Onigiri - Japanese Learning Website Demo
 
 ## Overview
-Welcome to the Onigiri repository! This project features a comprehensive video demo of Onigiri, a Japanese learning website developed by L1M1N4L as part of a Human-Computer Interaction (HCI) course. The demo provides an insightful exploration of Onigiri's various features and functionalities to support effective language learning.
+Welcome to the Onigiri repository! This project features a comprehensive video demo of Onigiri, a Japanese learning website which is as part of a Human-Computer Interaction (HCI) course. The demo provides an insightful exploration of Onigiri's various features and functionalities to support effective language learning.
 
 ## Video Demo
 To access the video demo, click [here](https://drive.google.com/folderview?id=1obphzakritgfmw5dzxwd-tb34abscteb). The video covers the following aspects:
