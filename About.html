@@ -205,17 +205,39 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 	});
 	
 	// Close sidebar when clicking outside
-	document.addEventListener('click', (e) => {
-	if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-		closeSidebar();
-	}
+		document.addEventListener('click', (e) => {
+		if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+			closeSidebar();
+		}
+		});
+
+		document.addEventListener('click', function(event) {
+		if (event.target === sidebar) {
+			closeSidebar();
+		}
+		});
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+	const inputContainers = document.querySelectorAll('.input-data');
+
+	inputContainers.forEach((container) => {
+		const input = container.querySelector('input');
+		const label = container.querySelector('label');
+
+		input.addEventListener('input', () => {
+		if (input.value.trim() !== '') {
+			label.classList.add('active');
+		} else {
+			label.classList.remove('active');
+		}
+		});
+
+		// Trigger input event on page load to check for existing values
+		input.dispatchEvent(new Event('input'));
+	});
 	});
 
-	document.addEventListener('click', function(event) {
-	if (event.target === sidebar) {
-		closeSidebar();
-	}
-	   });
   </script>
 </body>
 </html>

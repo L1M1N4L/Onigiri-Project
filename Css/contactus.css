@@ -34,8 +34,7 @@
   border-bottom: 2px solid silver;
 }
 
-.input-data input:focus ~ label,
-.input-data input:valid ~ label {
+.input-data label.active {
   transform: translateY(-20px);
   font-size: 15px;
   color: #4158d0;
