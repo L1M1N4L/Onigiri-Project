@@ -98,20 +98,20 @@
 const payButton = document.getElementById('payButton');
 const popup = document.getElementById('popup');
 
-  function showPopup() {
+function showPopup() {
     const name = document.getElementById('name').querySelector('input').value.trim();
     const cardNum = document.getElementById('cardNum').querySelector('input').value.trim();
     const validYear = document.getElementById('validYear').querySelector('input').value.trim();
     const cvv = document.getElementById('cvv').querySelector('input').value.trim();
+    const popup = document.getElementById('popup'); 
 
     if (name === '' || cardNum === '' || validYear === '' || cvv === '') {
-        
         alert('Please fill out all the required fields.');
     } else {
-        
         popup.style.display = 'block';
     }
-  }
+}
+
 
   function changeCard(name) {
     const creditCard = document.querySelector('.creditCard');
