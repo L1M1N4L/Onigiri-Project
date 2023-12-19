@@ -581,7 +581,7 @@ a{
 
 .kanji-progress{
   background-color: var(--c-olive-500);
-  width: 70%;
+  width: 0%;
   height: 100%;
   border-radius: 15px;
   animation: progressBar 1s ease
@@ -589,7 +589,7 @@ a{
 
 .pronounciation-progress{
   background-color: var(--c-olive-500);
-  width: 30%;
+  width: 0%;
   height: 100%;
   border-radius: 15px;
   animation: progressBar 1s ease
