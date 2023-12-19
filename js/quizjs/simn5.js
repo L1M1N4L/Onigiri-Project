@@ -168,8 +168,8 @@ let questions = [
 
   {
     instruction: "もんだい9) まず　しつもんを　きいてで　ください。それから　はなしを　きいて、もんだいようしの　A・B・C の中　から　いちばん　いいものを　一つ　えらんで　ください",
-    question: "しゅくだいは　いつ　出しますか",
-    image: "",
+    question: "おんなの　人は　何を　のみますか",
+    image: "Images/drinks.png",
     audio: "Images/n5listening2.wav",
     choice1: "A",
     choice2: "B",
