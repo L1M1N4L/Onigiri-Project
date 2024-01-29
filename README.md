@@ -123,9 +123,6 @@ Learn about the option to purchase additional course packages, unlocking new lea
 ### Material Page - Pronunciation N5
 ![Alt text](image-15.png)
 
-### Introduction To Pitch Accent
-![Introduction To Pitch Accent](screenshots/intro_pitch_accent.png)
-
 ### N5 Simulation Start Page
 ![Alt text](image-16.png)
 
