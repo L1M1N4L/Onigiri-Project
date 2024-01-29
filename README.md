@@ -56,9 +56,6 @@ Japanese language learning apps face challenges that impact their effectiveness:
 
 Addressing these challenges through strategic improvements can enhance the Japanese language learning app experience.
 
-## Video Demo
-To access the video demo, click [here](https://drive.google.com/folderview?id=1obphzakritgfmw5dzxwd-tb34abscteb). The video covers the following aspects:
-
 ### 1. Signing Up
 Learn how to create your Onigiri account to personalize your Japanese learning journey.
 
