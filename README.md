@@ -1,6 +1,6 @@
 
 # Onigiri - Japanese Language Learning Website
-![Home Page](Images\ONIGIRI.svg)
+![Home Page](Images\Logo.svg)
 
 ## Introduction
 
@@ -97,7 +97,7 @@ Learn about the option to purchase additional course packages, unlocking new lea
 ![Alt text](image-7.png)
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](image-18.png)
 
 ### All Courses
 ![Alt text](image-8.png)
