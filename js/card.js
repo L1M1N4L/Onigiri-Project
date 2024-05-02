@@ -1,7 +1,4 @@
-// INSPIRATION
-// ------------> https://dribbble.com/shots/3331288-Daily-UI-002-Credit-Card-Checkout
 
-// loading after resources and dependent resources have been loaded
 window.addEventListener("load", function () {
 
     // forms
