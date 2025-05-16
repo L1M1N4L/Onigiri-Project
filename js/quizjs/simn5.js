@@ -131,7 +131,7 @@ let questions = [
     choice2: "に",
     choice3: "へ",
     choice4: "を",
-    answer: 1,
+    answer: 2,
   },
   {
     instruction: "もんだい６） １３から　１４に　何を　入れますか。ぶんしょうの　いみを　考えて、A・B・C・D から　いいものを　一つ　えらんで　ください",
