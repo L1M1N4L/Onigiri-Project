@@ -82,7 +82,7 @@ let questions = [
     choice2: "かなさんは　あいに　おもしろい　DVDを　もらいました",
     choice3: "あいさんは　かなさんに　おもしろい　DVDを　かしました",
     choice4: "あいさんは　かなさんに　おもしろい　DVDを　もらいました",
-    answer: 4,
+    answer: 1,
   },
 
   {
@@ -120,7 +120,7 @@ let questions = [
     choice2: "しゅくだいを",
     choice3: "きき",
     choice4: "ながら",
-    answer: 2,
+    answer: 4,
   },
 
   {
